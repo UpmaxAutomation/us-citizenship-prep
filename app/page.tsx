@@ -9,7 +9,12 @@ import {
 } from "./lib/schema";
 import { buildMetadata } from "./lib/metadata";
 
-export const metadata = buildMetadata({});
+export const metadata = buildMetadata({
+  title: "Free US Citizenship Test Prep — All 128 USCIS Questions (2025)",
+  description:
+    "Master all 128 USCIS civics questions for your 2025 naturalization interview. Free flashcards with spaced repetition, practice quizzes, a realistic 20-question practice test, reading and writing prep, and state-specific answers. No account required.",
+  path: "/",
+});
 
 const faqs = [
   {
@@ -35,7 +40,7 @@ const faqs = [
   {
     question: "Is this study guide free?",
     answer:
-      "Yes, this study guide is 100% free with no hidden costs, no accounts required, and no ads. You get full access to all 128 official USCIS civics questions, smart flashcards with spaced repetition, practice quizzes, and progress tracking.",
+      "Yes, this study guide is 100% free with no hidden costs and no account required. You get full access to all 128 official USCIS civics questions, smart flashcards with spaced repetition, practice quizzes, and progress tracking.",
   },
   {
     question: "Can I study offline?",
@@ -246,7 +251,7 @@ export default function HomePage() {
               </div>
               <div>
                 <p className="text-xs sm:text-sm font-semibold text-white">Free Forever</p>
-                <p className="text-xs text-slate-500 hidden sm:block">No cost, no ads</p>
+                <p className="text-xs text-slate-500 hidden sm:block">No cost, no account needed</p>
               </div>
             </div>
 
@@ -682,6 +687,86 @@ export default function HomePage() {
                 </ul>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Study Resources */}
+      <section className="py-16 sm:py-24 bg-slate-900/30">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-4">
+            Study Resources
+          </h2>
+          <p className="text-slate-400 text-center mb-12 max-w-xl mx-auto">
+            Everything you need to prepare for your USCIS naturalization interview.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            <Link
+              href="/practice-test"
+              className="group p-6 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-blue-500/30 transition-all"
+            >
+              <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors mb-2">
+                20-Question Practice Test
+              </h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Take a realistic practice test that mirrors the actual USCIS interview. Random questions, 12/20 to pass, just like the real thing.
+              </p>
+            </Link>
+            <Link
+              href="/reading-writing"
+              className="group p-6 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-indigo-500/30 transition-all"
+            >
+              <h3 className="text-lg font-semibold text-white group-hover:text-indigo-300 transition-colors mb-2">
+                Reading & Writing Practice
+              </h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Practice with all 58 reading vocabulary words and 75 writing words from the official USCIS English test.
+              </p>
+            </Link>
+            <Link
+              href="/interview-guide"
+              className="group p-6 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-emerald-500/30 transition-all"
+            >
+              <h3 className="text-lg font-semibold text-white group-hover:text-emerald-300 transition-colors mb-2">
+                Interview Day Guide
+              </h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                What to bring, what happens during the interview, possible outcomes, and what to do if you need to retake the test.
+              </p>
+            </Link>
+            <Link
+              href="/2025-test-changes"
+              className="group p-6 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-amber-500/30 transition-all"
+            >
+              <h3 className="text-lg font-semibold text-white group-hover:text-amber-300 transition-colors mb-2">
+                2025 Test Changes
+              </h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                What changed: 128 questions (up from 100), 20 asked (up from 10), 12/20 to pass (up from 6/10), and new topics.
+              </p>
+            </Link>
+            <Link
+              href="/senior-exemption"
+              className="group p-6 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-rose-500/30 transition-all"
+            >
+              <h3 className="text-lg font-semibold text-white group-hover:text-rose-300 transition-colors mb-2">
+                Senior 65/20 Exemption
+              </h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Study guide for applicants 65+ with 20+ years as permanent residents. Only 20 simplified questions in your native language.
+              </p>
+            </Link>
+            <Link
+              href="/questions"
+              className="group p-6 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-cyan-500/30 transition-all"
+            >
+              <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors mb-2">
+                All 128 Questions & Answers
+              </h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Complete reference of every official USCIS civics question organized by category with 65/20 exemption questions marked.
+              </p>
+            </Link>
           </div>
         </div>
       </section>

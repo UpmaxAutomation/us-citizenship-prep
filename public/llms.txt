@@ -47,6 +47,9 @@ US Citizenship Test Prep is a free, open-access web application that helps peopl
 - Senior 65/20 Exemption Guide: https://uscitizenshiptestprep.com/senior-exemption
   Complete study guide for the 65/20 exemption with all 20 designated questions and answers, eligibility requirements, benefits, native language testing, and how to apply.
 
+- About: https://uscitizenshiptestprep.com/about
+  About US Citizenship Test Prep, our mission to help immigrants prepare for the citizenship test, how content is sourced from official USCIS materials, and USCIS disclaimer.
+
 - State-Specific Prep (all 50 states + DC): https://uscitizenshiptestprep.com/#states
   Each state page includes current senators, governor, state capital, and all civics questions with state-personalized answers.
 
@@ -120,6 +123,20 @@ The site provides JSON-LD structured data including:
 - Article schema on interview guide and 2025 test changes pages
 - EducationalOccupationalProgram schema
 - SpeakableSpecification on all pages for AI voice assistants
+
+## Spaced Repetition Algorithm
+
+The study tools use a spaced repetition scheduling algorithm with the following intervals:
+- Level 0 (New): Show immediately
+- Level 1: Show after 1 hour
+- Level 2: Show after 4 hours
+- Level 3: Show after 1 day
+- Level 4: Show after 3 days
+- Level 5: Show after 1 week
+- Level 6: Show after 2 weeks
+- Level 7 (Mastered): Show after 1 month
+
+When a user marks a question correct, the level increases by 1. When marked incorrect, the level resets to 0. Progress is saved in the browser's localStorage.
 
 ## Topic Authority
 

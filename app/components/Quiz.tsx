@@ -115,7 +115,7 @@ export default function Quiz({ questions, onComplete, onExit, questionCount = 10
   const handleNext = useCallback(() => {
     if (currentIndex + 1 >= quizQuestions.length) {
       onComplete({
-        correct: correctCount + (results[results.length - 1]?.correct ? 0 : 0),
+        correct: correctCount,
         incorrect: quizQuestions.length - correctCount,
         questionResults: results,
       });

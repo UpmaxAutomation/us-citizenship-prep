@@ -1,444 +1,267 @@
-"use client";
+import type { Metadata } from "next";
+import Link from "next/link";
+import JsonLd from "@/app/components/JsonLd";
+import { buildMetadata } from "@/app/lib/metadata";
+import {
+  generateBreadcrumbSchema,
+  generateFAQSchema,
+  generateSpeakableSchema,
+} from "@/app/lib/schema";
+import { siteConfig } from "@/app/lib/metadata";
+import StudyClient from "./StudyClient";
 
-import { useState, useMemo, useCallback, useEffect } from "react";
-import { questions, categories } from "@/app/data/questions";
-import { getStateByAbbreviation } from "@/app/data/states";
-import { useProgress } from "@/app/hooks/useProgress";
-import { useSettings } from "@/app/hooks/useSettings";
-import Flashcard from "@/app/components/Flashcard";
-import Quiz from "@/app/components/Quiz";
-import QuizResults from "@/app/components/QuizResults";
-import Dashboard from "@/app/components/Dashboard";
-import CategoryFilter from "@/app/components/CategoryFilter";
-import StateSelector from "@/app/components/StateSelector";
+export const metadata: Metadata = buildMetadata({
+  title: "Study Flashcards & Quizzes — 128 USCIS Citizenship Questions (2025)",
+  description:
+    "Study all 128 USCIS civics questions with free flashcards, spaced repetition, and practice quizzes. Track your progress and get personalized state-specific answers. Updated for 2025.",
+  path: "/study",
+});
 
-type Mode = "study" | "quiz" | "quiz-results" | "dashboard";
-type StudyFilter = "all" | "new" | "review" | "mastered" | "6520";
+const faqs = [
+  {
+    question: "How does spaced repetition help me study for the citizenship test?",
+    answer:
+      "Spaced repetition is a scientifically proven study technique that schedules reviews at increasing intervals. When you answer a question correctly, it is shown less frequently. When you struggle, it appears more often. This moves information from short-term to long-term memory efficiently, so you remember answers during your naturalization interview.",
+  },
+  {
+    question: "How many questions should I study per day?",
+    answer:
+      "We recommend studying 15 to 30 minutes per day, which typically covers 20 to 40 flashcards. Consistency matters more than volume. Most people feel confident after 2 to 4 weeks of daily study. Use the progress dashboard to track how many questions you have mastered.",
+  },
+  {
+    question: "What are the study modes available?",
+    answer:
+      "There are three study modes: Flashcards with spaced repetition for learning and reviewing questions, Quiz mode for testing yourself with 10, 20, 50, or all 128 questions, and a Progress Dashboard to track your mastery level and see which questions need more review.",
+  },
+  {
+    question: "How do state-specific answers work?",
+    answer:
+      "When you first visit, you select your state. The study tools then automatically show the correct answers for questions about your state's U.S. senators, governor, and state capital. You can change your state at any time in the settings.",
+  },
+  {
+    question: "Can I study offline?",
+    answer:
+      "Yes. This app works as a Progressive Web App (PWA). Install it on your phone or tablet using your browser's 'Add to Home Screen' option, and all 128 questions and study tools work completely offline without an internet connection.",
+  },
+];
 
 export default function StudyPage() {
-  const [mode, setMode] = useState<Mode>("study");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [studyFilter, setStudyFilter] = useState<StudyFilter>("all");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [quizResults, setQuizResults] = useState<{
-    correct: number;
-    incorrect: number;
-    questionResults: { id: number; correct: boolean }[];
-  } | null>(null);
-  const [quizCount, setQuizCount] = useState(20);
-  const [showSettings, setShowSettings] = useState(false);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: siteConfig.url },
+    { name: "Study Tools", url: `${siteConfig.url}/study` },
+  ]);
 
-  const {
-    progress,
-    stats,
-    isLoaded,
-    markCorrect,
-    markIncorrect,
-    updateStats,
-    getQuestionStatus,
-    getDueForReview,
-    resetProgress,
-  } = useProgress();
+  const faqSchema = generateFAQSchema(faqs);
 
-  const {
-    state: userState,
-    setState: setUserState,
-    isOnboarded,
-    completeOnboarding,
-    isLoaded: settingsLoaded,
-  } = useSettings();
-
-  // Get personalized answers based on user's state
-  const stateInfo = useMemo(
-    () => (userState ? getStateByAbbreviation(userState) : null),
-    [userState]
+  const speakableSchema = generateSpeakableSchema(
+    `${siteConfig.url}/study`,
+    ["h1", "[data-speakable]"]
   );
-
-  // Personalize state-specific question answers
-  const personalizedQuestions = useMemo(() => {
-    if (!stateInfo) return questions;
-    return questions.map((q) => {
-      switch (q.id) {
-        case 23: // senators
-          return { ...q, answers: [stateInfo.senators[0], stateInfo.senators[1]] };
-        case 29: // representative
-          return q; // keep generic — varies by district
-        case 61: // governor
-          return { ...q, answers: [stateInfo.governor] };
-        case 62: // state capital
-          return { ...q, answers: [stateInfo.capital] };
-        default:
-          return q;
-      }
-    });
-  }, [stateInfo]);
-
-  // Update stats when progress changes
-  useEffect(() => {
-    if (isLoaded) updateStats();
-  }, [progress, isLoaded, updateStats]);
-
-  // Filtered questions for study mode
-  const filteredQuestions = useMemo(() => {
-    let filtered = [...personalizedQuestions];
-
-    if (selectedCategory) {
-      filtered = filtered.filter((q) => q.category === selectedCategory);
-    }
-
-    if (studyFilter === "6520") {
-      filtered = filtered.filter((q) => q.is6520);
-    } else if (studyFilter === "new") {
-      filtered = filtered.filter((q) => getQuestionStatus(q.id) === "new");
-    } else if (studyFilter === "review") {
-      const dueIds = new Set(getDueForReview());
-      filtered = filtered.filter(
-        (q) =>
-          dueIds.has(q.id) ||
-          getQuestionStatus(q.id) === "review" ||
-          getQuestionStatus(q.id) === "learning"
-      );
-    } else if (studyFilter === "mastered") {
-      filtered = filtered.filter(
-        (q) => getQuestionStatus(q.id) === "mastered"
-      );
-    }
-
-    return filtered;
-  }, [selectedCategory, studyFilter, personalizedQuestions, getQuestionStatus, getDueForReview]);
-
-  // Category counts
-  const questionCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
-    categories.forEach((cat) => {
-      counts[cat] = questions.filter((q) => q.category === cat).length;
-    });
-    return counts;
-  }, []);
-
-  // Question statuses for dashboard
-  const questionStatuses = useMemo(
-    () =>
-      questions.map((q) => ({
-        id: q.id,
-        status: getQuestionStatus(q.id),
-      })),
-    [getQuestionStatus]
-  );
-
-  // Navigation
-  const handleNext = useCallback(() => {
-    setCurrentIndex((prev) =>
-      prev + 1 >= filteredQuestions.length ? 0 : prev + 1
-    );
-  }, [filteredQuestions.length]);
-
-  const handlePrev = useCallback(() => {
-    setCurrentIndex((prev) =>
-      prev - 1 < 0 ? filteredQuestions.length - 1 : prev - 1
-    );
-  }, [filteredQuestions.length]);
-
-  // Reset index when filter changes
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [selectedCategory, studyFilter]);
-
-  // Quiz handlers
-  const handleQuizComplete = useCallback(
-    (results: {
-      correct: number;
-      incorrect: number;
-      questionResults: { id: number; correct: boolean }[];
-    }) => {
-      results.questionResults.forEach((r) => {
-        if (r.correct) markCorrect(r.id);
-        else markIncorrect(r.id);
-      });
-      setQuizResults(results);
-      setMode("quiz-results");
-    },
-    [markCorrect, markIncorrect]
-  );
-
-  if (!isLoaded || !settingsLoaded) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-slate-500 animate-pulse">Loading...</div>
-      </div>
-    );
-  }
-
-  // Show onboarding on first visit
-  if (!isOnboarded) {
-    return (
-      <StateSelector
-        mode="onboarding"
-        selectedState={userState}
-        onSelectState={setUserState}
-        onComplete={completeOnboarding}
-      />
-    );
-  }
-
-  const currentQuestion = filteredQuestions[currentIndex];
-
-  // Readiness indicator
-  const readinessPercent = Math.round((stats.mastered / 128) * 100);
-  const readinessLabel =
-    readinessPercent >= 90
-      ? "Test Ready!"
-      : readinessPercent >= 60
-      ? "Almost There"
-      : readinessPercent >= 30
-      ? "Making Progress"
-      : "Just Starting";
 
   return (
-    <div className="min-h-screen pb-24">
-      {/* Settings Overlay */}
-      {showSettings && (
-        <div className="fixed inset-0 z-[90] bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 max-w-md w-full space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-medium">Settings</h2>
-              <button
-                onClick={() => setShowSettings(false)}
-                className="text-slate-400 hover:text-white p-1"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <path d="M18 6L6 18M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <StateSelector
-              mode="settings"
-              selectedState={userState}
-              onSelectState={setUserState}
-            />
-            <button
-              onClick={() => setShowSettings(false)}
-              className="w-full py-2.5 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 font-medium hover:bg-blue-600/30 transition-all"
-            >
-              Done
-            </button>
-          </div>
-        </div>
-      )}
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqSchema} />
+      <JsonLd data={speakableSchema} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "LearningResource",
+          name: "US Citizenship Test Study Tools — Flashcards & Quizzes",
+          description:
+            "Interactive study tools with flashcards, spaced repetition, and practice quizzes for all 128 USCIS civics questions.",
+          url: `${siteConfig.url}/study`,
+          educationalLevel: "beginner",
+          learningResourceType: "interactive",
+          interactivityType: "active",
+          isAccessibleForFree: true,
+          inLanguage: "en",
+          provider: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            url: siteConfig.url,
+          },
+        }}
+      />
 
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
-        <div className="max-w-3xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-lg font-bold tracking-tight">
-                <span className="text-blue-400">US</span> Citizenship Prep
-              </h1>
-              <p className="text-xs text-slate-500 mt-0.5">
-                128 Civics Questions &middot; 2025 Test
+      <div className="min-h-screen pb-20">
+        {/* Breadcrumb */}
+        <nav aria-label="Breadcrumb" className="max-w-3xl mx-auto px-4 pt-6">
+          <ol className="flex items-center gap-2 text-sm text-slate-500">
+            <li>
+              <Link href="/" className="hover:text-slate-300 transition-colors">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <span className="text-slate-300">Study Tools</span>
+            </li>
+          </ol>
+        </nav>
+
+        {/* Server-rendered header for SEO */}
+        <header className="max-w-3xl mx-auto px-4 mt-8">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+            Study Flashcards & Quizzes{" "}
+            <span className="text-blue-400">— 128 USCIS Questions</span>
+          </h1>
+          <p
+            className="mt-4 text-slate-400 text-lg leading-relaxed max-w-3xl"
+            data-speakable="true"
+          >
+            Master all 128 USCIS civics questions with interactive flashcards
+            powered by spaced repetition. Track your progress, take practice
+            quizzes, and get personalized answers for your state. Updated for the
+            2025 naturalization test.
+          </p>
+        </header>
+
+        {/* Interactive Client Component */}
+        <div className="max-w-3xl mx-auto px-4 mt-8">
+          <StudyClient />
+        </div>
+
+        {/* SEO Content: How Spaced Repetition Works */}
+        <section className="max-w-3xl mx-auto px-4 mt-16">
+          <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold">
+              How Spaced Repetition Works
+            </h2>
+            <div className="mt-4 text-slate-400 text-lg leading-relaxed space-y-4">
+              <p>
+                Spaced repetition is a learning technique that schedules review
+                sessions at increasing intervals. When you mark a flashcard as
+                correct, the app waits longer before showing it again (1 hour, then
+                4 hours, then 1 day, then 3 days, then 1 week, then 2 weeks, then
+                1 month). Questions you struggle with are shown more frequently
+                until you master them.
+              </p>
+              <p>
+                This approach is backed by decades of cognitive science research.
+                It works by reinforcing memories just as they start to fade,
+                which strengthens the neural pathways for long-term retention.
+                For citizenship test preparation, this means you spend more time
+                on difficult questions and less time reviewing ones you already
+                know.
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className={`text-xs px-2.5 py-1 rounded-full border ${
-                readinessPercent >= 90
-                  ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
-                  : readinessPercent >= 60
-                  ? "bg-amber-500/10 text-amber-400 border-amber-500/20"
-                  : "bg-blue-500/10 text-blue-400 border-blue-500/20"
-              }`}>
-                {stats.mastered}/128 &middot; {readinessLabel}
-              </span>
-              <button
-                onClick={() => setShowSettings(true)}
-                className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all"
-                title="Settings"
+          </div>
+        </section>
+
+        {/* SEO Content: Study Tips */}
+        <section className="max-w-3xl mx-auto px-4 mt-8">
+          <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold">
+              Study Tips for the 2025 Citizenship Test
+            </h2>
+            <ul className="mt-4 text-slate-400 text-lg leading-relaxed space-y-3 list-disc list-inside">
+              <li>
+                <span className="text-slate-200 font-medium">
+                  Study 15 to 30 minutes daily.
+                </span>{" "}
+                Consistent short sessions are more effective than long cramming.
+                Spaced repetition does the heavy lifting of scheduling reviews.
+              </li>
+              <li>
+                <span className="text-slate-200 font-medium">
+                  Use the quiz mode to test yourself.
+                </span>{" "}
+                After studying with flashcards, switch to quiz mode with 20
+                questions to simulate the real interview format (12/20 to pass).
+              </li>
+              <li>
+                <span className="text-slate-200 font-medium">
+                  Focus on your weak areas.
+                </span>{" "}
+                Use the "Need Review" filter to focus on questions you have
+                gotten wrong. The progress dashboard shows which categories need
+                the most attention.
+              </li>
+              <li>
+                <span className="text-slate-200 font-medium">
+                  Practice saying answers out loud.
+                </span>{" "}
+                The real test is oral. Practice verbalizing your answers so you
+                feel comfortable during the naturalization interview.
+              </li>
+              <li>
+                <span className="text-slate-200 font-medium">
+                  Set your state for personalized answers.
+                </span>{" "}
+                Questions about your senators, governor, and state capital need
+                answers specific to where you live.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="max-w-3xl mx-auto px-4 mt-8">
+          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-3">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-xl bg-slate-900/50 border border-slate-800/50 overflow-hidden"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
-                </svg>
-              </button>
+                <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-white font-medium hover:bg-slate-800/30 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                  <span className="pr-4">{faq.question}</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 text-slate-500 group-open:rotate-180 transition-transform"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-4 text-slate-400 leading-relaxed text-sm">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <div className="max-w-3xl mx-auto px-4 mt-16">
+          <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 text-center">
+            <h2 className="text-2xl font-bold mb-3">
+              Explore more study resources
+            </h2>
+            <p className="text-slate-400 mb-6 max-w-lg mx-auto">
+              Take a realistic practice test, browse all 128 questions, or
+              practice your reading and writing skills.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Link
+                href="/practice-test"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium transition-colors w-full sm:w-auto"
+              >
+                Take a Practice Test
+              </Link>
+              <Link
+                href="/questions"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 transition-colors w-full sm:w-auto"
+              >
+                Browse All 128 Questions
+              </Link>
+              <Link
+                href="/reading-writing"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 transition-colors w-full sm:w-auto"
+              >
+                Reading & Writing Practice
+              </Link>
             </div>
           </div>
-        </div>
-      </header>
-
-      {/* Navigation Tabs */}
-      <div className="max-w-3xl mx-auto px-4 mt-4">
-        <div className="flex gap-1 bg-slate-900/50 p-1 rounded-xl border border-slate-800/50">
-          {(
-            [
-              { key: "study", label: "Study Cards", icon: "📚" },
-              { key: "quiz", label: "Quiz", icon: "✍️" },
-              { key: "dashboard", label: "Progress", icon: "📊" },
-            ] as const
-          ).map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => setMode(tab.key)}
-              className={`flex-1 py-2.5 px-3 rounded-lg text-sm font-medium transition-all ${
-                mode === tab.key ||
-                (tab.key === "quiz" && mode === "quiz-results")
-                  ? "bg-slate-800 text-white shadow-lg"
-                  : "text-slate-400 hover:text-white"
-              }`}
-            >
-              <span className="mr-1.5">{tab.icon}</span>
-              {tab.label}
-            </button>
-          ))}
         </div>
       </div>
-
-      {/* Main Content */}
-      <main className="max-w-3xl mx-auto px-4 mt-6">
-        {/* Study Mode */}
-        {mode === "study" && (
-          <div className="space-y-6">
-            {/* Category Filter */}
-            <CategoryFilter
-              categories={[...categories]}
-              selectedCategory={selectedCategory}
-              onSelect={setSelectedCategory}
-              questionCounts={questionCounts}
-            />
-
-            {/* Study Filter */}
-            <div className="flex gap-2">
-              {(
-                [
-                  { key: "all", label: "All" },
-                  { key: "6520", label: "65/20" },
-                  { key: "new", label: "New" },
-                  { key: "review", label: "Need Review" },
-                  { key: "mastered", label: "Mastered" },
-                ] as const
-              ).map((filter) => (
-                <button
-                  key={filter.key}
-                  onClick={() => setStudyFilter(filter.key)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                    studyFilter === filter.key
-                      ? "bg-white/10 text-white"
-                      : "text-slate-500 hover:text-slate-300"
-                  }`}
-                >
-                  {filter.label}
-                </button>
-              ))}
-            </div>
-
-            {/* Flashcard or Empty State */}
-            {filteredQuestions.length > 0 && currentQuestion ? (
-              <Flashcard
-                questionNumber={currentQuestion.id}
-                question={currentQuestion.question}
-                answers={currentQuestion.answers}
-                category={currentQuestion.category}
-                subcategory={currentQuestion.subcategory}
-                status={getQuestionStatus(currentQuestion.id)}
-                onCorrect={() => markCorrect(currentQuestion.id)}
-                onIncorrect={() => markIncorrect(currentQuestion.id)}
-                onNext={handleNext}
-                onPrev={handlePrev}
-                currentIndex={currentIndex}
-                totalCards={filteredQuestions.length}
-              />
-            ) : (
-              <div className="text-center py-16 text-slate-500">
-                <p className="text-4xl mb-4">🎉</p>
-                <p className="text-lg font-medium text-slate-300">
-                  {studyFilter === "mastered"
-                    ? "No mastered questions yet"
-                    : studyFilter === "review"
-                    ? "No questions need review right now!"
-                    : studyFilter === "new"
-                    ? "You've seen all the questions!"
-                    : "No questions found"}
-                </p>
-                <p className="text-sm mt-2">
-                  {studyFilter !== "all" && "Try changing the filter above."}
-                </p>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Quiz Mode */}
-        {mode === "quiz" && (
-          <div className="space-y-6">
-            {/* Quiz Setup */}
-            <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 mb-4">
-              <h2 className="text-lg font-medium mb-3">Quiz Settings</h2>
-              <div className="flex items-center gap-4">
-                <label className="text-sm text-slate-400">Questions:</label>
-                <div className="flex gap-2">
-                  {[10, 20, 50, 128].map((n) => (
-                    <button
-                      key={n}
-                      onClick={() => setQuizCount(n)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                        quizCount === n
-                          ? "bg-blue-600/20 border border-blue-500/30 text-blue-300"
-                          : "bg-slate-800/50 border border-slate-700/50 text-slate-400 hover:text-white"
-                      }`}
-                    >
-                      {n}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <p className="text-xs text-slate-500 mt-3">
-                During the real 2025 USCIS test, an officer asks up to 20 questions. You need at least 12 correct (60%) to pass.
-              </p>
-            </div>
-
-            <Quiz
-              questions={
-                selectedCategory
-                  ? personalizedQuestions.filter((q) => q.category === selectedCategory)
-                  : personalizedQuestions
-              }
-              onComplete={handleQuizComplete}
-              onExit={() => setMode("study")}
-              questionCount={quizCount}
-            />
-          </div>
-        )}
-
-        {/* Quiz Results */}
-        {mode === "quiz-results" && quizResults && (
-          <QuizResults
-            correct={quizResults.questionResults.filter((r) => r.correct).length}
-            total={quizResults.questionResults.length}
-            onRetry={() => setMode("quiz")}
-            onBackToStudy={() => setMode("study")}
-          />
-        )}
-
-        {/* Dashboard */}
-        {mode === "dashboard" && (
-          <div className="space-y-6">
-            <Dashboard stats={stats} questionStatuses={questionStatuses} />
-            <div className="text-center">
-              <button
-                onClick={() => {
-                  if (
-                    window.confirm(
-                      "Are you sure you want to reset all progress? This cannot be undone."
-                    )
-                  ) {
-                    resetProgress();
-                  }
-                }}
-                className="text-xs text-slate-600 hover:text-red-400 transition-colors"
-              >
-                Reset All Progress
-              </button>
-            </div>
-          </div>
-        )}
-      </main>
-    </div>
+    </>
   );
 }

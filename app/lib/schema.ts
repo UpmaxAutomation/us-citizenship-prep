@@ -7,14 +7,6 @@ export function generateWebSiteSchema() {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/state/{state}`,
-      },
-      "query-input": "required name=state",
-    },
   };
 }
 
@@ -80,7 +72,6 @@ export function generateOrganizationSchema() {
     url: siteConfig.url,
     logo: `${siteConfig.url}/icons/icon-512.png`,
     description: siteConfig.description,
-    sameAs: [],
   };
 }
 
@@ -125,17 +116,28 @@ export function generateEducationalProgramSchema() {
   };
 }
 
-export function generateLearningResourceSchema() {
+export function generateLearningResourceSchema({
+  name,
+  description,
+  url,
+  resourceType = "reference",
+  interactivityType = "expositive",
+}: {
+  name: string;
+  description: string;
+  url: string;
+  resourceType?: string;
+  interactivityType?: string;
+}) {
   return {
     "@context": "https://schema.org",
     "@type": "LearningResource",
-    name: "All 128 USCIS Citizenship Test Questions and Answers (2025)",
-    description:
-      "Complete reference of all 128 official USCIS civics test questions and answers for the 2025 naturalization interview, organized by category.",
-    url: `${siteConfig.url}/questions`,
+    name,
+    description,
+    url,
     educationalLevel: "beginner",
-    learningResourceType: "reference",
-    interactivityType: "expositive",
+    learningResourceType: resourceType,
+    interactivityType,
     isAccessibleForFree: true,
     inLanguage: "en",
     audience: {
@@ -183,32 +185,6 @@ export function generateArticleSchema({
       url: siteConfig.url,
     },
     inLanguage: "en",
-  };
-}
-
-export function generateQuizSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "LearningResource",
-    name: "Free U.S. Citizenship Practice Test — 2025 Format",
-    description:
-      "Interactive 20-question practice test simulating the real USCIS citizenship interview with 12/20 passing score.",
-    url: `${siteConfig.url}/practice-test`,
-    educationalLevel: "beginner",
-    learningResourceType: "quiz",
-    interactivityType: "active",
-    isAccessibleForFree: true,
-    inLanguage: "en",
-    audience: {
-      "@type": "EducationalAudience",
-      educationalRole: "student",
-      audienceType: "US citizenship applicants",
-    },
-    provider: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: siteConfig.url,
-    },
   };
 }
 

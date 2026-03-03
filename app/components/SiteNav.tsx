@@ -63,8 +63,7 @@ export default function SiteNav() {
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
-            {moreOpen && (
-              <div className="absolute right-0 top-full mt-2 w-48 rounded-xl bg-slate-900 border border-slate-800 shadow-xl shadow-black/20 py-1 z-50">
+            <div className={`absolute right-0 top-full mt-2 w-48 rounded-xl bg-slate-900 border border-slate-800 shadow-xl shadow-black/20 py-1 z-50 ${moreOpen ? "block" : "hidden"}`}>
                 <Link
                   href="/reading-writing"
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
@@ -90,7 +89,6 @@ export default function SiteNav() {
                   Senior 65/20
                 </Link>
               </div>
-            )}
           </div>
         </div>
 
@@ -138,8 +136,7 @@ export default function SiteNav() {
       </div>
 
       {/* Mobile dropdown */}
-      {menuOpen && (
-        <div className="sm:hidden border-t border-slate-800/50 bg-slate-950">
+      <div className={`sm:hidden border-t border-slate-800/50 bg-slate-950 ${menuOpen ? "block" : "hidden"}`}>
           <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
             <Link
               href="/study"
@@ -192,7 +189,6 @@ export default function SiteNav() {
             </Link>
           </div>
         </div>
-      )}
     </nav>
   );
 }

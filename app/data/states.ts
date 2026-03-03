@@ -28,7 +28,7 @@ export const states: StateInfo[] = [
     abbreviation: "AZ",
     capital: "Phoenix",
     governor: "Katie Hobbs",
-    senators: ["Kyrsten Sinema", "Ruben Gallego"],
+    senators: ["Mark Kelly", "Ruben Gallego"],
   },
   {
     name: "Arkansas",
@@ -63,7 +63,7 @@ export const states: StateInfo[] = [
     abbreviation: "DE",
     capital: "Dover",
     governor: "Matt Meyer",
-    senators: ["Tom Carper", "Chris Coons"],
+    senators: ["Lisa Blunt Rochester", "Chris Coons"],
   },
   {
     name: "Florida",
@@ -147,7 +147,7 @@ export const states: StateInfo[] = [
     abbreviation: "MD",
     capital: "Annapolis",
     governor: "Wes Moore",
-    senators: ["Ben Cardin", "Angela Alsobrooks"],
+    senators: ["Chris Van Hollen", "Angela Alsobrooks"],
   },
   {
     name: "Massachusetts",
@@ -252,7 +252,7 @@ export const states: StateInfo[] = [
     abbreviation: "OH",
     capital: "Columbus",
     governor: "Mike DeWine",
-    senators: ["Sherrod Brown", "Bernie Moreno"],
+    senators: ["Bernie Moreno", "Jon Husted"],
   },
   {
     name: "Oklahoma",
@@ -273,7 +273,7 @@ export const states: StateInfo[] = [
     abbreviation: "PA",
     capital: "Harrisburg",
     governor: "Josh Shapiro",
-    senators: ["Bob Casey", "John Fetterman"],
+    senators: ["Dave McCormick", "John Fetterman"],
   },
   {
     name: "Rhode Island",
@@ -350,7 +350,7 @@ export const states: StateInfo[] = [
     abbreviation: "WI",
     capital: "Madison",
     governor: "Tony Evers",
-    senators: ["Tammy Baldwin", "Eric Hovde"],
+    senators: ["Eric Hovde", "Ron Johnson"],
   },
   {
     name: "Wyoming",

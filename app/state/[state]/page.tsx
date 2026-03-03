@@ -5,7 +5,7 @@ import { states, getStateBySlug, stateNameToSlug } from "@/app/data/states";
 import { questions } from "@/app/data/questions";
 import JsonLd from "@/app/components/JsonLd";
 import { buildMetadata } from "@/app/lib/metadata";
-import { generateBreadcrumbSchema } from "@/app/lib/schema";
+import { generateBreadcrumbSchema, generateFAQSchema, generateSpeakableSchema } from "@/app/lib/schema";
 import { siteConfig } from "@/app/lib/metadata";
 
 export function generateStaticParams() {
@@ -82,9 +82,34 @@ export default async function StatePage({
   const stateQuestions = getStateSpecificQuestions(stateInfo);
   const isDC = stateInfo.abbreviation === "DC";
 
+  const stateFaqs = [
+    {
+      question: `Who are the current U.S. senators from ${stateInfo.name}?`,
+      answer: isDC
+        ? "Washington, D.C. does not have voting U.S. senators. DC residents are represented by a non-voting delegate in the House of Representatives."
+        : `The current U.S. senators from ${stateInfo.name} are ${stateInfo.senators[0]} and ${stateInfo.senators[1]}.`,
+    },
+    {
+      question: `What is the capital of ${stateInfo.name}?`,
+      answer: `The capital of ${stateInfo.name} is ${stateInfo.capital}.`,
+    },
+    {
+      question: `How do I prepare for the citizenship test in ${stateInfo.name}?`,
+      answer: `To prepare for the USCIS citizenship test in ${stateInfo.name}, study all 128 civics questions with state-specific answers for your senators (${isDC ? "DC has no voting senators" : `${stateInfo.senators[0]} and ${stateInfo.senators[1]}`}), governor (${isDC ? "Mayor Muriel Bowser" : stateInfo.governor}), and capital (${stateInfo.capital}). Use flashcards with spaced repetition and take practice quizzes to build confidence before your naturalization interview.`,
+    },
+  ];
+
+  const faqSchema = generateFAQSchema(stateFaqs);
+  const speakableSchema = generateSpeakableSchema(
+    `${siteConfig.url}/state/${stateSlug}`,
+    ["h1", "[data-speakable]"]
+  );
+
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqSchema} />
+      <JsonLd data={speakableSchema} />
 
       <div className="min-h-screen pb-20">
         {/* Breadcrumb */}
@@ -112,8 +137,8 @@ export default async function StatePage({
             US Citizenship Test Prep for{" "}
             <span className="text-blue-400">{stateInfo.name}</span>
           </h1>
-          <p className="mt-3 text-slate-400 text-lg">
-            Personalized answers for {stateInfo.name} residents
+          <p className="mt-3 text-slate-400 text-lg" data-speakable="true">
+            Personalized answers for {stateInfo.name} residents. Study all 128 USCIS civics questions with your state&apos;s senators, governor, and capital included.
           </p>
         </header>
 
@@ -241,7 +266,55 @@ export default async function StatePage({
               >
                 View All 128 Questions
               </Link>
+              <Link
+                href="/reading-writing"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 transition-colors w-full sm:w-auto"
+              >
+                Reading & Writing
+              </Link>
             </div>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 mt-6 text-sm">
+            <Link href="/interview-guide" className="text-slate-400 hover:text-white transition-colors underline underline-offset-2">Interview Day Guide</Link>
+            <span className="text-slate-700">|</span>
+            <Link href="/2025-test-changes" className="text-slate-400 hover:text-white transition-colors underline underline-offset-2">2025 Test Changes</Link>
+            <span className="text-slate-700">|</span>
+            <Link href="/senior-exemption" className="text-slate-400 hover:text-white transition-colors underline underline-offset-2">Senior 65/20 Guide</Link>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="max-w-3xl mx-auto px-4 mt-12">
+          <h2 className="text-lg font-semibold mb-4">
+            Frequently Asked Questions about {stateInfo.name}
+          </h2>
+          <div className="space-y-3">
+            {stateFaqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-xl bg-slate-900/50 border border-slate-800/50 overflow-hidden"
+              >
+                <summary className="flex items-center justify-between cursor-pointer px-5 py-3 text-white font-medium hover:bg-slate-800/30 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                  <span className="pr-4 text-sm">{faq.question}</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 text-slate-500 group-open:rotate-180 transition-transform"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-3 text-slate-400 leading-relaxed text-sm">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
 

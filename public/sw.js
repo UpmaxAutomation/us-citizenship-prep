@@ -1,4 +1,4 @@
-const CACHE_NAME = 'citizenship-prep-v3';
+const CACHE_NAME = 'citizenship-prep-v4';
 const urlsToCache = [
   '/',
   '/study',
@@ -10,6 +10,7 @@ const urlsToCache = [
   '/senior-exemption',
   '/privacy-policy',
   '/terms',
+  '/about',
   '/manifest.json',
 ];
 

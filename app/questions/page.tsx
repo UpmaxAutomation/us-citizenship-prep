@@ -78,7 +78,11 @@ export default function QuestionsPage() {
   ]);
 
   const faqSchema = generateFAQSchema(faqSchemaQuestions);
-  const learningResourceSchema = generateLearningResourceSchema();
+  const learningResourceSchema = generateLearningResourceSchema({
+    name: "All 128 USCIS Citizenship Test Questions and Answers (2025)",
+    description: "Complete reference of all 128 official USCIS civics test questions and answers for the 2025 naturalization interview, organized by category.",
+    url: `${siteConfig.url}/questions`,
+  });
   const speakableSchema = generateSpeakableSchema(
     `${siteConfig.url}/questions`,
     ["h1", "header p", "[data-speakable]"]
@@ -113,7 +117,7 @@ export default function QuestionsPage() {
             All 128 USCIS Citizenship Test Questions and Answers{" "}
             <span className="text-blue-400">(2025)</span>
           </h1>
-          <p className="mt-4 text-slate-400 text-lg leading-relaxed max-w-3xl">
+          <p className="mt-4 text-slate-400 text-lg leading-relaxed max-w-3xl" data-speakable="true">
             These are the official 128 civics questions from the October 2025
             USCIS update for the naturalization interview. During the test, a
             USCIS officer asks up to 20 questions and you need at least 12
@@ -322,7 +326,7 @@ export default function QuestionsPage() {
                 Start Studying Now
               </Link>
               <Link
-                href="/study"
+                href="/#states"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 transition-colors w-full sm:w-auto"
               >
                 Study for Your State
