@@ -48,8 +48,8 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.uscitizenshiptestprep.com" }],
-      "destination": "https://uscitizenshiptestprep.com/:path*",
+      "has": [{ "type": "host", "value": "uscitizenshiptestprep.com" }],
+      "destination": "https://www.uscitizenshiptestprep.com/:path*",
       "permanent": true
     }
   ],

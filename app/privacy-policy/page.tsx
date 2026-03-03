@@ -36,10 +36,10 @@ export default function PrivacyPolicyPage() {
               how we collect, use, and safeguard your information when you use
               our website at{" "}
               <a
-                href="https://uscitizenshiptestprep.com"
+                href="https://www.uscitizenshiptestprep.com"
                 className="text-blue-400 hover:text-blue-300 underline"
               >
-                uscitizenshiptestprep.com
+                www.uscitizenshiptestprep.com
               </a>
               .
             </p>

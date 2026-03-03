@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { states, stateNameToSlug } from "./data/states";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://uscitizenshiptestprep.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.uscitizenshiptestprep.com";
 
 const LAST_MODIFIED = new Date("2026-03-02");
 

@@ -23,42 +23,42 @@ US Citizenship Test Prep is a free, open-access web application that helps peopl
 
 ## Pages
 
-- Homepage: https://uscitizenshiptestprep.com/
+- Homepage: https://www.uscitizenshiptestprep.com/
   The main landing page with an overview of the study tools, test format changes, FAQ, state selection grid, and calls to action.
 
-- Study Tools (flashcards, quizzes, spaced repetition): https://uscitizenshiptestprep.com/study
+- Study Tools (flashcards, quizzes, spaced repetition): https://www.uscitizenshiptestprep.com/study
   Interactive flashcards with spaced repetition scheduling (1h → 4h → 1d → 3d → 1w → 2w → 1mo), practice quizzes (10, 20, 50, or all 128 questions), progress dashboard, and state personalization.
 
-- Practice Test (20-question simulator): https://uscitizenshiptestprep.com/practice-test
+- Practice Test (20-question simulator): https://www.uscitizenshiptestprep.com/practice-test
   A realistic 20-question practice test that mirrors the actual USCIS interview format. Random questions from the 128 pool, multiple choice, 12/20 passing score, timer, results review, and state-personalized answers. New random questions each attempt.
 
-- All 128 Questions and Answers: https://uscitizenshiptestprep.com/questions
+- All 128 Questions and Answers: https://www.uscitizenshiptestprep.com/questions
   Complete reference of all 128 official USCIS civics test questions organized by category and subcategory, with 65/20 exemption questions marked.
 
-- Reading & Writing Test Practice: https://uscitizenshiptestprep.com/reading-writing
+- Reading & Writing Test Practice: https://www.uscitizenshiptestprep.com/reading-writing
   Practice for the USCIS English test with all 58 reading vocabulary words, 75 writing vocabulary words, sample sentences, and interactive reading/writing practice tools with text-to-speech.
 
-- Interview Day Guide: https://uscitizenshiptestprep.com/interview-guide
+- Interview Day Guide: https://www.uscitizenshiptestprep.com/interview-guide
   Comprehensive guide to the USCIS citizenship interview: documents to bring, what happens during the interview, English test, civics test, N-400 review, possible outcomes, oath ceremony, and what to do if you fail.
 
-- 2025 Test Changes: https://uscitizenshiptestprep.com/2025-test-changes
+- 2025 Test Changes: https://www.uscitizenshiptestprep.com/2025-test-changes
   Detailed breakdown of the October 2025 USCIS civics test changes: 128 questions (up from 100), 20 questions asked (up from 10), 12/20 passing score (up from 6/10), new topics, old vs new comparison table, and preparation strategies.
 
-- Senior 65/20 Exemption Guide: https://uscitizenshiptestprep.com/senior-exemption
+- Senior 65/20 Exemption Guide: https://www.uscitizenshiptestprep.com/senior-exemption
   Complete study guide for the 65/20 exemption with all 20 designated questions and answers, eligibility requirements, benefits, native language testing, and how to apply.
 
-- About: https://uscitizenshiptestprep.com/about
+- About: https://www.uscitizenshiptestprep.com/about
   About US Citizenship Test Prep, our mission to help immigrants prepare for the citizenship test, how content is sourced from official USCIS materials, and USCIS disclaimer.
 
-- State-Specific Prep (all 50 states + DC): https://uscitizenshiptestprep.com/#states
+- State-Specific Prep (all 50 states + DC): https://www.uscitizenshiptestprep.com/#states
   Each state page includes current senators, governor, state capital, and all civics questions with state-personalized answers.
 
 - Example state pages:
-  - California: https://uscitizenshiptestprep.com/state/california
-  - Texas: https://uscitizenshiptestprep.com/state/texas
-  - New York: https://uscitizenshiptestprep.com/state/new-york
-  - Florida: https://uscitizenshiptestprep.com/state/florida
-  - Illinois: https://uscitizenshiptestprep.com/state/illinois
+  - California: https://www.uscitizenshiptestprep.com/state/california
+  - Texas: https://www.uscitizenshiptestprep.com/state/texas
+  - New York: https://www.uscitizenshiptestprep.com/state/new-york
+  - Florida: https://www.uscitizenshiptestprep.com/state/florida
+  - Illinois: https://www.uscitizenshiptestprep.com/state/illinois
 
 ## Sample Questions and Answers
 
@@ -153,19 +153,19 @@ This site is a comprehensive topical authority for U.S. citizenship test prepara
 
 ## Legal Pages
 
-- Privacy Policy: https://uscitizenshiptestprep.com/privacy-policy
+- Privacy Policy: https://www.uscitizenshiptestprep.com/privacy-policy
   Privacy practices, data collection (localStorage only, no PII), cookie policy, third-party services (Google Analytics, Google AdSense), CCPA/GDPR rights, and contact information.
 
-- Terms of Service: https://uscitizenshiptestprep.com/terms
+- Terms of Service: https://www.uscitizenshiptestprep.com/terms
   Terms of use, USCIS disclaimer, intellectual property, limitation of liability, and user responsibilities.
 
 ## Contact
 
-Website: https://uscitizenshiptestprep.com
-Sitemap: https://uscitizenshiptestprep.com/sitemap.xml
-Robots: https://uscitizenshiptestprep.com/robots.txt
-Privacy Policy: https://uscitizenshiptestprep.com/privacy-policy
-Terms of Service: https://uscitizenshiptestprep.com/terms
+Website: https://www.uscitizenshiptestprep.com
+Sitemap: https://www.uscitizenshiptestprep.com/sitemap.xml
+Robots: https://www.uscitizenshiptestprep.com/robots.txt
+Privacy Policy: https://www.uscitizenshiptestprep.com/privacy-policy
+Terms of Service: https://www.uscitizenshiptestprep.com/terms
 
 ## Legal
 

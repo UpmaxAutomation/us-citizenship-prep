@@ -214,7 +214,7 @@ export default function PracticeTest() {
   }, [phase, currentIndex, testQuestions.length, correctCount]);
 
   const handleShare = useCallback(async () => {
-    const text = `I scored ${correctCount}/${results.length} on the US citizenship practice test! Try it: https://uscitizenshiptestprep.com/practice-test`;
+    const text = `I scored ${correctCount}/${results.length} on the US citizenship practice test! Try it: https://www.uscitizenshiptestprep.com/practice-test`;
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);

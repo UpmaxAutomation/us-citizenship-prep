@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "US Citizenship Test Prep",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://uscitizenshiptestprep.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.uscitizenshiptestprep.com",
   description:
     "Master all 128 USCIS civics questions for your naturalization interview. Free flashcards, quizzes, and spaced repetition. Updated for the 2025 test.",
 };

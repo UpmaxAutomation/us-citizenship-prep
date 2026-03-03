@@ -34,10 +34,10 @@ export default function TermsOfServicePage() {
               Welcome to US Citizenship Test Prep (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;).
               By accessing or using our website at{" "}
               <a
-                href="https://uscitizenshiptestprep.com"
+                href="https://www.uscitizenshiptestprep.com"
                 className="text-blue-400 hover:text-blue-300 underline"
               >
-                uscitizenshiptestprep.com
+                www.uscitizenshiptestprep.com
               </a>{" "}
               (the &quot;Site&quot;), you agree to be bound by these Terms of Service
               (&quot;Terms&quot;). If you do not agree to these Terms, please do not use

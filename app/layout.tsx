@@ -25,12 +25,12 @@ export const viewport: Viewport = {
 
 /*
  * Structured Data Testing:
- * - Google Rich Results Test: https://search.google.com/test/rich-results?url=https%3A%2F%2Fuscitizenshiptestprep.com
- * - Schema.org Validator: https://validator.schema.org/?url=https%3A%2F%2Fuscitizenshiptestprep.com
+ * - Google Rich Results Test: https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.uscitizenshiptestprep.com
+ * - Schema.org Validator: https://validator.schema.org/?url=https%3A%2F%2Fwww.uscitizenshiptestprep.com
  */
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://uscitizenshiptestprep.com"),
+  metadataBase: new URL("https://www.uscitizenshiptestprep.com"),
   title: {
     default: "US Citizenship Test Prep | All 128 USCIS Civics Questions (2025)",
     template: "%s | US Citizenship Test Prep",
@@ -87,7 +87,7 @@ export default function RootLayout({
         <JsonLd data={generateOrganizationSchema()} />
         <JsonLd data={generateEducationalProgramSchema()} />
         <JsonLd
-          data={generateSpeakableSchema("https://uscitizenshiptestprep.com", [
+          data={generateSpeakableSchema("https://www.uscitizenshiptestprep.com", [
             "h1",
             "[data-speakable]",
           ])}
