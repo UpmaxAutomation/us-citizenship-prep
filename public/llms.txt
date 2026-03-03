@@ -1,0 +1,155 @@
+# US Citizenship Test Prep
+
+> Free study guide for the 2025 USCIS naturalization civics test with all 128 official questions, flashcards, quizzes, practice tests, reading/writing prep, and spaced repetition.
+
+Last updated: 2026-03-02
+
+## Description
+
+US Citizenship Test Prep is a free, open-access web application that helps people prepare for the United States naturalization civics test. The site covers all 128 official USCIS civics questions updated October 2025. It provides interactive flashcards with spaced repetition, a realistic 20-question practice test that simulates the actual interview, reading and writing vocabulary practice for the English test, an interview day guide, study guides for the 65/20 senior exemption, state-specific personalized answers for all 50 states plus Washington DC, progress tracking saved locally, and offline access as a Progressive Web App (PWA). No account or payment is required.
+
+## Key Facts
+
+- Total questions: 128 (expanded from 100 in 2025)
+- Test format: USCIS officer asks up to 20 questions; applicant must answer at least 12 correctly (60%) to pass
+- 65/20 exemption: Applicants aged 65+ with 20+ years as lawful permanent resident study only 20 simplified questions and may test in their native language
+- Categories: American Government (72 questions), American History (46 questions), Symbols and Holidays (10 questions)
+- Reading vocabulary: 58 official USCIS words
+- Writing vocabulary: 75 official USCIS words
+- English test: Must read 1 of 3 sentences and write 1 of 3 sentences correctly
+- Cost: Free, no account required
+- Offline: Works offline as a PWA
+- Source: Official USCIS civics test materials updated October 2025
+
+## Pages
+
+- Homepage: https://uscitizenshiptestprep.com/
+  The main landing page with an overview of the study tools, test format changes, FAQ, state selection grid, and calls to action.
+
+- Study Tools (flashcards, quizzes, spaced repetition): https://uscitizenshiptestprep.com/study
+  Interactive flashcards with spaced repetition scheduling (1h → 4h → 1d → 3d → 1w → 2w → 1mo), practice quizzes (10, 20, 50, or all 128 questions), progress dashboard, and state personalization.
+
+- Practice Test (20-question simulator): https://uscitizenshiptestprep.com/practice-test
+  A realistic 20-question practice test that mirrors the actual USCIS interview format. Random questions from the 128 pool, multiple choice, 12/20 passing score, timer, results review, and state-personalized answers. New random questions each attempt.
+
+- All 128 Questions and Answers: https://uscitizenshiptestprep.com/questions
+  Complete reference of all 128 official USCIS civics test questions organized by category and subcategory, with 65/20 exemption questions marked.
+
+- Reading & Writing Test Practice: https://uscitizenshiptestprep.com/reading-writing
+  Practice for the USCIS English test with all 58 reading vocabulary words, 75 writing vocabulary words, sample sentences, and interactive reading/writing practice tools with text-to-speech.
+
+- Interview Day Guide: https://uscitizenshiptestprep.com/interview-guide
+  Comprehensive guide to the USCIS citizenship interview: documents to bring, what happens during the interview, English test, civics test, N-400 review, possible outcomes, oath ceremony, and what to do if you fail.
+
+- 2025 Test Changes: https://uscitizenshiptestprep.com/2025-test-changes
+  Detailed breakdown of the October 2025 USCIS civics test changes: 128 questions (up from 100), 20 questions asked (up from 10), 12/20 passing score (up from 6/10), new topics, old vs new comparison table, and preparation strategies.
+
+- Senior 65/20 Exemption Guide: https://uscitizenshiptestprep.com/senior-exemption
+  Complete study guide for the 65/20 exemption with all 20 designated questions and answers, eligibility requirements, benefits, native language testing, and how to apply.
+
+- State-Specific Prep (all 50 states + DC): https://uscitizenshiptestprep.com/#states
+  Each state page includes current senators, governor, state capital, and all civics questions with state-personalized answers.
+
+- Example state pages:
+  - California: https://uscitizenshiptestprep.com/state/california
+  - Texas: https://uscitizenshiptestprep.com/state/texas
+  - New York: https://uscitizenshiptestprep.com/state/new-york
+  - Florida: https://uscitizenshiptestprep.com/state/florida
+  - Illinois: https://uscitizenshiptestprep.com/state/illinois
+
+## Sample Questions and Answers
+
+Q: What is the supreme law of the land?
+A: The (U.S.) Constitution
+
+Q: What does the Constitution do?
+A: Sets up the government; defines the government; protects basic rights of Americans
+
+Q: What are the first three words of the Constitution?
+A: We the People
+
+Q: How many amendments does the Constitution have?
+A: Twenty-seven (27)
+
+Q: What is the economic system in the United States?
+A: Capitalist economy; market economy
+
+Q: Who is the Commander in Chief of the military?
+A: The President
+
+Q: How many U.S. senators are there?
+A: One hundred (100)
+
+Q: How many voting members does the House of Representatives have?
+A: Four hundred thirty-five (435)
+
+Q: What is the highest court in the United States?
+A: The Supreme Court
+
+Q: Who wrote the Declaration of Independence?
+A: (Thomas) Jefferson
+
+## Reading and Writing Vocabulary
+
+The USCIS English test uses official vocabulary lists:
+
+Reading vocabulary (58 words): Abraham Lincoln, George Washington, American flag, Bill of Rights, capital, citizen, city, Congress, country, Father of Our Country, government, President, right, Senators, state/states, White House, America, United States, U.S., Presidents' Day, Memorial Day, Flag Day, Independence Day, Labor Day, Columbus Day, Thanksgiving, How, What, When, Where, Who, Why, can, come, do/does, elects, have/has, is/are/was/be, lives/lived, meet, pay, vote, want, a, for, here, in, of, on, the, to, we, colors, dollar bill, first, largest, many, most, name, north, one, people, second, south
+
+Writing vocabulary (75 words): Adams, Lincoln, Washington, American Indians, capital, citizens, Civil War, Congress, Father of Our Country, flag, free, freedom of speech, President, right, Senators, state/states, White House, Alaska, California, Canada, Delaware, Mexico, New York City, United States, Washington, Washington D.C., February, May, June, July, September, October, November, Presidents' Day, Memorial Day, Flag Day, Independence Day, Labor Day, Columbus Day, Thanksgiving, can, come, elect, have/has, is/was/be, lives/lived, meets, pay, vote, and, during, for, here, in, of, on, the, to, we, blue, dollar bill, fifty/50, first, largest, most, north, one, one hundred/100, people, red, second, south, taxes, white
+
+## 2025 Test Format Changes
+
+The updated 2025 USCIS civics test changed significantly:
+- Question pool expanded from 100 to 128 questions
+- Officer now asks up to 20 questions (previously 10)
+- Passing score is 12/20 correct (previously 6/10)
+- Passing percentage remains 60%
+- New topics: geography, recent history, expanded government structure
+- 65/20 exemption: still 20 designated questions, native language option
+
+## Schema
+
+The site provides JSON-LD structured data including:
+- WebSite schema with SearchAction
+- Organization schema
+- Course schema (free educational course)
+- WebApplication schema (educational application)
+- FAQPage schema on all content pages
+- BreadcrumbList schema on all subpages
+- LearningResource schema on questions, practice test, reading/writing, and senior exemption pages
+- Article schema on interview guide and 2025 test changes pages
+- EducationalOccupationalProgram schema
+- SpeakableSpecification on all pages for AI voice assistants
+
+## Topic Authority
+
+This site is a comprehensive topical authority for U.S. citizenship test preparation covering:
+1. All 128 official USCIS civics questions and answers
+2. Interactive study tools (flashcards, spaced repetition, quizzes)
+3. Realistic practice test simulation matching the interview format
+4. English reading and writing test vocabulary and practice
+5. Complete interview day preparation guide
+6. Detailed 2025 test format changes and comparison
+7. Senior 65/20 exemption study guide
+8. State-specific information for all 50 states + DC
+9. Accessibility features (offline PWA, text-to-speech, keyboard navigation)
+
+## Legal Pages
+
+- Privacy Policy: https://uscitizenshiptestprep.com/privacy-policy
+  Privacy practices, data collection (localStorage only, no PII), cookie policy, third-party services (Google Analytics, Google AdSense), CCPA/GDPR rights, and contact information.
+
+- Terms of Service: https://uscitizenshiptestprep.com/terms
+  Terms of use, USCIS disclaimer, intellectual property, limitation of liability, and user responsibilities.
+
+## Contact
+
+Website: https://uscitizenshiptestprep.com
+Sitemap: https://uscitizenshiptestprep.com/sitemap.xml
+Robots: https://uscitizenshiptestprep.com/robots.txt
+Privacy Policy: https://uscitizenshiptestprep.com/privacy-policy
+Terms of Service: https://uscitizenshiptestprep.com/terms
+
+## Legal
+
+This is an independent study tool. It is not affiliated with or endorsed by USCIS (United States Citizenship and Immigration Services). All questions are sourced from official USCIS civics test materials.

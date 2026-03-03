@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="64" fill="#020617"/>
+  <rect x="56" y="120" width="400" height="272" rx="16" fill="#1e293b" stroke="#334155" stroke-width="4"/>
+  <rect x="56" y="120" width="180" height="148" fill="#1e3a5f"/>
+  <g fill="#ffffff" opacity="0.9">
+    <polygon points="100,148 104,160 117,160 107,168 110,180 100,172 90,180 93,168 83,160 96,160"/>
+    <polygon points="146,148 150,160 163,160 153,168 156,180 146,172 136,180 139,168 129,160 142,160"/>
+    <polygon points="192,148 196,160 209,160 199,168 202,180 192,172 182,180 185,168 175,160 188,160"/>
+    <polygon points="123,178 127,190 140,190 130,198 133,210 123,202 113,210 116,198 106,190 119,190"/>
+    <polygon points="169,178 173,190 186,190 176,198 179,210 169,202 159,210 162,198 152,190 165,190"/>
+    <polygon points="146,208 150,220 163,220 153,228 156,240 146,232 136,240 139,228 129,220 142,220"/>
+  </g>
+  <g fill="#dc2626">
+    <rect x="236" y="140" width="200" height="20" rx="4"/>
+    <rect x="236" y="180" width="200" height="20" rx="4"/>
+    <rect x="56" y="268" width="400" height="20" rx="4"/>
+    <rect x="56" y="308" width="400" height="20" rx="4"/>
+    <rect x="56" y="348" width="400" height="20" rx="4"/>
+  </g>
+  <g fill="#ffffff">
+    <rect x="236" y="160" width="200" height="20" rx="4"/>
+    <rect x="236" y="200" width="200" height="20" rx="4"/>
+    <rect x="236" y="240" width="200" height="16" rx="4"/>
+    <rect x="56" y="288" width="400" height="20" rx="4"/>
+    <rect x="56" y="328" width="400" height="20" rx="4"/>
+    <rect x="56" y="368" width="400" height="24" rx="4"/>
+  </g>
+  <text x="256" y="460" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="48" fill="#94a3b8">CITIZENSHIP</text>
+</svg>
