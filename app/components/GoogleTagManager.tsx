@@ -1,5 +1,7 @@
 import Script from "next/script";
 
+const GA_MEASUREMENT_ID = "G-JQJTESEKBV";
+
 export default function GoogleTagManager() {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
   const siteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -10,6 +12,17 @@ export default function GoogleTagManager() {
       {siteVerification && (
         <meta name="google-site-verification" content={siteVerification} />
       )}
+      {/* Google Analytics 4 (gtag.js) */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');`}
+      </Script>
       {gtmId && (
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
