@@ -10,9 +10,10 @@ import Quiz from "@/app/components/Quiz";
 import QuizResults from "@/app/components/QuizResults";
 import Dashboard from "@/app/components/Dashboard";
 import CategoryFilter from "@/app/components/CategoryFilter";
+import VoiceMode from "@/app/components/VoiceMode";
 import StateSelector from "@/app/components/StateSelector";
 
-type Mode = "study" | "quiz" | "quiz-results" | "dashboard";
+type Mode = "study" | "voice" | "quiz" | "quiz-results" | "dashboard";
 type StudyFilter = "all" | "new" | "review" | "mastered" | "6520";
 
 export default function StudyClient() {
@@ -26,6 +27,7 @@ export default function StudyClient() {
     questionResults: { id: number; correct: boolean }[];
   } | null>(null);
   const [quizCount, setQuizCount] = useState(20);
+  const [voiceAutoListen, setVoiceAutoListen] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
 
   const {
@@ -268,7 +270,8 @@ export default function StudyClient() {
         <div className="flex gap-1 bg-slate-900/50 p-1 rounded-xl border border-slate-800/50">
           {(
             [
-              { key: "study", label: "Study Cards", icon: "📚" },
+              { key: "study", label: "Study", icon: "📚" },
+              { key: "voice", label: "Voice", icon: "🎤" },
               { key: "quiz", label: "Quiz", icon: "✍️" },
               { key: "dashboard", label: "Progress", icon: "📊" },
             ] as const
@@ -276,7 +279,7 @@ export default function StudyClient() {
             <button
               key={tab.key}
               onClick={() => setMode(tab.key)}
-              className={`flex-1 py-2.5 px-3 rounded-lg text-sm font-medium transition-all ${
+              className={`flex-1 py-2.5 px-2 sm:px-3 rounded-lg text-xs sm:text-sm font-medium transition-all ${
                 mode === tab.key ||
                 (tab.key === "quiz" && mode === "quiz-results")
                   ? "bg-slate-800 text-white shadow-lg"
@@ -359,6 +362,67 @@ export default function StudyClient() {
                 <p className="text-sm mt-2">
                   {studyFilter !== "all" && "Try changing the filter above."}
                 </p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Voice Mode */}
+        {mode === "voice" && (
+          <div className="space-y-6">
+            {/* Category Filter */}
+            <CategoryFilter
+              categories={[...categories]}
+              selectedCategory={selectedCategory}
+              onSelect={setSelectedCategory}
+              questionCounts={questionCounts}
+            />
+
+            {/* Auto-listen toggle */}
+            <div className="flex items-center justify-between bg-slate-900/50 border border-slate-800 rounded-xl px-4 py-3">
+              <div>
+                <p className="text-sm font-medium text-white">Auto Mode</p>
+                <p className="text-xs text-slate-500">
+                  Reads question, listens, then advances automatically
+                </p>
+              </div>
+              <button
+                onClick={() => setVoiceAutoListen((prev) => !prev)}
+                className={`relative w-12 h-7 rounded-full transition-colors ${
+                  voiceAutoListen ? "bg-blue-600" : "bg-slate-700"
+                }`}
+                aria-label={voiceAutoListen ? "Disable auto mode" : "Enable auto mode"}
+              >
+                <span
+                  className={`absolute top-0.5 left-0.5 w-6 h-6 rounded-full bg-white shadow transition-transform ${
+                    voiceAutoListen ? "translate-x-5" : ""
+                  }`}
+                />
+              </button>
+            </div>
+
+            {filteredQuestions.length > 0 && currentQuestion ? (
+              <VoiceMode
+                questionNumber={currentQuestion.id}
+                question={currentQuestion.question}
+                answers={currentQuestion.answers}
+                category={currentQuestion.category}
+                status={getQuestionStatus(currentQuestion.id)}
+                onCorrect={() => markCorrect(currentQuestion.id)}
+                onIncorrect={() => markIncorrect(currentQuestion.id)}
+                onNext={handleNext}
+                onPrev={handlePrev}
+                currentIndex={currentIndex}
+                totalCards={filteredQuestions.length}
+                autoListen={voiceAutoListen}
+              />
+            ) : (
+              <div className="text-center py-16 text-slate-500">
+                <p className="text-4xl mb-4">🎤</p>
+                <p className="text-lg font-medium text-slate-300">
+                  No questions found
+                </p>
+                <p className="text-sm mt-2">Try changing the category filter.</p>
               </div>
             )}
           </div>
