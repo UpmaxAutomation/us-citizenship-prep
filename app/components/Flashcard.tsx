@@ -51,6 +51,13 @@ const speedLabels: Record<AutoPlaySpeed, string> = {
   fast: "Fast",
 };
 
+// Pause durations for voice auto-play (between speech segments)
+const voicePauses: Record<AutoPlaySpeed, { afterQuestion: number; afterAnswer: number }> = {
+  slow: { afterQuestion: 2500, afterAnswer: 3000 },
+  medium: { afterQuestion: 1000, afterAnswer: 2000 },
+  fast: { afterQuestion: 500, afterAnswer: 1000 },
+};
+
 export default function Flashcard({
   questionNumber,
   question,
@@ -118,13 +125,20 @@ export default function Flashcard({
 
   const stopSpeaking = useCallback(() => {
     if (typeof window !== "undefined" && window.speechSynthesis) {
+      // Null out handlers before cancel to prevent stale onEnd callbacks
+      // from triggering card flips or advances after speech is interrupted
+      if (utteranceRef.current) {
+        utteranceRef.current.onend = null;
+        utteranceRef.current.onerror = null;
+        utteranceRef.current = null;
+      }
       window.speechSynthesis.cancel();
     }
     setIsSpeaking(false);
   }, []);
 
   const speak = useCallback(
-    (text: string) => {
+    (text: string, onEnd?: () => void) => {
       if (typeof window === "undefined" || !window.speechSynthesis) return;
       stopSpeaking();
       const utterance = new SpeechSynthesisUtterance(text);
@@ -136,7 +150,10 @@ export default function Flashcard({
       );
       if (usVoice) utterance.voice = usVoice;
       utterance.onstart = () => setIsSpeaking(true);
-      utterance.onend = () => setIsSpeaking(false);
+      utterance.onend = () => {
+        setIsSpeaking(false);
+        onEnd?.();
+      };
       utterance.onerror = () => setIsSpeaking(false);
       utteranceRef.current = utterance;
       window.speechSynthesis.speak(utterance);
@@ -173,15 +190,6 @@ export default function Flashcard({
           // Currently showing question -> flip to answer
           setIsFlipped(true);
           setShowButtons(false);
-          if (autoPlayTTSRef.current) {
-            // Small delay to let card flip
-            setTimeout(() => {
-              if (isAutoPlayingRef.current) {
-                const answerText = answers.slice(0, 5).join(". Or, ");
-                speak(answerText);
-              }
-            }, 350);
-          }
           scheduleNextStep(true);
         } else {
           // Currently showing answer -> advance to next card
@@ -195,7 +203,7 @@ export default function Flashcard({
         }
       }, duration);
     },
-    [autoPlaySpeed, answers, speak, stopSpeaking, onNext, clearAutoPlayTimer]
+    [autoPlaySpeed, stopSpeaking, onNext, clearAutoPlayTimer]
   );
 
   // Start auto-play
@@ -222,11 +230,37 @@ export default function Flashcard({
   // When auto-play becomes active or card changes while auto-playing, schedule the question phase
   useEffect(() => {
     if (isAutoPlaying) {
-      // We're showing the question side now; speak it if TTS is on
       if (autoPlayTTSRef.current) {
-        speak(question);
+        // TTS-driven: speech completion controls pacing (no fixed timer cutoff)
+        const pauses = voicePauses[autoPlaySpeed];
+        speak(question, () => {
+          if (!isAutoPlayingRef.current) return;
+          // Pause after question, then flip to answer
+          autoPlayTimerRef.current = setTimeout(() => {
+            if (!isAutoPlayingRef.current) return;
+            setIsFlipped(true);
+            setShowButtons(false);
+            // Wait for flip animation, then read answer
+            setTimeout(() => {
+              if (!isAutoPlayingRef.current) return;
+              const answerText = answers.slice(0, 5).join(". Or, ");
+              speak(answerText, () => {
+                if (!isAutoPlayingRef.current) return;
+                // Pause after answer, then advance to next card
+                autoPlayTimerRef.current = setTimeout(() => {
+                  if (!isAutoPlayingRef.current) return;
+                  setIsFlipped(false);
+                  setShowButtons(false);
+                  setTimeout(() => onNext(), 200);
+                }, pauses.afterAnswer);
+              });
+            }, 500);
+          }, pauses.afterQuestion);
+        });
+      } else {
+        // Timer-driven (no TTS)
+        scheduleNextStep(false);
       }
-      scheduleNextStep(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAutoPlaying, currentIndex]);
@@ -319,12 +353,12 @@ export default function Flashcard({
     [isFlipped, isAutoPlaying, handleFlip, handleResponse, onNext, onPrev, toggleAutoPlay, pauseAutoPlay]
   );
 
-  // Change speed while auto-playing
+  // Change speed while auto-playing (only affects timer-driven mode, not TTS-driven)
   const handleSpeedChange = useCallback(
     (speed: AutoPlaySpeed) => {
       setAutoPlaySpeed(speed);
-      // If currently auto-playing, restart the current timer with the new speed
-      if (isAutoPlaying) {
+      // If auto-playing with TTS, speech controls pacing — speed change only saves preference
+      if (isAutoPlaying && !autoPlayTTSRef.current) {
         clearAutoPlayTimer();
         const duration = speedDurations[speed];
         setProgressKey((k) => k + 1);
@@ -333,24 +367,16 @@ export default function Flashcard({
           if (!isFlippedRef.current) {
             setIsFlipped(true);
             setShowButtons(false);
-            if (autoPlayTTSRef.current) {
-              setTimeout(() => {
-                if (isAutoPlayingRef.current) {
-                  speak(answers.slice(0, 5).join(". Or, "));
-                }
-              }, 350);
-            }
             scheduleNextStep(true);
           } else {
             setIsFlipped(false);
             setShowButtons(false);
-            stopSpeaking();
             setTimeout(() => onNext(), 200);
           }
         }, duration);
       }
     },
-    [isAutoPlaying, clearAutoPlayTimer, speak, answers, stopSpeaking, onNext, scheduleNextStep]
+    [isAutoPlaying, clearAutoPlayTimer, onNext, scheduleNextStep]
   );
 
   const cardBg = categoryColors[category] || "from-slate-600/20 to-slate-600/20 border-slate-500/20";
@@ -397,8 +423,8 @@ export default function Flashcard({
           <div
             className={`card-front absolute inset-0 rounded-2xl border bg-gradient-to-br ${cardBg} p-6 sm:p-8 flex flex-col overflow-hidden`}
           >
-            {/* Auto-play countdown progress bar */}
-            {isAutoPlaying && !isFlipped && (
+            {/* Auto-play progress indicator */}
+            {isAutoPlaying && !isFlipped && !autoPlayTTS && (
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-blue-900/30 rounded-t-2xl overflow-hidden">
                 <div
                   key={`q-${progressKey}`}
@@ -406,6 +432,9 @@ export default function Flashcard({
                   style={{ animationDuration: `${currentDuration}ms` }}
                 />
               </div>
+            )}
+            {isAutoPlaying && !isFlipped && autoPlayTTS && (
+              <div className="absolute top-0 left-0 right-0 h-[3px] bg-blue-400 rounded-t-2xl animate-pulse" />
             )}
 
             <div className="flex items-center gap-2 mb-6">
@@ -420,10 +449,18 @@ export default function Flashcard({
             <button
               onClick={(e) => {
                 e.stopPropagation();
+                if (isAutoPlaying) pauseAutoPlay();
                 if (isSpeaking) {
                   stopSpeaking();
                 } else {
-                  speak(question);
+                  speak(question, () => {
+                    // Auto-flip to answer and read it
+                    setIsFlipped(true);
+                    setTimeout(() => setShowButtons(true), 300);
+                    setTimeout(() => {
+                      speak(answers.slice(0, 5).join(". Or, "));
+                    }, 500);
+                  });
                 }
               }}
               className={`absolute top-4 right-4 p-2 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400/50 ${
@@ -431,8 +468,8 @@ export default function Flashcard({
                   ? "bg-blue-500/30 text-blue-300 animate-pulse"
                   : "bg-white/10 hover:bg-white/20 text-slate-400 hover:text-white"
               }`}
-              title="Read question aloud"
-              aria-label="Read question aloud"
+              title="Read question &amp; answer"
+              aria-label="Read question and answer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -468,8 +505,8 @@ export default function Flashcard({
           <div
             className={`card-back absolute inset-0 rounded-2xl border bg-gradient-to-br ${cardBg} p-6 sm:p-8 flex flex-col overflow-hidden`}
           >
-            {/* Auto-play countdown progress bar */}
-            {isAutoPlaying && isFlipped && (
+            {/* Auto-play progress indicator */}
+            {isAutoPlaying && isFlipped && !autoPlayTTS && (
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-emerald-900/30 rounded-t-2xl overflow-hidden">
                 <div
                   key={`a-${progressKey}`}
@@ -477,6 +514,9 @@ export default function Flashcard({
                   style={{ animationDuration: `${currentDuration}ms` }}
                 />
               </div>
+            )}
+            {isAutoPlaying && isFlipped && autoPlayTTS && (
+              <div className="absolute top-0 left-0 right-0 h-[3px] bg-emerald-400 rounded-t-2xl animate-pulse" />
             )}
 
             <div className="flex items-center gap-2 mb-3">
@@ -557,46 +597,11 @@ export default function Flashcard({
       </div>
 
       {/* Auto-Play Controls */}
-      <div className="flex items-center justify-center gap-3 mt-5">
-        {/* TTS Toggle */}
-        <button
-          onClick={() => setAutoPlayTTS((prev) => !prev)}
-          className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all focus:outline-none focus:ring-2 focus:ring-blue-400/50 ${
-            autoPlayTTS
-              ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
-              : "bg-slate-800/50 text-slate-500 border border-slate-700/50 hover:text-slate-300"
-          }`}
-          title="Toggle text-to-speech during auto-play"
-          aria-label={autoPlayTTS ? "Disable auto-play TTS" : "Enable auto-play TTS"}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-            {autoPlayTTS ? (
-              <>
-                <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-              </>
-            ) : (
-              <line x1="23" y1="9" x2="17" y2="15" />
-            )}
-          </svg>
-          <span className="hidden sm:inline">TTS</span>
-        </button>
-
+      <div className="flex items-center justify-center gap-2 sm:gap-3 mt-5">
         {/* Play/Pause Button */}
         <button
           onClick={toggleAutoPlay}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-blue-400/50 active:scale-95 ${
+          className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-sm font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-blue-400/50 active:scale-95 ${
             isAutoPlaying
               ? "bg-amber-500/20 text-amber-300 border border-amber-500/30 hover:bg-amber-500/30"
               : "bg-blue-500/20 text-blue-300 border border-blue-500/30 hover:bg-blue-500/30"
@@ -605,32 +610,64 @@ export default function Flashcard({
           aria-label={isAutoPlaying ? "Pause auto-play" : "Start auto-play"}
         >
           {isAutoPlaying ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <rect x="6" y="4" width="4" height="16" rx="1" />
               <rect x="14" y="4" width="4" height="16" rx="1" />
             </svg>
           ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
           )}
-          {isAutoPlaying ? "Pause" : "Auto-Play"}
+          {isAutoPlaying ? "Pause" : "Play"}
         </button>
 
+        {/* Normal / Voice Mode Toggle */}
+        <div className="flex items-center gap-0.5 bg-slate-800/50 border border-slate-700/50 rounded-xl p-1">
+          <button
+            onClick={() => {
+              if (autoPlayTTS) {
+                if (isAutoPlaying) pauseAutoPlay();
+                setAutoPlayTTS(false);
+              }
+            }}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all focus:outline-none ${
+              !autoPlayTTS
+                ? "bg-slate-600/60 text-white"
+                : "text-slate-500 hover:text-slate-300"
+            }`}
+            aria-label="Normal auto-play (silent)"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="6" width="20" height="12" rx="2" />
+              <path d="M12 12h.01" />
+            </svg>
+            Normal
+          </button>
+          <button
+            onClick={() => {
+              if (!autoPlayTTS) {
+                if (isAutoPlaying) pauseAutoPlay();
+                setAutoPlayTTS(true);
+              }
+            }}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all focus:outline-none ${
+              autoPlayTTS
+                ? "bg-blue-500/30 text-blue-300"
+                : "text-slate-500 hover:text-slate-300"
+            }`}
+            aria-label="Voice auto-play (reads aloud)"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+            </svg>
+            Voice
+          </button>
+        </div>
+
         {/* Speed Selector */}
-        <div className="flex items-center gap-1 bg-slate-800/50 border border-slate-700/50 rounded-lg p-1">
+        <div className="flex items-center gap-0.5 bg-slate-800/50 border border-slate-700/50 rounded-lg p-1">
           {(["slow", "medium", "fast"] as AutoPlaySpeed[]).map((speed) => (
             <button
               key={speed}
@@ -640,7 +677,11 @@ export default function Flashcard({
                   ? "bg-slate-600/60 text-white"
                   : "text-slate-500 hover:text-slate-300"
               }`}
-              title={`${speedLabels[speed]} speed (${speedDurations[speed] / 1000}s per side)`}
+              title={
+                autoPlayTTS
+                  ? `${speedLabels[speed]} pauses between speech`
+                  : `${speedLabels[speed]} speed (${speedDurations[speed] / 1000}s per side)`
+              }
               aria-label={`Set speed to ${speedLabels[speed]}`}
             >
               {speedLabels[speed]}
