@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/app/components/JsonLd";
+import AuthorAttribution from "@/app/components/AuthorAttribution";
 import { buildMetadata } from "@/app/lib/metadata";
 import { generateBreadcrumbSchema, generateSpeakableSchema } from "@/app/lib/schema";
 import { siteConfig } from "@/app/lib/metadata";
@@ -176,6 +177,10 @@ export default function AboutPage() {
             </p>
           </div>
         </section>
+
+        <div className="max-w-3xl mx-auto px-4">
+          <AuthorAttribution />
+        </div>
 
         {/* CTA */}
         <div className="max-w-3xl mx-auto px-4 mt-12">

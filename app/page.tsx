@@ -2,6 +2,7 @@ import Link from "next/link";
 import { questions, categories, subcategories } from "./data/questions";
 import { states, stateNameToSlug } from "./data/states";
 import JsonLd from "./components/JsonLd";
+import LeadCapture from "./components/LeadCapture";
 import {
   generateFAQSchema,
   generateCourseSchema,
@@ -59,11 +60,16 @@ const faqs = [
   },
 ];
 
+function slugify(text: string): string {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 // Compute category stats for the category overview section
 const categoryStats = categories.map((cat) => {
   const catQuestions = questions.filter((q) => q.category === cat);
   return {
     name: cat,
+    slug: slugify(cat),
     count: catQuestions.length,
     subcategories: subcategories[cat] || [],
   };
@@ -646,6 +652,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Lead Capture */}
+      <section className="py-12 sm:py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <LeadCapture variant="banner" />
+        </div>
+      </section>
+
       {/* Category Overview */}
       <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4">
@@ -660,7 +673,7 @@ export default function HomePage() {
             {categoryStats.map((cat) => (
               <Link
                 key={cat.name}
-                href="/questions"
+                href={`/questions#${cat.slug}`}
                 className="group p-6 lg:p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-blue-500/30 transition-all"
               >
                 <div className="flex items-center justify-between mb-4">

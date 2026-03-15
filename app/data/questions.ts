@@ -5,6 +5,7 @@ export interface Question {
   category: string;
   subcategory: string;
   is6520: boolean;
+  slug: string;
 }
 
 export const categories = [
@@ -42,6 +43,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "form-of-government-of-the-united-states",
   },
   {
     id: 2,
@@ -50,6 +52,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: true,
+    slug: "supreme-law-of-the-land",
   },
   {
     id: 3,
@@ -63,6 +66,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "what-the-constitution-does",
   },
   {
     id: 4,
@@ -78,6 +82,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "we-the-people-meaning",
   },
   {
     id: 5,
@@ -86,6 +91,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "how-to-change-the-constitution",
   },
   {
     id: 6,
@@ -97,6 +103,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "what-the-bill-of-rights-protects",
   },
   {
     id: 7,
@@ -105,6 +112,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: true,
+    slug: "how-many-amendments",
   },
   {
     id: 8,
@@ -118,6 +126,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "why-declaration-of-independence-is-important",
   },
   {
     id: 9,
@@ -127,6 +136,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "founding-document-colonies-free-from-britain",
   },
   {
     id: 10,
@@ -143,6 +153,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "important-ideas-declaration-and-constitution",
   },
   {
     id: 11,
@@ -152,6 +163,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "life-liberty-pursuit-of-happiness-document",
   },
   {
     id: 12,
@@ -160,6 +172,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: true,
+    slug: "economic-system-of-the-united-states",
   },
   {
     id: 13,
@@ -173,6 +186,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "what-is-the-rule-of-law",
   },
   {
     id: 14,
@@ -191,6 +205,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "documents-that-influenced-the-constitution",
   },
   {
     id: 15,
@@ -203,6 +218,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Principles of American Government",
     is6520: false,
+    slug: "why-three-branches-of-government",
   },
 
   // ==========================================================================
@@ -218,6 +234,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "name-the-three-branches-of-government",
   },
   {
     id: 17,
@@ -227,6 +244,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "president-in-charge-of-which-branch",
   },
   {
     id: 18,
@@ -239,6 +257,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "what-part-of-government-writes-laws",
   },
   {
     id: 19,
@@ -247,6 +266,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "two-parts-of-congress",
   },
   {
     id: 20,
@@ -259,6 +279,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: true,
+    slug: "power-of-congress",
   },
   {
     id: 21,
@@ -267,6 +288,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "how-many-us-senators",
   },
   {
     id: 22,
@@ -275,6 +297,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "how-long-is-a-senator-term",
   },
   {
     id: 23,
@@ -287,6 +310,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "your-states-us-senators",
   },
   {
     id: 24,
@@ -295,6 +319,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "how-many-voting-members-house-of-representatives",
   },
   {
     id: 25,
@@ -304,6 +329,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "how-long-is-a-house-representative-term",
   },
   {
     id: 26,
@@ -313,6 +339,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "why-representatives-serve-shorter-terms",
   },
   {
     id: 27,
@@ -321,6 +348,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "how-many-senators-per-state",
   },
   {
     id: 28,
@@ -332,6 +360,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "why-each-state-has-two-senators",
   },
   {
     id: 29,
@@ -340,6 +369,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "name-your-us-representative",
   },
   {
     id: 30,
@@ -349,6 +379,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: true,
+    slug: "speaker-of-the-house-now",
   },
   {
     id: 31,
@@ -360,6 +391,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "who-does-a-senator-represent",
   },
   {
     id: 32,
@@ -368,6 +400,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "who-elects-us-senators",
   },
   {
     id: 33,
@@ -382,6 +415,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "who-does-a-house-representative-represent",
   },
   {
     id: 34,
@@ -390,6 +424,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "who-elects-house-representatives",
   },
   {
     id: 35,
@@ -403,6 +438,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "why-some-states-have-more-representatives",
   },
   {
     id: 36,
@@ -412,6 +448,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: true,
+    slug: "president-elected-for-how-many-years",
   },
   {
     id: 37,
@@ -424,6 +461,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "why-president-can-serve-only-two-terms",
   },
   {
     id: 38,
@@ -433,6 +471,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: true,
+    slug: "name-of-the-president-now",
   },
   {
     id: 39,
@@ -442,6 +481,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: true,
+    slug: "name-of-the-vice-president-now",
   },
   {
     id: 40,
@@ -451,6 +491,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "who-becomes-president-if-president-cannot-serve",
   },
   {
     id: 41,
@@ -466,6 +507,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "power-of-the-president",
   },
   {
     id: 42,
@@ -474,6 +516,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "commander-in-chief-of-the-military",
   },
   {
     id: 43,
@@ -482,6 +525,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "who-signs-bills-to-become-laws",
   },
   {
     id: 44,
@@ -490,6 +534,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: true,
+    slug: "who-vetoes-bills",
   },
   {
     id: 45,
@@ -498,6 +543,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "who-appoints-federal-judges",
   },
   {
     id: 46,
@@ -510,6 +556,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "parts-of-the-executive-branch",
   },
   {
     id: 47,
@@ -518,6 +565,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "what-does-the-presidents-cabinet-do",
   },
   {
     id: 48,
@@ -549,6 +597,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "two-cabinet-level-positions",
   },
   {
     id: 49,
@@ -560,6 +609,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "why-electoral-college-is-important",
   },
   {
     id: 50,
@@ -568,6 +618,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "part-of-the-judicial-branch",
   },
   {
     id: 51,
@@ -581,6 +632,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "what-does-the-judicial-branch-do",
   },
   {
     id: 52,
@@ -589,6 +641,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: true,
+    slug: "highest-court-in-the-united-states",
   },
   {
     id: 53,
@@ -597,6 +650,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "how-many-seats-on-supreme-court",
   },
   {
     id: 54,
@@ -606,6 +660,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "how-many-justices-needed-to-decide-a-case",
   },
   {
     id: 55,
@@ -618,6 +673,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "how-long-do-supreme-court-justices-serve",
   },
   {
     id: 56,
@@ -629,6 +685,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "why-supreme-court-justices-serve-for-life",
   },
   {
     id: 57,
@@ -637,6 +694,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "chief-justice-of-the-united-states-now",
   },
   {
     id: 58,
@@ -653,6 +711,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "power-only-for-the-federal-government",
   },
   {
     id: 59,
@@ -667,6 +726,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "power-only-for-the-states",
   },
   {
     id: 60,
@@ -677,6 +737,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "purpose-of-the-10th-amendment",
   },
   {
     id: 61,
@@ -688,6 +749,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: true,
+    slug: "governor-of-your-state-now",
   },
   {
     id: 62,
@@ -699,6 +761,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "System of Government",
     is6520: false,
+    slug: "capital-of-your-state",
   },
 
   // ==========================================================================
@@ -717,6 +780,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: false,
+    slug: "four-voting-amendments-describe-one",
   },
   {
     id: 64,
@@ -730,6 +794,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: false,
+    slug: "who-can-vote-run-for-office-serve-on-jury",
   },
   {
     id: 65,
@@ -746,6 +811,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: false,
+    slug: "three-rights-of-everyone-in-the-united-states",
   },
   {
     id: 66,
@@ -755,6 +821,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: true,
+    slug: "pledge-of-allegiance-loyalty",
   },
   {
     id: 67,
@@ -771,6 +838,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: false,
+    slug: "oath-of-allegiance-promises",
   },
   {
     id: 68,
@@ -783,6 +851,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: false,
+    slug: "how-to-become-a-united-states-citizen",
   },
   {
     id: 69,
@@ -803,6 +872,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: false,
+    slug: "examples-of-civic-participation",
   },
   {
     id: 70,
@@ -818,6 +888,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: false,
+    slug: "ways-americans-can-serve-their-country",
   },
   {
     id: 71,
@@ -831,6 +902,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: false,
+    slug: "why-important-to-pay-federal-taxes",
   },
   {
     id: 72,
@@ -844,6 +916,7 @@ export const questions: Question[] = [
     category: "American Government",
     subcategory: "Rights and Responsibilities",
     is6520: false,
+    slug: "why-register-for-selective-service",
   },
 
   // ==========================================================================
@@ -863,6 +936,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "why-colonists-came-to-america",
   },
   {
     id: 74,
@@ -871,6 +945,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: true,
+    slug: "who-lived-in-america-before-europeans",
   },
   {
     id: 75,
@@ -879,6 +954,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "what-group-was-taken-and-sold-as-slaves",
   },
   {
     id: 76,
@@ -892,6 +968,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "war-to-win-independence-from-britain",
   },
   {
     id: 77,
@@ -912,6 +989,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "reason-americans-declared-independence",
   },
   {
     id: 78,
@@ -920,6 +998,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: true,
+    slug: "who-wrote-the-declaration-of-independence",
   },
   {
     id: 79,
@@ -928,6 +1007,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "when-was-declaration-of-independence-adopted",
   },
   {
     id: 80,
@@ -944,6 +1024,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "important-events-of-the-american-revolution",
   },
   {
     id: 81,
@@ -966,6 +1047,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "13-original-states-name-five",
   },
   {
     id: 82,
@@ -974,6 +1056,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "founding-document-written-in-1787",
   },
   {
     id: 83,
@@ -988,6 +1071,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "federalist-papers-writers",
   },
   {
     id: 84,
@@ -999,6 +1083,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "why-federalist-papers-were-important",
   },
   {
     id: 85,
@@ -1014,6 +1099,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "benjamin-franklin-famous-for",
   },
   {
     id: 86,
@@ -1028,6 +1114,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: true,
+    slug: "george-washington-famous-for",
   },
   {
     id: 87,
@@ -1044,6 +1131,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "thomas-jefferson-famous-for",
   },
   {
     id: 88,
@@ -1058,6 +1146,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "james-madison-famous-for",
   },
   {
     id: 89,
@@ -1073,6 +1162,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "Colonial Period and Independence",
     is6520: false,
+    slug: "alexander-hamilton-famous-for",
   },
 
   // ==========================================================================
@@ -1086,6 +1176,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: false,
+    slug: "territory-bought-from-france-in-1803",
   },
   {
     id: 91,
@@ -1099,6 +1190,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: false,
+    slug: "war-fought-in-the-1800s",
   },
   {
     id: 92,
@@ -1107,6 +1199,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: false,
+    slug: "war-between-the-north-and-south",
   },
   {
     id: 93,
@@ -1125,6 +1218,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: false,
+    slug: "important-events-of-the-civil-war",
   },
   {
     id: 94,
@@ -1140,6 +1234,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: true,
+    slug: "abraham-lincoln-famous-for",
   },
   {
     id: 95,
@@ -1153,6 +1248,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: false,
+    slug: "what-did-emancipation-proclamation-do",
   },
   {
     id: 96,
@@ -1161,6 +1257,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: false,
+    slug: "what-war-ended-slavery",
   },
   {
     id: 97,
@@ -1170,6 +1267,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: false,
+    slug: "14th-amendment-citizenship",
   },
   {
     id: 98,
@@ -1183,6 +1281,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: false,
+    slug: "when-did-all-men-get-the-right-to-vote",
   },
   {
     id: 99,
@@ -1199,6 +1298,7 @@ export const questions: Question[] = [
     category: "American History",
     subcategory: "1800s",
     is6520: false,
+    slug: "leader-of-womens-rights-movement-1800s",
   },
 
   // ==========================================================================
@@ -1219,6 +1319,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "war-fought-in-the-1900s",
   },
   {
     id: 101,
@@ -1232,6 +1333,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "why-united-states-entered-world-war-i",
   },
   {
     id: 102,
@@ -1245,6 +1347,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "when-did-all-women-get-the-right-to-vote",
   },
   {
     id: 103,
@@ -1254,6 +1357,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "what-was-the-great-depression",
   },
   {
     id: 104,
@@ -1266,6 +1370,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "when-did-the-great-depression-start",
   },
   {
     id: 105,
@@ -1276,6 +1381,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "president-during-great-depression-and-world-war-ii",
   },
   {
     id: 106,
@@ -1290,6 +1396,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "why-united-states-entered-world-war-ii",
   },
   {
     id: 107,
@@ -1305,6 +1412,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "dwight-eisenhower-famous-for",
   },
   {
     id: 108,
@@ -1315,6 +1423,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "main-rival-during-the-cold-war",
   },
   {
     id: 109,
@@ -1325,6 +1434,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "main-concern-during-the-cold-war",
   },
   {
     id: 110,
@@ -1334,6 +1444,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "why-united-states-entered-korean-war",
   },
   {
     id: 111,
@@ -1343,6 +1454,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "why-united-states-entered-vietnam-war",
   },
   {
     id: 112,
@@ -1352,6 +1464,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "what-did-the-civil-rights-movement-do",
   },
   {
     id: 113,
@@ -1366,6 +1479,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: true,
+    slug: "martin-luther-king-jr-famous-for",
   },
   {
     id: 114,
@@ -1376,6 +1490,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "why-united-states-entered-persian-gulf-war",
   },
   {
     id: 115,
@@ -1391,6 +1506,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: true,
+    slug: "what-happened-on-september-11-2001",
   },
   {
     id: 116,
@@ -1405,6 +1521,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "military-conflict-after-september-11",
   },
   {
     id: 117,
@@ -1440,6 +1557,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "american-indian-tribe-in-united-states",
   },
   {
     id: 118,
@@ -1457,6 +1575,7 @@ export const questions: Question[] = [
     subcategory:
       "Recent American History and Other Important Historical Information",
     is6520: false,
+    slug: "example-of-american-innovation",
   },
 
   // ==========================================================================
@@ -1469,6 +1588,7 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Symbols",
     is6520: false,
+    slug: "capital-of-the-united-states",
   },
   {
     id: 120,
@@ -1483,6 +1603,7 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Symbols",
     is6520: false,
+    slug: "where-is-the-statue-of-liberty",
   },
   {
     id: 121,
@@ -1494,6 +1615,7 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Symbols",
     is6520: true,
+    slug: "why-does-the-flag-have-13-stripes",
   },
   {
     id: 122,
@@ -1506,6 +1628,7 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Symbols",
     is6520: false,
+    slug: "why-does-the-flag-have-50-stars",
   },
   {
     id: 123,
@@ -1514,6 +1637,7 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Symbols",
     is6520: false,
+    slug: "name-of-the-national-anthem",
   },
   {
     id: 124,
@@ -1523,6 +1647,7 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Symbols",
     is6520: false,
+    slug: "e-pluribus-unum-meaning",
   },
 
   // ==========================================================================
@@ -1538,6 +1663,7 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Holidays",
     is6520: false,
+    slug: "what-is-independence-day",
   },
   {
     id: 126,
@@ -1558,6 +1684,7 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Holidays",
     is6520: true,
+    slug: "three-national-us-holidays",
   },
   {
     id: 127,
@@ -1568,6 +1695,7 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Holidays",
     is6520: false,
+    slug: "what-is-memorial-day",
   },
   {
     id: 128,
@@ -1579,5 +1707,10 @@ export const questions: Question[] = [
     category: "Symbols and Holidays",
     subcategory: "Holidays",
     is6520: false,
+    slug: "what-is-veterans-day",
   },
 ];
+
+export function getQuestionBySlug(slug: string): Question | undefined {
+  return questions.find((q) => q.slug === slug);
+}

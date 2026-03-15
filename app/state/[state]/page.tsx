@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { states, getStateBySlug, stateNameToSlug } from "@/app/data/states";
 import { questions } from "@/app/data/questions";
+import { stateFacts } from "@/app/data/state-facts";
+import { uscisOffices } from "@/app/data/uscis-offices";
 import JsonLd from "@/app/components/JsonLd";
 import { buildMetadata } from "@/app/lib/metadata";
 import { generateBreadcrumbSchema, generateFAQSchema, generateSpeakableSchema } from "@/app/lib/schema";
@@ -64,6 +66,12 @@ function getStateSpecificQuestions(stateInfo: {
   }).filter(Boolean);
 }
 
+function ordinal(n: number): string {
+  const s = ["th", "st", "nd", "rd"];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
 export default async function StatePage({
   params,
 }: {
@@ -81,6 +89,8 @@ export default async function StatePage({
 
   const stateQuestions = getStateSpecificQuestions(stateInfo);
   const isDC = stateInfo.abbreviation === "DC";
+  const facts = stateFacts[stateInfo.name];
+  const offices = uscisOffices[stateInfo.name] || [];
 
   const stateFaqs = [
     {
@@ -96,6 +106,22 @@ export default async function StatePage({
     {
       question: `How do I prepare for the citizenship test in ${stateInfo.name}?`,
       answer: `To prepare for the USCIS citizenship test in ${stateInfo.name}, study all 128 civics questions with state-specific answers for your senators (${isDC ? "DC has no voting senators" : `${stateInfo.senators[0]} and ${stateInfo.senators[1]}`}), governor (${isDC ? "Mayor Muriel Bowser" : stateInfo.governor}), and capital (${stateInfo.capital}). Use flashcards with spaced repetition and take practice quizzes to build confidence before your naturalization interview.`,
+    },
+    {
+      question: `How many electoral votes does ${stateInfo.name} have?`,
+      answer: `${stateInfo.name} has ${facts.electoralVotes} electoral votes. Electoral votes are based on the total number of senators (2) plus representatives (${facts.usRepresentatives}) in Congress.${isDC ? " Washington, D.C. has 3 electoral votes as granted by the 23rd Amendment." : ""}`,
+    },
+    {
+      question: `Where is the USCIS office in ${stateInfo.name}?`,
+      answer: offices.length > 0
+        ? `USCIS has ${offices.length === 1 ? "a field office" : `${offices.length} offices`} in ${stateInfo.name}: ${offices.map(o => o.city).join(", ")}. Visit uscis.gov to schedule your naturalization interview appointment.`
+        : `Visit uscis.gov to find the nearest USCIS office for ${stateInfo.name} residents.`,
+    },
+    {
+      question: `When did ${stateInfo.name} become a state?`,
+      answer: isDC
+        ? "Washington, D.C. is not a state — it is a federal district established in 1790 as the nation's capital under Article I, Section 8 of the Constitution."
+        : `${stateInfo.name} became the ${ordinal(facts.statehood.order)} state to join the Union in ${facts.statehood.year}.`,
     },
   ];
 
@@ -242,6 +268,77 @@ export default async function StatePage({
             })}
           </div>
         </div>
+
+        {/* State Civics Facts */}
+        {facts && (
+          <div className="max-w-3xl mx-auto px-4 mt-8">
+            <h2 className="text-xl font-bold mb-2">
+              {stateInfo.name} Civics Facts
+            </h2>
+            <p className="text-slate-400 text-sm mb-4">
+              Key facts about {stateInfo.name} that may help you prepare for your citizenship test.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div className="bg-slate-900/30 border border-slate-800/50 rounded-xl p-4">
+                <dt className="text-xs font-medium text-slate-500 uppercase tracking-wider">Statehood</dt>
+                <dd className="mt-1 text-white font-medium">
+                  {facts.statehood.order > 0
+                    ? `${ordinal(facts.statehood.order)} state, admitted ${facts.statehood.year}`
+                    : `Federal district established ${facts.statehood.year}`}
+                </dd>
+              </div>
+              <div className="bg-slate-900/30 border border-slate-800/50 rounded-xl p-4">
+                <dt className="text-xs font-medium text-slate-500 uppercase tracking-wider">Population</dt>
+                <dd className="mt-1 text-white font-medium">{facts.population}</dd>
+              </div>
+              <div className="bg-slate-900/30 border border-slate-800/50 rounded-xl p-4">
+                <dt className="text-xs font-medium text-slate-500 uppercase tracking-wider">Electoral Votes</dt>
+                <dd className="mt-1 text-white font-medium">{facts.electoralVotes}</dd>
+              </div>
+              <div className="bg-slate-900/30 border border-slate-800/50 rounded-xl p-4">
+                <dt className="text-xs font-medium text-slate-500 uppercase tracking-wider">U.S. Representatives</dt>
+                <dd className="mt-1 text-white font-medium">{facts.usRepresentatives}</dd>
+              </div>
+            </div>
+            <div className="mt-3 bg-blue-500/5 border border-blue-500/20 rounded-xl p-4">
+              <p className="text-sm text-slate-300">
+                <span className="text-blue-400 font-medium">Did you know?</span>{" "}
+                {facts.interestingFact}
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* USCIS Offices */}
+        {offices && offices.length > 0 && (
+          <div className="max-w-3xl mx-auto px-4 mt-8">
+            <h2 className="text-xl font-bold mb-2">
+              USCIS Offices in {stateInfo.name}
+            </h2>
+            <p className="text-slate-400 text-sm mb-4">
+              USCIS field offices where you may attend your naturalization interview.
+            </p>
+            <div className="space-y-2">
+              {offices.map((office) => (
+                <div key={office.city} className="flex items-center gap-3 bg-slate-900/30 border border-slate-800/50 rounded-xl p-4">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium text-sm">{office.city}</p>
+                    <p className="text-slate-500 text-xs">{office.type}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-slate-500 mt-3">
+              Visit <a href="https://www.uscis.gov/about-us/find-a-uscis-office/field-offices" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline underline-offset-2">uscis.gov</a> for current office locations and appointment scheduling.
+            </p>
+          </div>
+        )}
 
         {/* CTA Section */}
         <div className="max-w-3xl mx-auto px-4 mt-12">

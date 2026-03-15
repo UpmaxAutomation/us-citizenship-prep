@@ -594,6 +594,14 @@ export default function ReadingWritingPage() {
                 View All 128 Questions
               </Link>
             </div>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-4">
+              <Link
+                href="/interview-guide"
+                className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                Interview Day Guide
+              </Link>
+            </div>
           </div>
         </div>
       </div>

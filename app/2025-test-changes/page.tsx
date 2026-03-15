@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/app/components/JsonLd";
+import AuthorAttribution from "@/app/components/AuthorAttribution";
 import { buildMetadata } from "@/app/lib/metadata";
 import {
   generateBreadcrumbSchema,
@@ -628,6 +629,10 @@ export default function TestChangesPage() {
             ))}
           </div>
         </section>
+
+        <div className="max-w-4xl mx-auto px-4">
+          <AuthorAttribution />
+        </div>
 
         {/* CTA Section */}
         <div className="max-w-4xl mx-auto px-4 mt-16">

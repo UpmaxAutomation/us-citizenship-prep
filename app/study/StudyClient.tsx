@@ -19,6 +19,7 @@ type StudyFilter = "all" | "new" | "review" | "mastered" | "6520";
 export default function StudyClient() {
   const [mode, setMode] = useState<Mode>("study");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [studyFilter, setStudyFilter] = useState<StudyFilter>("all");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [quizResults, setQuizResults] = useState<{
@@ -88,6 +89,10 @@ export default function StudyClient() {
       filtered = filtered.filter((q) => q.category === selectedCategory);
     }
 
+    if (selectedSubcategory) {
+      filtered = filtered.filter((q) => q.subcategory === selectedSubcategory);
+    }
+
     if (studyFilter === "6520") {
       filtered = filtered.filter((q) => q.is6520);
     } else if (studyFilter === "new") {
@@ -107,13 +112,22 @@ export default function StudyClient() {
     }
 
     return filtered;
-  }, [selectedCategory, studyFilter, personalizedQuestions, getQuestionStatus, getDueForReview]);
+  }, [selectedCategory, selectedSubcategory, studyFilter, personalizedQuestions, getQuestionStatus, getDueForReview]);
 
   // Category counts
   const questionCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     categories.forEach((cat) => {
       counts[cat] = questions.filter((q) => q.category === cat).length;
+    });
+    return counts;
+  }, []);
+
+  // Subcategory counts
+  const subcategoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    questions.forEach((q) => {
+      counts[q.subcategory] = (counts[q.subcategory] || 0) + 1;
     });
     return counts;
   }, []);
@@ -144,7 +158,7 @@ export default function StudyClient() {
   // Reset index when filter changes
   useEffect(() => {
     setCurrentIndex(0);
-  }, [selectedCategory, studyFilter]);
+  }, [selectedCategory, selectedSubcategory, studyFilter]);
 
   // Quiz handlers
   const handleQuizComplete = useCallback(
@@ -302,8 +316,11 @@ export default function StudyClient() {
             <CategoryFilter
               categories={[...categories]}
               selectedCategory={selectedCategory}
+              selectedSubcategory={selectedSubcategory}
               onSelect={setSelectedCategory}
+              onSelectSubcategory={setSelectedSubcategory}
               questionCounts={questionCounts}
+              subcategoryCounts={subcategoryCounts}
             />
 
             {/* Study Filter */}
@@ -374,8 +391,11 @@ export default function StudyClient() {
             <CategoryFilter
               categories={[...categories]}
               selectedCategory={selectedCategory}
+              selectedSubcategory={selectedSubcategory}
               onSelect={setSelectedCategory}
+              onSelectSubcategory={setSelectedSubcategory}
               questionCounts={questionCounts}
+              subcategoryCounts={subcategoryCounts}
             />
 
             {/* Auto-listen toggle */}

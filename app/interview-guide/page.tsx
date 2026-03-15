@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/app/components/JsonLd";
+import AuthorAttribution from "@/app/components/AuthorAttribution";
 import { buildMetadata } from "@/app/lib/metadata";
 import {
   generateBreadcrumbSchema,
@@ -671,6 +672,10 @@ export default function InterviewGuidePage() {
           </div>
         </section>
 
+        <div className="max-w-4xl mx-auto px-4">
+          <AuthorAttribution />
+        </div>
+
         {/* ============================================= */}
         {/* CTA Section                                   */}
         {/* ============================================= */}
@@ -710,6 +715,12 @@ export default function InterviewGuidePage() {
                 className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
               >
                 All 128 Questions
+              </Link>
+              <Link
+                href="/2025-test-changes"
+                className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                2025 Test Changes
               </Link>
             </div>
           </div>

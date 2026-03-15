@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/app/components/JsonLd";
+import AuthorAttribution from "@/app/components/AuthorAttribution";
 import { buildMetadata } from "@/app/lib/metadata";
 import {
   generateBreadcrumbSchema,
@@ -460,6 +461,10 @@ export default function SeniorExemptionPage() {
           </div>
         </section>
 
+        <div className="max-w-4xl mx-auto px-4">
+          <AuthorAttribution />
+        </div>
+
         {/* Bottom CTA */}
         <section className="max-w-4xl mx-auto px-4 mt-16">
           <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 text-center">
@@ -494,6 +499,12 @@ export default function SeniorExemptionPage() {
                 className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 transition-colors w-full sm:w-auto"
               >
                 Reading & Writing
+              </Link>
+              <Link
+                href="/2025-test-changes"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 transition-colors w-full sm:w-auto"
+              >
+                2025 Test Changes
               </Link>
             </div>
           </div>
