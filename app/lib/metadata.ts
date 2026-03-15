@@ -11,10 +11,12 @@ export function buildMetadata({
   title,
   description,
   path = "/",
+  ogType,
 }: {
   title?: string;
   description?: string;
   path?: string;
+  ogType?: string;
 }): Metadata {
   // For <title> tag: just pass the raw title — layout.tsx template adds "| US Citizenship Test Prep"
   // For OG/Twitter: use full title with site name (social cards don't use the template)
@@ -23,6 +25,10 @@ export function buildMetadata({
     : `${siteConfig.name} | All 128 USCIS Civics Questions (2025)`;
   const pageDescription = description || siteConfig.description;
   const url = `${siteConfig.url}${path}`;
+
+  const ogImageUrl = title
+    ? `${siteConfig.url}/api/og?title=${encodeURIComponent(title)}${ogType ? `&type=${encodeURIComponent(ogType)}` : ""}`
+    : `${siteConfig.url}/og-image.png`;
 
   const meta: Metadata = {
     description: pageDescription,
@@ -35,7 +41,7 @@ export function buildMetadata({
       type: "website",
       images: [
         {
-          url: `${siteConfig.url}/og-image.png`,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: "US Citizenship Test Prep - All 128 USCIS Questions",
@@ -46,7 +52,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title: ogTitle,
       description: pageDescription,
-      images: [`${siteConfig.url}/og-image.png`],
+      images: [ogImageUrl],
     },
     alternates: {
       canonical: url,

@@ -90,3 +90,35 @@
     animation: none;
   }
 }
+
+@media print {
+  nav, footer, .print\:hidden {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  * {
+    color: black !important;
+    border-color: #ccc !important;
+    background: white !important;
+  }
+  h1, h2, h3, h4 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+  .max-w-3xl, .max-w-7xl {
+    max-width: 100% !important;
+  }
+  details {
+    break-inside: avoid;
+  }
+  details[open] summary {
+    font-weight: bold;
+  }
+}

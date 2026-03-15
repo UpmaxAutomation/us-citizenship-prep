@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function SiteNav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [processOpen, setProcessOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
 
   return (
@@ -37,6 +38,59 @@ export default function SiteNav() {
           >
             All 128 Questions
           </Link>
+          {/* Process dropdown */}
+          <div className="relative">
+            <button
+              type="button"
+              className="text-xs text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+              onClick={() => setProcessOpen((prev) => !prev)}
+              onBlur={() => setTimeout(() => setProcessOpen(false), 150)}
+              aria-expanded={processOpen}
+              aria-haspopup="true"
+            >
+              Process
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={`transition-transform ${processOpen ? "rotate-180" : ""}`}
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div className={`absolute right-0 top-full mt-2 w-48 rounded-xl bg-slate-900 border border-slate-800 shadow-xl shadow-black/20 py-1 z-50 ${processOpen ? "block" : "hidden"}`}>
+                <Link
+                  href="/eligibility-checker"
+                  className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+                >
+                  Eligibility Checker
+                </Link>
+                <Link
+                  href="/n400-guide"
+                  className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+                >
+                  N-400 Guide
+                </Link>
+                <Link
+                  href="/citizenship-timeline"
+                  className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+                >
+                  Timeline
+                </Link>
+                <Link
+                  href="/citizenship-costs"
+                  className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+                >
+                  Costs
+                </Link>
+              </div>
+          </div>
           {/* More dropdown */}
           <div className="relative">
             <button
@@ -87,6 +141,18 @@ export default function SiteNav() {
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
                   Senior 65/20
+                </Link>
+                <Link
+                  href="/blog"
+                  className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/about"
+                  className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+                >
+                  About
                 </Link>
               </div>
           </div>
@@ -160,6 +226,34 @@ export default function SiteNav() {
               All 128 Questions
             </Link>
             <Link
+              href="/eligibility-checker"
+              className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Eligibility Checker
+            </Link>
+            <Link
+              href="/n400-guide"
+              className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              N-400 Guide
+            </Link>
+            <Link
+              href="/citizenship-timeline"
+              className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Timeline
+            </Link>
+            <Link
+              href="/citizenship-costs"
+              className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Costs
+            </Link>
+            <Link
               href="/reading-writing"
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
@@ -186,6 +280,20 @@ export default function SiteNav() {
               onClick={() => setMenuOpen(false)}
             >
               Senior 65/20
+            </Link>
+            <Link
+              href="/blog"
+              className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/about"
+              className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              About
             </Link>
           </div>
         </div>

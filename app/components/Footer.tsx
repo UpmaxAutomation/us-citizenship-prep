@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900/50 border-t border-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-6 gap-8">
           {/* Study Tools */}
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Study Tools</h4>
@@ -16,6 +16,31 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Study Guide */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Study Guide</h4>
+            <ul className="space-y-2">
+              <li><Link href="/study-guide" className="text-sm text-slate-400 hover:text-white transition-colors">Study Guide</Link></li>
+              <li><Link href="/study-guide/american-government" className="text-sm text-slate-400 hover:text-white transition-colors">American Government</Link></li>
+              <li><Link href="/study-guide/american-history" className="text-sm text-slate-400 hover:text-white transition-colors">American History</Link></li>
+              <li><Link href="/study-guide/symbols-and-holidays" className="text-sm text-slate-400 hover:text-white transition-colors">Symbols & Holidays</Link></li>
+            </ul>
+          </div>
+
+          {/* Naturalization Process */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">Naturalization Process</h4>
+            <ul className="space-y-2">
+              <li><Link href="/eligibility-checker" className="text-sm text-slate-400 hover:text-white transition-colors">Eligibility Checker</Link></li>
+              <li><Link href="/n400-guide" className="text-sm text-slate-400 hover:text-white transition-colors">N-400 Guide</Link></li>
+              <li><Link href="/citizenship-timeline" className="text-sm text-slate-400 hover:text-white transition-colors">Timeline</Link></li>
+              <li><Link href="/citizenship-costs" className="text-sm text-slate-400 hover:text-white transition-colors">Costs & Fees</Link></li>
+              <li><Link href="/interview-checklist" className="text-sm text-slate-400 hover:text-white transition-colors">Interview Checklist</Link></li>
+              <li><Link href="/oath-of-allegiance" className="text-sm text-slate-400 hover:text-white transition-colors">Oath of Allegiance</Link></li>
+              <li><Link href="/faq" className="text-sm text-slate-400 hover:text-white transition-colors">FAQ</Link></li>
+            </ul>
+          </div>
+
           {/* Resources */}
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Resources</h4>
@@ -24,6 +49,7 @@ export default function Footer() {
               <li><Link href="/2025-test-changes" className="text-sm text-slate-400 hover:text-white transition-colors">2025 Test Changes</Link></li>
               <li><Link href="/senior-exemption" className="text-sm text-slate-400 hover:text-white transition-colors">Senior 65/20</Link></li>
               <li><Link href="/#states" className="text-sm text-slate-400 hover:text-white transition-colors">State-Specific Prep</Link></li>
+              <li><Link href="/blog" className="text-sm text-slate-400 hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
 
