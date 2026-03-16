@@ -108,6 +108,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/daily-challenge`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "daily" as const,
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/printable-study-guide`,
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
@@ -185,5 +191,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   ];
 
-  return [...staticPages, ...statePages, ...questionPages, ...studyGuidePages, ...blogPages];
+  const spanishPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/es`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/es/estudio`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/es/preguntas`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/es/examen-de-practica`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+  ];
+
+  return [...staticPages, ...spanishPages, ...statePages, ...questionPages, ...studyGuidePages, ...blogPages];
 }

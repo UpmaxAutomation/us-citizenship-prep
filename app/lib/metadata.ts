@@ -12,11 +12,13 @@ export function buildMetadata({
   description,
   path = "/",
   ogType,
+  locale,
 }: {
   title?: string;
   description?: string;
   path?: string;
   ogType?: string;
+  locale?: "en" | "es";
 }): Metadata {
   // For <title> tag: just pass the raw title — layout.tsx template adds "| US Citizenship Test Prep"
   // For OG/Twitter: use full title with site name (social cards don't use the template)
@@ -56,6 +58,10 @@ export function buildMetadata({
     },
     alternates: {
       canonical: url,
+      languages: {
+        "en": locale === "es" ? `${siteConfig.url}${path.replace(/^\/es/, "").replace(/\/estudio/, "/study").replace(/\/preguntas/, "/questions").replace(/\/examen-de-practica/, "/practice-test") || "/"}` : `${siteConfig.url}${path}`,
+        "es": locale === "es" ? url : `${siteConfig.url}/es${path === "/" ? "" : path.replace(/^\/study/, "/estudio").replace(/^\/questions$/, "/preguntas").replace(/^\/practice-test/, "/examen-de-practica")}`,
+      },
     },
   };
 

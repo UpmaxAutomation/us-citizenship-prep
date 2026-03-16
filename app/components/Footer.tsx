@@ -67,6 +67,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-white mb-4">About</h4>
             <ul className="space-y-2 mb-3">
               <li><Link href="/about" className="text-sm text-slate-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/es" className="text-sm text-slate-400 hover:text-white transition-colors">Español</Link></li>
             </ul>
             <p className="text-sm text-slate-400 mb-3">
               Free study tools for the 2025 USCIS citizenship test. All 128 official civics questions with flashcards, practice tests, and more.

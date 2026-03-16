@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function SiteNav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,6 +38,12 @@ export default function SiteNav() {
             className="text-xs text-slate-400 hover:text-white transition-colors"
           >
             All 128 Questions
+          </Link>
+          <Link
+            href="/daily-challenge"
+            className="text-xs text-slate-400 hover:text-white transition-colors"
+          >
+            Daily Challenge
           </Link>
           {/* Process dropdown */}
           <div className="relative">
@@ -156,6 +163,7 @@ export default function SiteNav() {
                 </Link>
               </div>
           </div>
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile hamburger button */}
@@ -224,6 +232,13 @@ export default function SiteNav() {
               onClick={() => setMenuOpen(false)}
             >
               All 128 Questions
+            </Link>
+            <Link
+              href="/daily-challenge"
+              className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Daily Challenge
             </Link>
             <Link
               href="/eligibility-checker"
@@ -295,6 +310,9 @@ export default function SiteNav() {
             >
               About
             </Link>
+            <div className="border-t border-slate-800/50 mt-2 pt-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
     </nav>
