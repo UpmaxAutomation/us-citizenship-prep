@@ -156,9 +156,8 @@ export default function StudyClient() {
   }, [filteredQuestions.length]);
 
   // Reset index when filter changes
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [selectedCategory, selectedSubcategory, studyFilter]);
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { setCurrentIndex(0); }, [selectedCategory, selectedSubcategory, studyFilter]);
 
   // Quiz handlers
   const handleQuizComplete = useCallback(

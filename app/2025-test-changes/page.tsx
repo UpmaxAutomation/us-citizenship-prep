@@ -9,6 +9,7 @@ import {
   generateSpeakableSchema,
 } from "@/app/lib/schema";
 import { siteConfig } from "@/app/lib/metadata";
+import Constitution from "@/app/components/illustrations/Constitution";
 
 export const metadata: Metadata = buildMetadata({
   title:
@@ -196,12 +197,15 @@ export default function TestChangesPage() {
 
         {/* Header */}
         <header className="max-w-4xl mx-auto px-4 mt-8">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            2025 USCIS Citizenship Test Changes{" "}
-            <span className="text-blue-400">
-              — Everything You Need to Know
-            </span>
-          </h1>
+          <div className="flex items-start justify-between gap-4">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              2025 USCIS Citizenship Test Changes{" "}
+              <span className="text-blue-400">
+                — Everything You Need to Know
+              </span>
+            </h1>
+            <Constitution className="hidden sm:block w-16 h-16 opacity-20 flex-shrink-0" />
+          </div>
           <p
             data-speakable="true"
             className="mt-4 text-slate-400 text-lg leading-relaxed max-w-3xl"

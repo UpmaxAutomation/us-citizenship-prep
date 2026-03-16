@@ -5,6 +5,7 @@ import Link from "next/link";
 import { questions, type Question } from "@/app/data/questions";
 import { getStateByAbbreviation } from "@/app/data/states";
 import { useSettings } from "@/app/hooks/useSettings";
+import ShareButton from "@/app/components/ShareButton";
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -115,7 +116,6 @@ export default function PracticeTest() {
   const [correctCount, setCorrectCount] = useState(0);
   const [results, setResults] = useState<QuestionResult[]>([]);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
-  const [copied, setCopied] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // ---- Timer ----------------------------------------------------------------
@@ -144,7 +144,6 @@ export default function PracticeTest() {
     setCorrectCount(0);
     setResults([]);
     setElapsedSeconds(0);
-    setCopied(false);
     setPhase("active");
   }, [personalizedQuestions]);
 
@@ -212,17 +211,6 @@ export default function PracticeTest() {
     setSelectedAnswer(null);
     setIsRevealed(false);
   }, [phase, currentIndex, testQuestions.length, correctCount]);
-
-  const handleShare = useCallback(async () => {
-    const text = `I scored ${correctCount}/${results.length} on the US citizenship practice test! Try it: https://www.uscitizenshiptestprep.com/practice-test`;
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // Fallback: do nothing if clipboard fails
-    }
-  }, [correctCount, results.length]);
 
   // ---- Derived values -------------------------------------------------------
 
@@ -514,12 +502,12 @@ export default function PracticeTest() {
           >
             Try Again
           </button>
-          <button
-            onClick={handleShare}
-            className="flex-1 py-3.5 rounded-xl bg-slate-800/50 border border-slate-700/50 text-slate-300 font-medium hover:bg-slate-800 transition-all"
-          >
-            {copied ? "Copied!" : "Share Result"}
-          </button>
+          <ShareButton
+            title="US Citizenship Practice Test Results"
+            text={`I scored ${correctCount}/${results.length} on the US citizenship practice test!`}
+            url="https://www.uscitizenshiptestprep.com/practice-test"
+            className="flex-1 justify-center py-3.5 rounded-xl"
+          />
         </div>
       </div>
 

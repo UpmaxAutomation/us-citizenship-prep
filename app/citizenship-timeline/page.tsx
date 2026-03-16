@@ -10,6 +10,8 @@ import {
   generateHowToSchema,
   generateSpeakableSchema,
 } from "@/app/lib/schema";
+import VotingBallot from "@/app/components/illustrations/VotingBallot";
+import USFlag from "@/app/components/illustrations/USFlag";
 
 export const metadata: Metadata = buildMetadata({
   title: "US Citizenship Timeline: How Long Naturalization Takes (2025)",
@@ -183,12 +185,18 @@ export default function CitizenshipTimelinePage() {
 
         {/* Header */}
         <header className="max-w-3xl mx-auto px-4 mt-8">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            US Citizenship Timeline:{" "}
-            <span className="text-blue-400">
-              From Application to Oath
-            </span>
-          </h1>
+          <div className="flex items-start justify-between gap-4">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              US Citizenship Timeline:{" "}
+              <span className="text-blue-400">
+                From Application to Oath
+              </span>
+            </h1>
+            <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
+              <VotingBallot className="w-12 h-12 opacity-20" />
+              <USFlag className="w-12 h-12 opacity-20" />
+            </div>
+          </div>
           <p
             data-speakable="true"
             className="mt-4 text-slate-400 text-lg leading-relaxed"

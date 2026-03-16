@@ -9,6 +9,8 @@ import {
   generateArticleSchema,
   generateSpeakableSchema,
 } from "@/app/lib/schema";
+import USFlag from "@/app/components/illustrations/USFlag";
+import BaldEagle from "@/app/components/illustrations/BaldEagle";
 
 export const metadata: Metadata = buildMetadata({
   title: "Oath of Allegiance — Full Text, Meaning & What to Expect",
@@ -157,10 +159,16 @@ export default function OathOfAllegiancePage() {
 
         {/* Header */}
         <header className="max-w-3xl mx-auto px-4 mt-8">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            The Oath of{" "}
-            <span className="text-blue-400">Allegiance</span>
-          </h1>
+          <div className="flex items-start justify-between gap-4">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              The Oath of{" "}
+              <span className="text-blue-400">Allegiance</span>
+            </h1>
+            <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
+              <USFlag className="w-12 h-12 opacity-20" />
+              <BaldEagle className="w-12 h-12 opacity-20" />
+            </div>
+          </div>
           <p
             className="mt-4 text-slate-400 text-lg leading-relaxed"
             data-speakable="summary"

@@ -10,6 +10,8 @@ import {
 } from "@/app/lib/schema";
 import { siteConfig } from "@/app/lib/metadata";
 import { questions, categories, subcategories } from "@/app/data/questions";
+import Capitol from "@/app/components/illustrations/Capitol";
+import Constitution from "@/app/components/illustrations/Constitution";
 
 export const metadata: Metadata = buildMetadata({
   title: "US Citizenship Test Study Guide — All 128 USCIS Questions by Topic",
@@ -100,9 +102,12 @@ export default function StudyGuidePage() {
 
         {/* Header */}
         <header className="max-w-4xl mx-auto px-4 mt-8">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            US Citizenship Test Study Guide
-          </h1>
+          <div className="flex items-start justify-between gap-4">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              US Citizenship Test Study Guide
+            </h1>
+            <Capitol className="hidden sm:block w-16 h-16 opacity-20 flex-shrink-0" />
+          </div>
           <p
             className="mt-4 text-slate-400 text-lg leading-relaxed max-w-3xl"
             data-speakable="true"
@@ -208,8 +213,9 @@ export default function StudyGuidePage() {
 
         {/* CTA Section */}
         <div className="max-w-4xl mx-auto px-4 mt-16">
-          <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-3">
+          <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 text-center relative overflow-hidden">
+            <Constitution className="absolute -bottom-4 -right-4 w-16 h-16 opacity-20" />
+            <h2 className="text-2xl font-bold mb-3 relative">
               Ready to start studying?
             </h2>
             <p className="text-slate-400 mb-6 max-w-lg mx-auto">
