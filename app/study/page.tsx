@@ -8,6 +8,8 @@ import {
   generateSpeakableSchema,
 } from "@/app/lib/schema";
 import { siteConfig } from "@/app/lib/metadata";
+import AdUnit from "@/app/components/AdUnit";
+import AmazonRecommendation from "@/app/components/AmazonRecommendation";
 import StudyClient from "./StudyClient";
 
 export const metadata: Metadata = buildMetadata({
@@ -122,6 +124,8 @@ export default function StudyPage() {
           <StudyClient />
         </div>
 
+        <AdUnit slot="auto" format="horizontal" className="max-w-3xl mx-auto px-4 my-8" />
+
         {/* SEO Content: How Spaced Repetition Works */}
         <section className="max-w-3xl mx-auto px-4 mt-16">
           <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8">
@@ -228,6 +232,10 @@ export default function StudyPage() {
             ))}
           </div>
         </section>
+
+        <div className="max-w-3xl mx-auto px-4">
+          <AmazonRecommendation category="study-aids" />
+        </div>
 
         {/* CTA Section */}
         <div className="max-w-3xl mx-auto px-4 mt-16">

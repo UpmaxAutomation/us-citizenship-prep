@@ -15,6 +15,8 @@ import {
   writingSentences,
 } from "@/app/data/vocabulary";
 import type { VocabWord } from "@/app/data/vocabulary";
+import AdUnit from "@/app/components/AdUnit";
+import AmazonRecommendation from "@/app/components/AmazonRecommendation";
 import VocabPractice from "./VocabPractice";
 
 export const metadata: Metadata = buildMetadata({
@@ -295,6 +297,8 @@ export default function ReadingWritingPage() {
           </div>
         </section>
 
+        <AdUnit slot="auto" format="horizontal" className="max-w-4xl mx-auto px-4 my-8" />
+
         {/* Writing Vocabulary Section */}
         <section
           className="max-w-4xl mx-auto px-4 mt-12"
@@ -562,6 +566,10 @@ export default function ReadingWritingPage() {
             ))}
           </div>
         </section>
+
+        <div className="max-w-4xl mx-auto px-4">
+          <AmazonRecommendation category="english-learning" />
+        </div>
 
         {/* CTA Section */}
         <div className="max-w-4xl mx-auto px-4 mt-16">

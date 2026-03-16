@@ -7,6 +7,8 @@ import {
   generateBreadcrumbSchema,
   generateFAQSchema,
 } from "@/app/lib/schema";
+import AdUnit from "@/app/components/AdUnit";
+import LibertyBell from "@/app/components/illustrations/LibertyBell";
 import { allFaqs, faqCategories } from "@/app/data/faqs";
 
 export const metadata: Metadata = buildMetadata({
@@ -201,10 +203,13 @@ export default function FAQPage() {
 
         {/* Header */}
         <header className="max-w-3xl mx-auto px-4 mt-8">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            Frequently Asked Questions About{" "}
-            <span className="text-blue-400">US Citizenship</span>
-          </h1>
+          <div className="flex items-start justify-between gap-4">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              Frequently Asked Questions About{" "}
+              <span className="text-blue-400">US Citizenship</span>
+            </h1>
+            <LibertyBell className="hidden sm:block w-16 h-16 opacity-20 flex-shrink-0" />
+          </div>
           <p className="mt-4 text-slate-400 text-lg leading-relaxed">
             Everything you need to know about the US citizenship test,
             eligibility requirements, how to study, what to expect on interview
@@ -309,6 +314,8 @@ export default function FAQPage() {
             </section>
           );
         })}
+
+        <AdUnit slot="auto" format="horizontal" className="max-w-4xl mx-auto px-4 my-8" />
 
         {/* Additional Resources */}
         <section className="max-w-3xl mx-auto px-4 mt-14">

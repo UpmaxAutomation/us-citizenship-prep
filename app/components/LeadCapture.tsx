@@ -24,23 +24,14 @@ export default function LeadCapture({ variant = "inline" }: LeadCaptureProps) {
     if (!email) return;
     setStatus("loading");
 
-    const action = process.env.NEXT_PUBLIC_LEAD_FORM_ACTION;
-    if (!action || action === "#") {
-      // No endpoint configured — just simulate success for now
-      setTimeout(() => {
-        setStatus("success");
-        localStorage.setItem("lead-captured", "true");
-      }, 800);
-      return;
-    }
-
     try {
-      const res = await fetch(action, {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (data.success) {
         setStatus("success");
         localStorage.setItem("lead-captured", "true");
       } else {
@@ -57,6 +48,12 @@ export default function LeadCapture({ variant = "inline" }: LeadCaptureProps) {
       <div className={variant === "banner" ? "bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-6 text-center" : "bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-6 text-center"}>
         <div className="text-2xl mb-2">✓</div>
         <p className="text-emerald-300 font-medium">Check your email for the study guide!</p>
+        <p className="text-slate-400 text-sm mt-2">
+          Meanwhile, access your study guide at{" "}
+          <Link href="/printable-study-guide" className="text-blue-400 hover:text-blue-300 underline underline-offset-2">
+            /printable-study-guide
+          </Link>
+        </p>
         <p className="text-slate-400 text-sm mt-1">Didn&apos;t receive it? Check your spam folder.</p>
       </div>
     );

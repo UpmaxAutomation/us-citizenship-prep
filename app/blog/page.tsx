@@ -4,6 +4,7 @@ import JsonLd from "@/app/components/JsonLd";
 import { buildMetadata } from "@/app/lib/metadata";
 import { generateBreadcrumbSchema, generateSpeakableSchema } from "@/app/lib/schema";
 import { siteConfig } from "@/app/lib/metadata";
+import AdUnit from "@/app/components/AdUnit";
 import { blogPosts } from "@/app/data/blog-posts";
 
 export const metadata: Metadata = buildMetadata({
@@ -121,6 +122,8 @@ export default function BlogIndexPage() {
             ))}
           </div>
         </section>
+
+        <AdUnit slot="auto" format="horizontal" className="max-w-4xl mx-auto px-4 my-8" />
 
         {/* CTA Section */}
         <section className="max-w-4xl mx-auto px-4 mt-16">

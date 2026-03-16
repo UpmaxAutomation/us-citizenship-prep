@@ -8,7 +8,10 @@ import {
   generateFAQSchema,
   generateSpeakableSchema,
 } from "@/app/lib/schema";
+import AdUnit from "@/app/components/AdUnit";
+import AmazonRecommendation from "@/app/components/AmazonRecommendation";
 import { siteConfig } from "@/app/lib/metadata";
+import Capitol from "@/app/components/illustrations/Capitol";
 
 export const metadata: Metadata = buildMetadata({
   title:
@@ -174,10 +177,13 @@ export default function InterviewGuidePage() {
 
         {/* Header */}
         <header className="max-w-4xl mx-auto px-4 mt-8">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-            Citizenship Interview Guide — What to Expect on Test Day{" "}
-            <span className="text-blue-400">(2025)</span>
-          </h1>
+          <div className="flex items-start justify-between gap-4">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              Citizenship Interview Guide — What to Expect on Test Day{" "}
+              <span className="text-blue-400">(2025)</span>
+            </h1>
+            <Capitol className="hidden sm:block w-16 h-16 opacity-20 flex-shrink-0" />
+          </div>
           <p
             data-speakable="true"
             className="mt-4 text-slate-400 text-lg leading-relaxed max-w-3xl"
@@ -417,6 +423,8 @@ export default function InterviewGuidePage() {
             ))}
           </div>
         </section>
+
+        <AdUnit slot="auto" format="horizontal" className="max-w-4xl mx-auto px-4 my-8" />
 
         {/* ============================================= */}
         {/* Section 3: After the Interview                */}
@@ -671,6 +679,10 @@ export default function InterviewGuidePage() {
             ))}
           </div>
         </section>
+
+        <div className="max-w-4xl mx-auto px-4">
+          <AmazonRecommendation category="interview-prep" />
+        </div>
 
         <div className="max-w-4xl mx-auto px-4">
           <AuthorAttribution />

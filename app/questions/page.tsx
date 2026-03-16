@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { questions, categories, subcategories } from "@/app/data/questions";
 import JsonLd from "@/app/components/JsonLd";
+import AdUnit from "@/app/components/AdUnit";
+import AmazonRecommendation from "@/app/components/AmazonRecommendation";
 import LeadCapture from "@/app/components/LeadCapture";
 import { buildMetadata } from "@/app/lib/metadata";
 import {
@@ -11,6 +13,9 @@ import {
   generateSpeakableSchema,
 } from "@/app/lib/schema";
 import { siteConfig } from "@/app/lib/metadata";
+import Capitol from "@/app/components/illustrations/Capitol";
+import Constitution from "@/app/components/illustrations/Constitution";
+import LibertyBell from "@/app/components/illustrations/LibertyBell";
 
 export const metadata: Metadata = buildMetadata({
   title: "All 128 USCIS Citizenship Test Questions and Answers (2025)",
@@ -224,23 +229,34 @@ export default function QuestionsPage() {
           </div>
         </div>
 
+        <AdUnit slot="auto" format="horizontal" className="max-w-4xl mx-auto px-4 my-8" />
+
         {/* Questions by Category */}
         <div className="max-w-4xl mx-auto px-4 mt-10 space-y-12">
           {categories.map((cat) => {
             const colors = categoryColors[cat];
             const catQuestions = questions.filter((q) => q.category === cat);
 
+            const CategoryIcon = cat === "American Government"
+              ? Capitol
+              : cat === "American History"
+              ? Constitution
+              : LibertyBell;
+
             return (
               <section key={cat} id={slugify(cat)} aria-labelledby={`heading-${slugify(cat)}`}>
-                <h2
-                  id={`heading-${slugify(cat)}`}
-                  className={`text-2xl font-bold border-l-4 ${colors.border} pl-4 mb-8`}
-                >
-                  {cat}
-                  <span className="text-base font-normal text-slate-500 ml-3">
-                    {catQuestions.length} questions
-                  </span>
-                </h2>
+                <div className="flex items-center gap-4 mb-8">
+                  <CategoryIcon className="hidden sm:block w-16 h-16 opacity-30 flex-shrink-0" />
+                  <h2
+                    id={`heading-${slugify(cat)}`}
+                    className={`text-2xl font-bold border-l-4 ${colors.border} pl-4`}
+                  >
+                    {cat}
+                    <span className="text-base font-normal text-slate-500 ml-3">
+                      {catQuestions.length} questions
+                    </span>
+                  </h2>
+                </div>
 
                 <div className="space-y-8">
                   {subcategories[cat].map((sub) => {
@@ -317,6 +333,10 @@ export default function QuestionsPage() {
               </section>
             );
           })}
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4">
+          <AmazonRecommendation category="test-prep" />
         </div>
 
         {/* CTA Section */}

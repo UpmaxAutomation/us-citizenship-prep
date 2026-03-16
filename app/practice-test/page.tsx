@@ -8,6 +8,7 @@ import {
   generateSpeakableSchema,
 } from "@/app/lib/schema";
 import { siteConfig } from "@/app/lib/metadata";
+import AdUnit from "@/app/components/AdUnit";
 import PracticeTest from "./PracticeTest";
 
 export const metadata: Metadata = buildMetadata({
@@ -127,6 +128,8 @@ export default function PracticeTestPage() {
         <div className="max-w-4xl mx-auto px-4 mt-10">
           <PracticeTest />
         </div>
+
+        <AdUnit slot="auto" format="horizontal" className="max-w-4xl mx-auto px-4 my-8" />
 
         {/* SEO Content: How the Real Test Works */}
         <section className="max-w-4xl mx-auto px-4 mt-16">

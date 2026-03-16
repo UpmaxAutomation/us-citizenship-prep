@@ -2,7 +2,9 @@ import Link from "next/link";
 import { questions, categories, subcategories } from "./data/questions";
 import { states, stateNameToSlug } from "./data/states";
 import JsonLd from "./components/JsonLd";
+import AdUnit from "./components/AdUnit";
 import LeadCapture from "./components/LeadCapture";
+import USFlag from "./components/illustrations/USFlag";
 import {
   generateFAQSchema,
   generateCourseSchema,
@@ -151,6 +153,7 @@ export default function HomePage() {
 
             {/* Right: Flashcard preview - desktop only */}
             <div className="hidden lg:block">
+              <USFlag className="w-16 h-16 opacity-20 absolute -top-4 -right-4" />
               <div className="relative max-w-md mx-auto">
                 {/* Background card (stacked effect) */}
                 <div className="absolute top-4 left-4 right-0 bottom-0 rounded-2xl bg-slate-800/40 border border-slate-700/20" />
@@ -186,6 +189,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <AdUnit slot="auto" format="horizontal" className="max-w-7xl mx-auto px-4 my-8" />
 
       {/* Trust Badges */}
       <section className="py-8 sm:py-12 border-y border-slate-800/50">
