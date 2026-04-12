@@ -1,0 +1,659 @@
+US Citizenship Civics Test (128) - English, Pronunciation,
+                         Turkish
+Duzen: English soru, hemen altinda okunus, sonra English cevap, Turkce soru ve Turkce cevap. Kutucuk sorunu
+cikmamasi icin Unicode font kullanildi. Not: Bazi sorularin cevabi guncel gorevlilere gore degisebilir.
+
+
+AMERICAN GOVERNMENT
+1. What is the form of government of the United States?
+Okunus: vat iz di form ov gavirnment ov di yunaytid steyts
+Answer: Republic
+Turkce soru: Amerika Birlesik Devletleri'nin yonetim sekli nedir?
+Turkce cevap: Cumhuriyet.
+2. What is the supreme law of the land? *
+Okunus: vat iz di suprim lo ov di lend
+Answer: (U.S.) Constitution
+Turkce soru: Ulkenin en yuksek yasasi nedir?
+Turkce cevap: ABD Anayasasi.
+3. Name one thing the U.S. Constitution does.
+Okunus: neym van ting di yu es konstitushin does.
+Answer: Forms the government
+Turkce soru: ABD Anayasasi'nin yaptigi bir sey soyleyin.
+Turkce cevap: Hukumeti kurar.
+4. The U.S. Constitution starts with the words “We the People.” What does “We the People” mean?
+Okunus: di yu es konstitushin starts vith di vordz wi di people. vat daz wi di piipl miin
+Answer: Self-government
+Turkce soru: ABD Anayasasi 'We the People' sozleriyle baslar. 'We the People' ne demektir?
+Turkce cevap: Halkin kendi kendini yonetmesi.
+5. How are changes made to the U.S. Constitution?
+Okunus: hav ar cheynciz meyd tu di yu es konstitushin
+Answer: Amendments
+Turkce soru: ABD Anayasasi'nda degisiklikler nasil yapilir?
+Turkce cevap: Degisikliklerle.
+6. What does the Bill of Rights protect?
+Okunus: vat daz di bil ov rayts protekt
+Answer: (The basic) rights of Americans
+Turkce soru: Haklar Bildirgesi neyi korur?
+Turkce cevap: Amerikalilarin temel haklarini.
+7. How many amendments does the U.S. Constitution have? *
+Okunus: hav meni amendmints daz di yu es konstitushin hev
+Answer: Twenty-seven (27)
+Turkce soru: ABD Anayasasi'nda kac degisiklik vardir?
+Turkce cevap: Yirmi yedi (27).
+8. Why is the Declaration of Independence important?
+Okunus: vay iz di deklarayshin ov indipendins imporint
+Answer: It says America is free from British control.
+Turkce soru: Bagimsizlik Bildirgesi neden onemlidir?
+Turkce cevap: Amerika'nin Ingiliz kontrolunden ozgur oldugunu soyler.
+9. What founding document said the American colonies were free from Britain?
+Okunus: vat faunding dokyument sed di amerikin koloniz were fri from britin
+Answer: Declaration of Independence
+Turkce soru: Amerikan kolonilerinin Britanya'dan ozgur oldugunu hangi kurucu belge soyledi?
+Turkce cevap: Bagimsizlik Bildirgesi.
+10. Name two important ideas from the Declaration of Independence and the U.S. Constitution.
+Okunus: neym tu imporint aydiyaz from di deklarayshin ov indipendins end di yu es constitushin.
+Answer: Equality
+Turkce soru: Bagimsizlik Bildirgesi ve ABD Anayasasi'ndan iki onemli fikir soyleyin.
+Turkce cevap: Esitlik.
+11. The words “Life, Liberty, and the pursuit of Happiness” are in what founding document?
+Okunus: di vordz layf libirti end di pirsuit ov hepinis ar in vat faunding dokyument
+Answer: Declaration of Independence
+Turkce soru: 'Life, Liberty, and the pursuit of Happiness' sozleri hangi kurucu belgede yer alir?
+Turkce cevap: Bagimsizlik Bildirgesi.
+12. What is the economic system of the United States? *
+Okunus: vat iz di ekonomik sistim ov di yunaytid steyts
+Answer: Capitalism
+Turkce soru: Amerika Birlesik Devletleri'nin ekonomik sistemi nedir?
+Turkce cevap: Kapitalizm.
+13. What is the rule of law?
+Okunus: vat iz di ruul ov lo
+Answer: Everyone must follow the law.
+Turkce soru: Hukukun ustunlugu nedir?
+Turkce cevap: Herkes yasaya uymak zorundadir.
+14. Many documents influenced the U.S. Constitution. Name one.
+Okunus: meni dokyuments influinst di yu es constitushin. neym one.
+Answer: Declaration of Independence
+Turkce soru: Bir cok belge ABD Anayasasi'ni etkilemistir. Birini soyleyin.
+Turkce cevap: Bagimsizlik Bildirgesi.
+15. There are three branches of government. Why?
+Okunus: dere ar thri brenchiz ov government. vay
+Answer: So one part does not become too powerful
+Turkce soru: Neden uc hukumet dali vardir?
+Turkce cevap: Bir bolum cok guclu olmasin diye.
+16. Name the three branches of government.
+Okunus: neym di thri brenchiz ov government.
+Answer: Legislative, executive, and judicial
+Turkce soru: Uc hukumet dalini soyleyin.
+Turkce cevap: Yasama, yurutme ve yargi.
+17. The President of the United States is in charge of which branch of government?
+Okunus: di prezidint ov di yunaytid steyts iz in charge ov vich brench ov gavirnment
+Answer: Executive branch
+Turkce soru: Amerika Birlesik Devletleri Baskani hangi hukumet dalindan sorumludur?
+Turkce cevap: Yurutme dali.
+18. What part of the federal government writes laws?
+Okunus: vat part ov di fediril gavirnment rayts loz
+Answer: (U.S.) Congress
+Turkce soru: Federal hukumetin hangi bolumu yasalar yazar?
+Turkce cevap: ABD Kongresi.
+19. What are the two parts of the U.S. Congress?
+Okunus: vat ar di tu parts ov di yu es kangris
+Answer: Senate and House (of Representatives)
+Turkce soru: ABD Kongresi'nin iki bolumu nedir?
+Turkce cevap: Senato ve Temsilciler Meclisi.
+20. Name one power of the U.S. Congress. *
+Okunus: neym van pauir ov di yu es congress.
+Answer: Writes laws
+Turkce soru: ABD Kongresi'nin bir yetkisini soyleyin.
+Turkce cevap: Yasa yazar.
+21. How many U.S. senators are there?
+Okunus: hav meni yu es senitirs ar dere
+Answer: One hundred (100)
+Turkce soru: Kac ABD senatoru vardir?
+Turkce cevap: Yuz (100).
+22. How long is a term for a U.S. senator?
+Okunus: hav long iz a term for a yu es senitir
+Answer: Six (6) years
+Turkce soru: Bir ABD senatorunun gorev suresi ne kadardir?
+Turkce cevap: Alti (6) yil.
+23. Who is one of your state’s U.S. senators now?
+Okunus: hu iz van ov yor steyts yu es senitirs nau
+Answer: Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or
+the territory where the applicant lives) has no U.S. senators.]
+Turkce soru: Su anda eyaletinizin ABD senatorlerinden biri kimdir?
+Turkce cevap: Cevap degisir.
+24. How many voting members are in the House of Representatives?
+Okunus: hav meni vouting membirs ar in di haus ov reprizentitıvs
+Answer: Four hundred thirty-five (435)
+Turkce soru: Temsilciler Meclisi'nde kac oy kullanan uye vardir?
+Turkce cevap: Dort yuz otuz bes (435).
+25. How long is a term for a member of the House of Representatives?
+Okunus: hav long iz a term for a membir ov di haus ov reprizentitıvs
+Answer: Two (2) years
+Turkce soru: Bir Temsilciler Meclisi uyesinin gorev suresi ne kadardir?
+Turkce cevap: Iki (2) yil.
+26. Why do U.S. representatives serve shorter terms than U.S. senators?
+Okunus: vay do yu es reprizentitıvs sirv shortir termz den yu es senitirs
+Answer: To more closely follow public opinion
+Turkce soru: Neden ABD temsilcileri senatorlerden daha kisa sure gorev yapar?
+Turkce cevap: Halkin gorusunu daha yakindan takip etmek icin.
+27. How many senators does each state have?
+Okunus: hav meni senitirs daz iich state hev
+Answer: Two (2)
+Turkce soru: Her eyaletin kac senatoru vardir?
+Turkce cevap: Iki (2).
+28. Why does each state have two senators?
+Okunus: vay daz iich state hev tu senitirs
+Answer: Equal representation (for small states)
+Turkce soru: Neden her eyaletin iki senatoru vardir?
+Turkce cevap: Esit temsil icin.
+29. Name your U.S. representative.
+Okunus: neym yor yu es representative.
+Answer: Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide
+the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no (voting)
+representatives in Congress.]
+Turkce soru: Kendi ABD temsilcinizin adini soyleyin.
+Turkce cevap: Cevap degisir.
+30. What is the name of the Speaker of the House of Representatives now? *
+Okunus: vat iz di neym ov di spiikir ov di haus ov reprizentitıvs nau
+Answer: Visit uscis.gov/citizenship/testupdates for the name of the Speaker of the House of Representatives.
+Turkce soru: Su anda Temsilciler Meclisi Baskani'nin adi nedir?
+Turkce cevap: Guncel isme gore degisir.
+31. Who does a U.S. senator represent?
+Okunus: hu daz a yu es senitir represent
+Answer: Citizens of their state
+Turkce soru: Bir ABD senatoru kimi temsil eder?
+Turkce cevap: Eyaletindeki vatandaslari.
+32. Who elects U.S. senators?
+Okunus: hu ilekts yu es senitirs
+Answer: Citizens from their state
+Turkce soru: ABD senatorlerini kim secer?
+Turkce cevap: Eyaletlerindeki vatandaslar.
+33. Who does a member of the House of Representatives represent?
+Okunus: hu daz a membir ov di haus ov reprizentitıvs represent
+Answer: Citizens in their (congressional) district
+Turkce soru: Bir Temsilciler Meclisi uyesi kimi temsil eder?
+Turkce cevap: Bolgesindeki vatandaslari.
+34. Who elects members of the House of Representatives?
+Okunus: hu ilekts membirs ov di haus ov reprizentitıvs
+Answer: Citizens from their (congressional) district
+Turkce soru: Temsilciler Meclisi uyelerini kim secer?
+Turkce cevap: Kongre bolgesindeki vatandaslar.
+35. Some states have more representatives than other states. Why?
+Okunus: some steyts hev more reprizentitıvs den oder states. vay
+Answer: (Because of) the state’s population
+Turkce soru: Neden bazi eyaletlerin digerlerinden daha fazla temsilcisi vardir?
+Turkce cevap: Eyalet nufusu nedeniyle.
+36. The President of the United States is elected for how many years? *
+Okunus: di prezidint ov di yunaytid steyts iz ilektid for hav meni yiirs
+Answer: Four (4) years
+Turkce soru: Amerika Birlesik Devletleri Baskani kac yil icin secilir?
+Turkce cevap: Dort (4) yil.
+37. The President of the United States can serve only two terms. Why?
+Okunus: di prezidint ov di yunaytid steyts ken sirv ounli tu terms. vay
+Answer: (Because of) the 22nd Amendment
+Turkce soru: Baskan neden sadece iki donem gorev yapabilir?
+Turkce cevap: 22. Degisiklik nedeniyle.
+38. What is the name of the President of the United States now? *
+Okunus: vat iz di neym ov di prezidint ov di yunaytid steyts nau
+Answer: Visit uscis.gov/citizenship/testupdates for the name of the President of the United States.
+Turkce soru: Su anda Amerika Birlesik Devletleri Baskani'nin adi nedir?
+Turkce cevap: Guncel isme gore degisir.
+39. What is the name of the Vice President of the United States now? *
+Okunus: vat iz di neym ov di vays prezidint ov di yunaytid steyts nau
+Answer: Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States.
+Turkce soru: Su anda Amerika Birlesik Devletleri Baskan Yardimcisi'nin adi nedir?
+Turkce cevap: Guncel isme gore degisir.
+40. If the president can no longer serve, who becomes president?
+Okunus: if di prezidint ken nou longir sirv hu bikams prezidint
+Answer: The Vice President (of the United States)
+Turkce soru: Baskan artik gorev yapamazsa kim baskan olur?
+Turkce cevap: Baskan Yardimcisi.
+41. Name one power of the president.
+Okunus: neym van pauir ov di president.
+Answer: Signs bills into law
+Turkce soru: Baskanin bir yetkisini soyleyin.
+Turkce cevap: Tasariyi yasaya donusturur.
+42. Who is Commander in Chief of the U.S. military?
+Okunus: hu iz komandir in chiif ov di yu es militeri
+Answer: The President (of the United States)
+Turkce soru: ABD ordusunun baskomutani kimdir?
+Turkce cevap: Baskan.
+43. Who signs bills to become laws?
+Okunus: hu saynz bilz tu become loz
+Answer: The President (of the United States)
+Turkce soru: Tasariyi yasaya kim donusturur?
+Turkce cevap: Baskan.
+44. Who vetoes bills? *
+Okunus: hu vitouz bilz
+Answer: The President (of the United States)
+Turkce soru: Yasayi kim veto eder?
+Turkce cevap: Baskan.
+45. Who appoints federal judges?
+Okunus: hu apoints fediril caciz
+Answer: The President (of the United States)
+Turkce soru: Federal hakimleri kim atar?
+Turkce cevap: Baskan.
+46. The executive branch has many parts. Name one.
+Okunus: di executive brench has meni parts. neym one.
+Answer: President (of the United States)
+Turkce soru: Yurutme dalinin bir bolumunu soyleyin.
+Turkce cevap: Baskan.
+47. What does the President’s Cabinet do?
+Okunus: vat daz di president's kebinit do
+Answer: Advises the President (of the United States)
+Turkce soru: Baskanin Kabinesi ne yapar?
+Turkce cevap: Baskana danismanlik yapar.
+48. What are two Cabinet-level positions?
+Okunus: vat ar tu cabinet-level pozishinz
+Answer: Attorney General
+Turkce soru: Iki kabine duzeyi gorev soyleyin.
+Turkce cevap: Adalet Bakani ve Disisleri Bakani.
+49. Why is the Electoral College important?
+Okunus: vay iz di ilektoral kolic imporint
+Answer: It decides who is elected president.
+Turkce soru: Seciciler Kurulu neden onemlidir?
+Turkce cevap: Baskanin kim secilecegine karar verir.
+50. What is one part of the judicial branch?
+Okunus: vat iz van part ov di judicial brench
+Answer: Supreme Court
+Turkce soru: Yargi dalinin bir bolumunu soyleyin.
+Turkce cevap: Yuksek Mahkeme.
+51. What does the judicial branch do?
+Okunus: vat daz di judicial brench do
+Answer: Reviews laws
+Turkce soru: Yargi dali ne yapar?
+Turkce cevap: Yasalari gozden gecirir.
+52. What is the highest court in the United States? *
+Okunus: vat iz di hayist kort in di yunaytid steyts
+Answer: Supreme Court
+Turkce soru: Amerika Birlesik Devletleri'ndeki en yuksek mahkeme nedir?
+Turkce cevap: Yuksek Mahkeme.
+53. How many seats are on the Supreme Court?
+Okunus: hav meni siits ar on di suprim kort
+Answer: Nine (9)
+Turkce soru: Yuksek Mahkeme'de kac koltuk vardir?
+Turkce cevap: Dokuz (9).
+54. How many Supreme Court justices are usually needed to decide a case?
+Okunus: hav meni suprim kort castisiz ar yujili niidid tu disayd a keys
+Answer: Five (5)
+Turkce soru: Bir davayi karara baglamak icin genelde kac yargic gerekir?
+Turkce cevap: Bes (5).
+55. How long do Supreme Court justices serve?
+Okunus: hav long do suprim kort castisiz sirv
+Answer: (For) life
+Turkce soru: Yuksek Mahkeme yargiclari ne kadar sure gorev yapar?
+Turkce cevap: Omur boyu.
+56. Supreme Court justices serve for life. Why?
+Okunus: suprim kort castisiz sirv for life. vay
+Answer: To be independent (of politics)
+Turkce soru: Yuksek Mahkeme yargiclari neden omur boyu gorev yapar?
+Turkce cevap: Siyasetten bagimsiz olmalar icin.
+57. Who is the Chief Justice of the United States now?
+Okunus: hu iz di chiif castis ov di yunaytid steyts nau
+Answer: Visit uscis.gov/citizenship/testupdates for the name of the Chief Justice of the United States.
+Turkce soru: Su anda Amerika Birlesik Devletleri Basyargici kimdir?
+Turkce cevap: Guncel isme gore degisir.
+58. Name one power that is only for the federal government.
+Okunus: neym van pauir dat iz ounli for di fediril government.
+Answer: Print paper money
+Turkce soru: Sadece federal hukumete ait olan bir yetki soyleyin.
+Turkce cevap: Kagit para basmak.
+59. Name one power that is only for the states.
+Okunus: neym van pauir dat iz ounli for di states.
+Answer: Provide schooling and education
+Turkce soru: Sadece eyaletlere ait olan bir yetki soyleyin.
+Turkce cevap: Egitim saglamak.
+60. What is the purpose of the 10th Amendment?
+Okunus: vat iz di pirpis ov di tent amendmint
+Answer: (It states that the) powers not given to the federal government belong to the states or to the people.
+Turkce soru: 10. Degisiklik'in amaci nedir?
+Turkce cevap: Federal hukumete verilmeyen yetkilerin eyaletlere veya halka ait oldugunu belirtir.
+61. Who is the governor of your state now? *
+Okunus: hu iz di gavırnir ov yor state nau
+Answer: Answers will vary. [District of Columbia residents should answer that D.C. does not have a governor.]
+Turkce soru: Su anda eyaletinizin valisi kimdir?
+Turkce cevap: Cevap degisir.
+62. What is the capital of your state?
+Okunus: vat iz di kepitil ov yor state
+Answer: Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a
+capital. Residents of U.S. territories should name the capital of the territory.]
+Turkce soru: Eyaletinizin baskenti neresidir?
+Turkce cevap: Cevap degisir.
+RIGHTS AND RESPONSIBILITIES
+63. There are four amendments to the U.S. Constitution about who can vote. Describe one of them.
+Okunus: dere ar four amendmints tu di yu es konstitushin about hu ken vote. describe van ov dem.
+Answer: Citizens eighteen (18) and older (can vote).
+Turkce soru: ABD Anayasasi'nda kimin oy verebilecegiyle ilgili dort degisiklik vardir. Bunlardan birini aciklayin.
+Turkce cevap: 18 yas ve ustu vatandaslar oy verebilir.
+64. Who can vote in federal elections, run for federal office, and serve on a jury in the United
+States?
+Okunus: hu ken vote in fediril elecshins run for fediril office end sirv on a jury in di yunaytid steyts
+Answer: Citizens
+Turkce soru: Amerika Birlesik Devletleri'nde federal secimlerde kim oy verebilir, federal goreve aday olabilir ve juri
+uyeligi yapabilir?
+Turkce cevap: Vatandaslar.
+65. What are three rights of everyone living in the United States?
+Okunus: vat ar thri rayts ov evrivon living in di yunaytid steyts
+Answer: Freedom of expression
+Turkce soru: Amerika Birlesik Devletleri'nde yasayan herkesin uc hakkini soyleyin.
+Turkce cevap: Ifade ozgurlugu.
+66. What do we show loyalty to when we say the Pledge of Allegiance? *
+Okunus: vat do wi shou loyalty tu when wi sey di pledge ov allegiance
+Answer: The United States
+Turkce soru: Baglilik Andi'ni soylerken neye baglilik gosteririz?
+Turkce cevap: Amerika Birlesik Devletleri'ne.
+67. Name two promises that new citizens make in the Oath of Allegiance.
+Okunus: neym tu promises dat new sitizins make in di oad ov allegiance.
+Answer: Give up loyalty to other countries
+Turkce soru: Yeni vatandaslarin Baglilik Yemini'nde verdigi iki sozu soyleyin.
+Turkce cevap: Diger ulkelere olan bagliliklarindan vazgecerler.
+68. How can people become United States citizens?
+Okunus: hav ken piipl become yunaytid steyts sitizins
+Answer: Be born in the United States, under the conditions set by the 14th Amendment
+Turkce soru: Insanlar nasil ABD vatandasi olabilir?
+Turkce cevap: Amerika'da dogarak.
+69. What are two examples of civic participation in the United States?
+Okunus: vat ar tu examples ov civic participashin in di yunaytid steyts
+Answer: Vote
+Turkce soru: Amerika Birlesik Devletleri'nde yurttas katilimina iki ornek soyleyin.
+Turkce cevap: Oy vermek.
+70. What is one way Americans can serve their country?
+Okunus: vat iz van wey americans ken sirv deir country
+Answer: Vote
+Turkce soru: Amerikalilar ulkelerine bir sekilde nasil hizmet edebilir?
+Turkce cevap: Oy vererek.
+71. Why is it important to pay federal taxes?
+Okunus: vay iz it imporint tu pey fediril taxes
+Answer: Required by law
+Turkce soru: Federal vergi odemek neden onemlidir?
+Turkce cevap: Yasa geregi zorunludur.
+72. It is important for all men age 18 through 25 to register for the Selective Service. Name one
+reason why.
+Okunus: it iz imporint for all men age 18 dro 25 tu register for di selective service. neym van riison why.
+Answer: Required by law
+Turkce soru: 18-25 yas arasi tum erkeklerin Selective Service'e kaydolmasi onemlidir. Nedenlerinden birini soyleyin.
+Turkce cevap: Yasa geregi zorunludur.
+AMERICAN HISTORY
+73. The colonists came to America for many reasons. Name one.
+Okunus: di colonists came tu america for meni riisons. neym one.
+Answer: Freedom
+Turkce soru: Koloniciler Amerika'ya bircok nedenle geldi. Bunlardan birini soyleyin.
+Turkce cevap: Ozgunluk.
+74. Who lived in America before the Europeans arrived? *
+Okunus: hu lived in america before di europiins arrived
+Answer: American Indians
+Turkce soru: Avrupalilar gelmeden once Amerika'da kimler yasiyordu?
+Turkce cevap: Amerikan yerlileri.
+75. What group of people was taken and sold as slaves?
+Okunus: vat group ov piipl was taken end sold as slaves
+Answer: Africans
+Turkce soru: Hangi insan grubu kole olarak alinip satildi?
+Turkce cevap: Afrikalilar.
+76. What war did the Americans fight to win independence from Britain?
+Okunus: vat vor did di americans fight tu win indipendins from britin
+Answer: American Revolution
+Turkce soru: Amerikalilar Britanya'dan bagimsizlik kazanmak icin hangi savasi savasti?
+Turkce cevap: Amerikan Devrimi.
+77. Name one reason why the Americans declared independence from Britain.
+Okunus: neym van riison vay di americans declared indipendins from britain.
+Answer: High taxes
+Turkce soru: Amerikalilar neden Britanya'dan bagimsizlik ilan etti? Bir neden soyleyin.
+Turkce cevap: Yuksek vergiler.
+78. Who wrote the Declaration of Independence? *
+Okunus: hu wrote di deklarayshin ov indipendins
+Answer: (Thomas) Jefferson
+Turkce soru: Bagimsizlik Bildirgesi'ni kim yazdi?
+Turkce cevap: Thomas Jefferson.
+79. When was the Declaration of Independence adopted?
+Okunus: when was di deklarayshin ov indipendins adopted
+Answer: July 4, 1776
+Turkce soru: Bagimsizlik Bildirgesi ne zaman kabul edildi?
+Turkce cevap: 4 Temmuz 1776.
+80. The American Revolution had many important events. Name one.
+Okunus: di amerikin revolushin had meni imporint events. neym one.
+Answer: (Battle of) Bunker Hill
+Turkce soru: Amerikan Devrimi'nin onemli olaylarindan birini soyleyin.
+Turkce cevap: Bunker Hill Savasi.
+81. There were 13 original states. Name five.
+Okunus: dere were 13 original states. neym five.
+Answer: New Hampshire
+Turkce soru: 13 ilk eyaletten besini soyleyin.
+Turkce cevap: New Hampshire, Massachusetts, Rhode Island, Connecticut, New York.
+82. What founding document was written in 1787?
+Okunus: vat faunding dokyument was written in 1787
+Answer: (U.S.) Constitution
+Turkce soru: 1787'de hangi kurucu belge yazildi?
+Turkce cevap: ABD Anayasasi.
+83. The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.
+Okunus: di federalist papers supported di passage ov di yu es constitushin. neym van ov di writers.
+Answer: (James) Madison
+Turkce soru: Federalist Papers'in yazarlarindan birini soyleyin.
+Turkce cevap: James Madison.
+84. Why were the Federalist Papers important?
+Okunus: vay were di federalist papers imporint
+Answer: They helped people understand the (U.S.) Constitution.
+Turkce soru: Federalist Papers neden onemliydi?
+Turkce cevap: Insanlarin Anayasa'yi anlamasina yardim etti.
+85. Benjamin Franklin is famous for many things. Name one.
+Okunus: benjamin franklin iz famous for meni dings. neym one.
+Answer: Founded the first free public libraries
+Turkce soru: Benjamin Franklin bircok sey ile meshurdur. Birini soyleyin.
+Turkce cevap: Ilk ucretsiz halk kutuphanelerini kurdu.
+86. George Washington is famous for many things. Name one. *
+Okunus: george washington iz famous for meni dings. neym one.
+Answer: “Father of Our Country”
+Turkce soru: George Washington bircok sey ile meshurdur. Birini soyleyin.
+Turkce cevap: Ulkemizin Babasi olarak bilinir.
+87. Thomas Jefferson is famous for many things. Name one.
+Okunus: domas jefferson iz famous for meni dings. neym one.
+Answer: Writer of the Declaration of Independence
+Turkce soru: Thomas Jefferson bircok sey ile meshurdur. Birini soyleyin.
+Turkce cevap: Bagimsizlik Bildirgesi'nin yazariydi.
+88. James Madison is famous for many things. Name one.
+Okunus: james madison iz famous for meni dings. neym one.
+Answer: “Father of the Constitution”
+Turkce soru: James Madison bircok sey ile meshurdur. Birini soyleyin.
+Turkce cevap: Anayasa'nin Babasi olarak bilinir.
+89. Alexander Hamilton is famous for many things. Name one.
+Okunus: alexander hamilton iz famous for meni dings. neym one.
+Answer: First Secretary of the Treasury
+Turkce soru: Alexander Hamilton bircok sey ile meshurdur. Birini soyleyin.
+Turkce cevap: Ilk Hazine Bakaniydi.
+90. What territory did the United States buy from France in 1803?
+Okunus: vat territory did di yunaytid steyts buy from france in 1803
+Answer: Louisiana Territory
+Turkce soru: Amerika Birlesik Devletleri 1803'te Fransa'dan hangi topragi satin aldi?
+Turkce cevap: Louisiana Topragi.
+91. Name one war fought by the United States in the 1800s.
+Okunus: neym van vor fot by di yunaytid steyts in di 1800s.
+Answer: War of 1812
+Turkce soru: 1800'lerde ABD'nin savastigi bir savasi soyleyin.
+Turkce cevap: 1812 Savasi.
+92. Name the U.S. war between the North and the South.
+Okunus: neym di yu es vor betwiin di nord end di soud.
+Answer: The Civil War
+Turkce soru: Kuzey ile Guney arasindaki ABD savasinin adi nedir?
+Turkce cevap: Ic Savas.
+93. The Civil War had many important events. Name one.
+Okunus: di civil vor had meni imporint events. neym one.
+Answer: (Battle of) Fort Sumter
+Turkce soru: Ic Savas'in onemli olaylarindan birini soyleyin.
+Turkce cevap: Fort Sumter Savasi.
+94. Abraham Lincoln is famous for many things. Name one. *
+Okunus: abraham lincoln iz famous for meni dings. neym one.
+Answer: Freed the slaves (Emancipation Proclamation)
+Turkce soru: Abraham Lincoln bircok sey ile meshurdur. Birini soyleyin.
+Turkce cevap: Koleleri ozgurlestirdi.
+95. What did the Emancipation Proclamation do?
+Okunus: vat did di emancipashin proclamashin do
+Answer: Freed the slaves
+Turkce soru: Emancipation Proclamation ne yapti?
+Turkce cevap: Koleleri ozgurlestirdi.
+96. What U.S. war ended slavery?
+Okunus: vat yu es vor ended slavery
+Answer: The Civil War
+Turkce soru: Hangi ABD savasi koleligi bitirdi?
+Turkce cevap: Ic Savas.
+97. What amendment says all persons born or naturalized in the United States,
+Okunus: vat amendmint seys all persons born or naturalized in di yunaytid steyts
+Answer: 14th Amendment
+Turkce soru: Amerika Birlesik Devletleri'nde dogan veya vatandasliga kabul edilen herkesin ABD vatandasi oldugunu
+hangi degisiklik soyler?
+Turkce cevap: 14. Degisiklik.
+98. When did all men get the right to vote?
+Okunus: when did all men get di right tu vote
+Answer: After the Civil War
+Turkce soru: Tum erkekler oy kullanma hakkini ne zaman kazandi?
+Turkce cevap: Ic Savas'tan sonra.
+99. Name one leader of the women’s rights movement in the 1800s.
+Okunus: neym van liider ov di women's rayts movement in di 1800s.
+Answer: Susan B. Anthony
+Turkce soru: 1800'lerde kadin haklari hareketinin bir liderini soyleyin.
+Turkce cevap: Susan B. Anthony.
+100. Name one war fought by the United States in the 1900s.
+Okunus: neym van vor fot by di yunaytid steyts in di 1900s.
+Answer: World War I
+Turkce soru: 1900'lerde ABD'nin savastigi bir savasi soyleyin.
+Turkce cevap: I. Dunya Savasi.
+101. Why did the United States enter World War I?
+Okunus: vay did di yunaytid steyts enter world vor i
+Answer: Because Germany attacked U.S. (civilian) ships
+Turkce soru: ABD neden I. Dunya Savasi'na girdi?
+Turkce cevap: Cunku Almanya ABD sivil gemilerine saldirdi.
+102. When did all women get the right to vote?
+Okunus: when did all women get di right tu vote
+Answer: 1920
+Turkce soru: Tum kadinlar oy kullanma hakkini ne zaman kazandi?
+Turkce cevap: 1920'de.
+103. What was the Great Depression?
+Okunus: vat was di griit depresjın
+Answer: Longest economic recession in modern history
+Turkce soru: Buyuk Bunalim neydi?
+Turkce cevap: Modern tarihin en uzun ekonomik durgunluguydu.
+104. When did the Great Depression start?
+Okunus: when did di griit depresjın start
+Answer: The Great Crash (1929)
+Turkce soru: Buyuk Bunalim ne zaman basladi?
+Turkce cevap: 1929 Buyuk Cokus'unda.
+105. Who was president during the Great Depression and World War II?
+Okunus: hu was prezidint during di griit depresjın end world vor ii
+Answer: (Franklin) Roosevelt
+Turkce soru: Buyuk Bunalim ve II. Dunya Savasi sirasinda baskan kimdi?
+Turkce cevap: Franklin Roosevelt.
+106. Why did the United States enter World War II?
+Okunus: vay did di yunaytid steyts enter world vor ii
+Answer: (Bombing of) Pearl Harbor
+Turkce soru: ABD neden II. Dunya Savasi'na girdi?
+Turkce cevap: Pearl Harbor saldirisi nedeniyle.
+107. Dwight Eisenhower is famous for many things. Name one.
+Okunus: dwight eisenhouer iz famous for meni dings. neym one.
+Answer: General during World War II
+Turkce soru: Dwight Eisenhower bircok sey ile meshurdur. Birini soyleyin.
+Turkce cevap: II. Dunya Savasi'nda generaldi.
+108. Who was the United States’ main rival during the Cold War?
+Okunus: hu was di yunaytid states' main rival during di cold vor
+Answer: Soviet Union
+Turkce soru: Soguk Savas sirasinda ABD'nin baslica rakibi kimdi?
+Turkce cevap: Sovyetler Birligi.
+109. During the Cold War, what was one main concern of the United States?
+Okunus: during di cold vor vat was van main concern ov di yunaytid steyts
+Answer: Communism
+Turkce soru: Soguk Savas sirasinda ABD'nin temel kaygilarindan biri neydi?
+Turkce cevap: Komunizm.
+110. Why did the United States enter the Korean War?
+Okunus: vay did di yunaytid steyts enter di koriin vor
+Answer: To stop the spread of communism
+Turkce soru: ABD neden Kore Savasi'na girdi?
+Turkce cevap: Komunizmin yayilmasini durdurmak icin.
+111. Why did the United States enter the Vietnam War?
+Okunus: vay did di yunaytid steyts enter di vietnam vor
+Answer: To stop the spread of communism
+Turkce soru: ABD neden Vietnam Savasi'na girdi?
+Turkce cevap: Komunizmin yayilmasini durdurmak icin.
+112. What did the civil rights movement do?
+Okunus: vat did di civil rayts movement do
+Answer: Fought to end racial discrimination
+Turkce soru: Sivil haklar hareketi ne yapti?
+Turkce cevap: Irksal ayrimciligi sona erdirmek icin mucadele etti.
+113. Martin Luther King, Jr. is famous for many things. Name one. *
+Okunus: martin luder king jr. iz famous for meni dings. neym one.
+Answer: Fought for civil rights
+Turkce soru: Martin Luther King, Jr. bircok sey ile meshurdur. Birini soyleyin.
+Turkce cevap: Sivil haklar icin mucadele etti.
+114. Why did the United States enter the Persian Gulf War?
+Okunus: vay did di yunaytid steyts enter di persian gulf vor
+Answer: To force the Iraqi military from Kuwait
+Turkce soru: ABD neden Korfez Savasi'na girdi?
+Turkce cevap: Irak ordusunu Kuveyt'ten cikarmak icin.
+115. What major event happened on September 11, 2001 in the United States? *
+Okunus: vat major event happened on september 11 2001 in di yunaytid steyts
+Answer: Terrorists attacked the United States
+Turkce soru: 11 Eylul 2001'de ABD'de hangi buyuk olay oldu?
+Turkce cevap: Teroristler ABD'ye saldirdi.
+116. Name one U.S. military conflict after the September 11, 2001 attacks.
+Okunus: neym van yu es militeri conflict after di september 11 2001 attacks.
+Answer: (Global) War on Terror
+Turkce soru: 11 Eylul 2001 saldirilarindan sonra bir ABD askeri catismasi soyleyin.
+Turkce cevap: Terore Karsi Savas.
+117. Name one American Indian tribe in the United States.
+Okunus: neym van amerikin indian tribe in di yunaytid states.
+Answer: Apache
+Turkce soru: Amerika Birlesik Devletleri'ndeki bir Amerikan yerli kabilesini soyleyin.
+Turkce cevap: Apache.
+118. Name one example of an American innovation.
+Okunus: neym van example ov an amerikin innovashin.
+Answer: Light bulb
+Turkce soru: Bir Amerikan yeniligine ornek soyleyin.
+Turkce cevap: Ampul.
+SYMBOLS AND HOLIDAYS
+119. What is the capital of the United States?
+Okunus: vat iz di kepitil ov di yunaytid steyts
+Answer: Washington, D.C.
+Turkce soru: Amerika Birlesik Devletleri'nin baskenti neresidir?
+Turkce cevap: Washington, D.C.
+120. Where is the Statue of Liberty?
+Okunus: where iz di statue ov libirti
+Answer: New York (Harbor)
+Turkce soru: Ozgurluk Heykeli nerededir?
+Turkce cevap: New York Limani'nda.
+121. Why does the flag have 13 stripes? *
+Okunus: vay daz di flag hev 13 stripes
+Answer: (Because there were) 13 original colonies
+Turkce soru: Bayrakta neden 13 cizgi vardir?
+Turkce cevap: 13 ilk koloniyi temsil eder.
+122. Why does the flag have 50 stars?
+Okunus: vay daz di flag hev 50 stars
+Answer: (Because there is) one star for each state
+Turkce soru: Bayrakta neden 50 yildiz vardir?
+Turkce cevap: Her eyalet icin bir yildiz vardir.
+123. What is the name of the national anthem?
+Okunus: vat iz di neym ov di nashinal andem
+Answer: The Star-Spangled Banner
+Turkce soru: Ulusal marsin adi nedir?
+Turkce cevap: The Star-Spangled Banner.
+124. The Nation’s first motto was “E Pluribus Unum.” What does that mean?
+Okunus: di nashin's first motto was e pluribus unum. vat daz dat miin
+Answer: Out of many, one
+Turkce soru: Ulkenin ilk slogani 'E Pluribus Unum' idi. Bu ne demektir?
+Turkce cevap: Cokluktan birlik.
+125. What is Independence Day?
+Okunus: vat iz indipendins dey
+Answer: A holiday to celebrate U.S. independence (from Britain)
+Turkce soru: Independence Day nedir?
+Turkce cevap: ABD bagimsizligini kutlayan bir bayramdir.
+126. Name three national U.S. holidays. *
+Okunus: neym thri nashinal yu es holideys.
+Answer: New Year’s Day
+Turkce soru: ABD'nin uc ulusal tatilini soyleyin.
+Turkce cevap: New Year's Day, Martin Luther King Jr. Day, Presidents Day.
+127. What is Memorial Day?
+Okunus: vat iz memorial dey
+Answer: A holiday to honor soldiers who died in military service
+Turkce soru: Memorial Day nedir?
+Turkce cevap: Askerlik hizmetinde olen askerleri onurlandiran bir tatildir.
+128. What is Veterans Day?
+Okunus: vat iz veterans dey
+Answer: A holiday to honor people in the (U.S.) military
+Turkce soru: Veterans Day nedir?
+Turkce cevap: ABD ordusunda gorev yapmis kisileri onurlandiran bir tatildir.
+

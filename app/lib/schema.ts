@@ -1,4 +1,15 @@
 import { siteConfig } from "./metadata";
+import { getLanguageByCode, type LanguageConfig } from "./languages";
+
+function resolveLocale(
+  locale?: LanguageConfig["code"]
+): { code: LanguageConfig["code"]; bcp47: string } {
+  const lang = locale ? getLanguageByCode(locale) : undefined;
+  return {
+    code: lang?.code ?? "en",
+    bcp47: lang?.bcp47 ?? "en-US",
+  };
+}
 
 export function generateWebSiteSchema() {
   return {
@@ -122,12 +133,14 @@ export function generateLearningResourceSchema({
   url,
   resourceType = "reference",
   interactivityType = "expositive",
+  locale,
 }: {
   name: string;
   description: string;
   url: string;
   resourceType?: string;
   interactivityType?: string;
+  locale?: LanguageConfig["code"];
 }) {
   return {
     "@context": "https://schema.org",
@@ -139,7 +152,7 @@ export function generateLearningResourceSchema({
     learningResourceType: resourceType,
     interactivityType,
     isAccessibleForFree: true,
-    inLanguage: "en",
+    inLanguage: resolveLocale(locale).bcp47,
     audience: {
       "@type": "EducationalAudience",
       educationalRole: "student",
@@ -159,12 +172,14 @@ export function generateArticleSchema({
   path,
   datePublished = "2025-10-01",
   dateModified = "2026-03-02",
+  locale,
 }: {
   title: string;
   description: string;
   path: string;
   datePublished?: string;
   dateModified?: string;
+  locale?: LanguageConfig["code"];
 }) {
   return {
     "@context": "https://schema.org",
@@ -184,7 +199,7 @@ export function generateArticleSchema({
       name: siteConfig.name,
       url: siteConfig.url,
     },
-    inLanguage: "en",
+    inLanguage: resolveLocale(locale).bcp47,
   };
 }
 

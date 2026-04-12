@@ -11,6 +11,8 @@ interface UseVoiceRecognitionOptions {
 interface UseVoiceRecognitionReturn {
   isListening: boolean;
   transcript: string;
+  /** All alternatives returned by the speech engine (maxAlternatives: 3). */
+  transcriptAlternatives: string[];
   interimTranscript: string;
   isSupported: boolean;
   startListening: () => void;
@@ -27,6 +29,7 @@ export function useVoiceRecognition(
 
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState("");
+  const [transcriptAlternatives, setTranscriptAlternatives] = useState<string[]>([]);
   const [interimTranscript, setInterimTranscript] = useState("");
   const [isSupported, setIsSupported] = useState(false);
 
@@ -50,11 +53,15 @@ export function useVoiceRecognition(
       recognition.onresult = (event: any) => {
         let final = "";
         let interim = "";
+        const alternatives: string[] = [];
 
         for (let i = event.resultIndex; i < event.results.length; i++) {
           const result = event.results[i];
           if (result.isFinal) {
             final += result[0].transcript;
+            for (let j = 0; j < result.length; j++) {
+              alternatives.push(result[j].transcript);
+            }
           } else {
             interim += result[0].transcript;
           }
@@ -62,6 +69,7 @@ export function useVoiceRecognition(
 
         if (final) {
           setTranscript((prev) => (prev ? prev + " " + final : final));
+          setTranscriptAlternatives(alternatives);
           setInterimTranscript("");
         } else {
           setInterimTranscript(interim);
@@ -98,6 +106,7 @@ export function useVoiceRecognition(
   const startListening = useCallback(() => {
     if (!recognitionRef.current) return;
     setTranscript("");
+    setTranscriptAlternatives([]);
     setInterimTranscript("");
     try {
       recognitionRef.current.start();
@@ -119,12 +128,14 @@ export function useVoiceRecognition(
 
   const resetTranscript = useCallback(() => {
     setTranscript("");
+    setTranscriptAlternatives([]);
     setInterimTranscript("");
   }, []);
 
   return {
     isListening,
     transcript,
+    transcriptAlternatives,
     interimTranscript,
     isSupported,
     startListening,
@@ -135,13 +146,18 @@ export function useVoiceRecognition(
 
 /**
  * Fuzzy match a spoken answer against a list of correct answers.
- * Returns the matched answer string or null.
+ *
+ * `spoken` can be a single transcript string or an array of alternatives
+ * (from `maxAlternatives`). When multiple alternatives are provided, each is
+ * scored independently and the best result across all alternatives wins.
+ * This significantly reduces false-fail rate for accented speakers.
  */
 export function matchAnswer(
-  spoken: string,
+  spoken: string | string[],
   correctAnswers: string[]
 ): { matched: boolean; bestMatch: string | null; confidence: number } {
-  if (!spoken.trim()) return { matched: false, bestMatch: null, confidence: 0 };
+  const spokenTexts = Array.isArray(spoken) ? spoken : [spoken];
+  if (!spokenTexts.some((s) => s.trim())) return { matched: false, bestMatch: null, confidence: 0 };
 
   const normalize = (s: string) =>
     s
@@ -151,53 +167,57 @@ export function matchAnswer(
       .replace(/\s+/g, " ")
       .trim();
 
-  const spokenNorm = normalize(spoken);
-  const spokenWords = new Set(spokenNorm.split(" ").filter((w) => w.length > 1));
+  let globalBestScore = 0;
+  let globalBestMatch: string | null = null;
 
-  let bestScore = 0;
-  let bestMatch: string | null = null;
+  for (const spokenText of spokenTexts) {
+    if (!spokenText.trim()) continue;
 
-  for (const answer of correctAnswers) {
-    const answerNorm = normalize(answer);
-    const answerWords = answerNorm.split(" ").filter((w) => w.length > 1);
+    const spokenNorm = normalize(spokenText);
+    const spokenWords = new Set(spokenNorm.split(" ").filter((w) => w.length > 1));
 
-    if (!answerWords.length) continue;
+    for (const answer of correctAnswers) {
+      const answerNorm = normalize(answer);
+      const answerWords = answerNorm.split(" ").filter((w) => w.length > 1);
 
-    // Exact match after normalization
-    if (spokenNorm === answerNorm || spokenNorm.includes(answerNorm) || answerNorm.includes(spokenNorm)) {
-      return { matched: true, bestMatch: answer, confidence: 1 };
-    }
+      if (!answerWords.length) continue;
 
-    // Word overlap score
-    let matchCount = 0;
-    for (const word of answerWords) {
-      if (spokenWords.has(word)) {
-        matchCount++;
-      } else {
-        // Check partial match for longer words (e.g., "constitution" vs "constitutional")
-        for (const sw of spokenWords) {
-          if (
-            (sw.length > 4 && word.startsWith(sw.slice(0, -1))) ||
-            (word.length > 4 && sw.startsWith(word.slice(0, -1)))
-          ) {
-            matchCount += 0.8;
-            break;
+      // Exact match after normalization
+      if (spokenNorm === answerNorm || spokenNorm.includes(answerNorm) || answerNorm.includes(spokenNorm)) {
+        return { matched: true, bestMatch: answer, confidence: 1 };
+      }
+
+      // Word overlap score
+      let matchCount = 0;
+      for (const word of answerWords) {
+        if (spokenWords.has(word)) {
+          matchCount++;
+        } else {
+          // Check partial match for longer words (e.g., "constitution" vs "constitutional")
+          for (const sw of spokenWords) {
+            if (
+              (sw.length > 4 && word.startsWith(sw.slice(0, -1))) ||
+              (word.length > 4 && sw.startsWith(word.slice(0, -1)))
+            ) {
+              matchCount += 0.8;
+              break;
+            }
           }
         }
       }
-    }
 
-    const score = matchCount / answerWords.length;
-    if (score > bestScore) {
-      bestScore = score;
-      bestMatch = answer;
+      const score = matchCount / answerWords.length;
+      if (score > globalBestScore) {
+        globalBestScore = score;
+        globalBestMatch = answer;
+      }
     }
   }
 
   // Threshold: at least 60% of answer words must match
   return {
-    matched: bestScore >= 0.6,
-    bestMatch,
-    confidence: bestScore,
+    matched: globalBestScore >= 0.6,
+    bestMatch: globalBestMatch,
+    confidence: globalBestScore,
   };
 }

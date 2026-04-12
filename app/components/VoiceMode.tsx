@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useVoiceRecognition, matchAnswer } from "@/app/hooks/useVoiceRecognition";
+import { useLocale } from "@/app/lib/LocaleContext";
 
 interface VoiceModeProps {
   questionNumber: number;
@@ -16,6 +17,8 @@ interface VoiceModeProps {
   currentIndex: number;
   totalCards: number;
   autoListen: boolean;
+  phonetic?: string;
+  answerPhonetics?: string[];
 }
 
 type Result = "correct" | "incorrect" | "skipped" | null;
@@ -24,6 +27,9 @@ const categoryColors: Record<string, string> = {
   "American Government": "from-blue-600/20 to-indigo-600/20 border-blue-500/20",
   "American History": "from-red-600/20 to-orange-600/20 border-red-500/20",
   "Symbols and Holidays": "from-emerald-600/20 to-teal-600/20 border-emerald-500/20",
+  "Amerikan Hukumeti": "from-blue-600/20 to-indigo-600/20 border-blue-500/20",
+  "Amerikan Tarihi": "from-red-600/20 to-orange-600/20 border-red-500/20",
+  "Semboller ve Tatiller": "from-emerald-600/20 to-teal-600/20 border-emerald-500/20",
 };
 
 export default function VoiceMode({
@@ -39,23 +45,41 @@ export default function VoiceMode({
   currentIndex,
   totalCards,
   autoListen,
+  phonetic,
+  answerPhonetics,
 }: VoiceModeProps) {
+  const locale = useLocale();
+  const isNonEnglish = locale.code !== "en";
+
   const [result, setResult] = useState<Result>(null);
   const [matchedAnswer, setMatchedAnswer] = useState<string | null>(null);
   const [hasSpoken, setHasSpoken] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [englishAnswers, setEnglishAnswers] = useState<string[]>([]);
+  const [highlightWordIndex, setHighlightWordIndex] = useState(-1);
   const advanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const questionReadRef = useRef(false);
 
   const {
     isListening,
     transcript,
+    transcriptAlternatives,
     interimTranscript,
     isSupported,
     startListening,
     stopListening,
     resetTranscript,
   } = useVoiceRecognition({ continuous: false });
+
+  // Load English answers for non-English locales (needed for voice matching + TTS)
+  useEffect(() => {
+    if (isNonEnglish) {
+      import("@/app/data/questions").then((m) => {
+        const enQ = m.questions.find((q) => q.id === questionNumber);
+        if (enQ) setEnglishAnswers(enQ.answers);
+      });
+    }
+  }, [isNonEnglish, questionNumber]);
 
   // TTS helpers
   const stopSpeaking = useCallback(() => {
@@ -66,24 +90,69 @@ export default function VoiceMode({
   }, []);
 
   const speak = useCallback(
-    (text: string, onEnd?: () => void) => {
+    (
+      text: string,
+      opts?: {
+        lang?: string;
+        onEnd?: () => void;
+        onWordBoundary?: (charIndex: number) => void;
+      }
+    ) => {
       if (typeof window === "undefined" || !window.speechSynthesis) return;
       stopSpeaking();
+      const lang = opts?.lang ?? "en-US";
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = "en-US";
-      utterance.rate = 0.85;
+      utterance.lang = lang;
+      utterance.rate = lang === "en-US" ? 0.85 : 0.9;
       const voices = window.speechSynthesis.getVoices();
-      const usVoice = voices.find((v) => v.lang === "en-US" && v.localService);
-      if (usVoice) utterance.voice = usVoice;
+      const voice = voices.find((v) => v.lang === lang && v.localService)
+        ?? voices.find((v) => v.lang.startsWith(lang.split("-")[0]));
+      if (voice) utterance.voice = voice;
       utterance.onstart = () => setIsSpeaking(true);
       utterance.onend = () => {
         setIsSpeaking(false);
-        onEnd?.();
+        setHighlightWordIndex(-1);
+        opts?.onEnd?.();
       };
-      utterance.onerror = () => setIsSpeaking(false);
+      utterance.onerror = () => {
+        setIsSpeaking(false);
+        setHighlightWordIndex(-1);
+      };
+      if (opts?.onWordBoundary) {
+        utterance.onboundary = (event) => {
+          if (event.name === "word") {
+            opts.onWordBoundary!(event.charIndex);
+          }
+        };
+      }
       window.speechSynthesis.speak(utterance);
     },
     [stopSpeaking]
+  );
+
+  // Compute which phonetic word is being spoken from a charIndex in the English text
+  const charIndexToWordIndex = useCallback((text: string, charIdx: number) => {
+    const words = text.split(/\s+/);
+    let pos = 0;
+    for (let i = 0; i < words.length; i++) {
+      if (charIdx <= pos + words[i].length) return i;
+      pos += words[i].length + 1;
+    }
+    return words.length - 1;
+  }, []);
+
+  // Speak an English answer with word-by-word phonetic highlight
+  const speakEnglishAnswer = useCallback(
+    (text: string, onEnd?: () => void) => {
+      speak(text, {
+        lang: "en-US",
+        onEnd,
+        onWordBoundary: (charIdx) => {
+          setHighlightWordIndex(charIndexToWordIndex(text, charIdx));
+        },
+      });
+    },
+    [speak, charIndexToWordIndex]
   );
 
   // Read question aloud when card changes, then auto-listen
@@ -92,6 +161,7 @@ export default function VoiceMode({
     setResult(null);
     setMatchedAnswer(null);
     setHasSpoken(false);
+    setHighlightWordIndex(-1);
     resetTranscript();
     stopSpeaking();
 
@@ -104,11 +174,14 @@ export default function VoiceMode({
     const timer = setTimeout(() => {
       if (!questionReadRef.current) {
         questionReadRef.current = true;
-        speak(question, () => {
-          // After question is read, auto-listen if enabled
-          if (autoListen && isSupported) {
-            setTimeout(() => startListening(), 400);
-          }
+        // Read question in the locale's voice (tr-TR, es-US, or en-US)
+        speak(question, {
+          lang: isNonEnglish ? locale.bcp47 : "en-US",
+          onEnd: () => {
+            if (autoListen && isSupported) {
+              setTimeout(() => startListening(), 400);
+            }
+          },
         });
       }
     }, 300);
@@ -123,15 +196,20 @@ export default function VoiceMode({
   // Check answer when listening stops and we have a transcript
   useEffect(() => {
     if (!isListening && transcript && !hasSpoken) {
+      // Wait for English answers to load before matching in non-English locales
+      if (isNonEnglish && englishAnswers.length === 0) return;
       setHasSpoken(true);
-      const { matched, bestMatch } = matchAnswer(transcript, answers);
+
+      // For non-English locales, match against English answers; use all alternatives
+      const matchTargets = isNonEnglish ? englishAnswers : answers;
+      const spokenTexts = transcriptAlternatives.length > 0 ? transcriptAlternatives : [transcript];
+      const { matched, bestMatch } = matchAnswer(spokenTexts, matchTargets);
       setMatchedAnswer(bestMatch);
 
       if (matched) {
         setResult("correct");
         onCorrect();
-        speak("Correct!");
-        // Auto-advance after delay
+        speak("Correct!", { onEnd: undefined });
         if (autoListen) {
           advanceTimerRef.current = setTimeout(() => {
             onNext();
@@ -140,11 +218,9 @@ export default function VoiceMode({
       } else {
         setResult("incorrect");
         onIncorrect();
-        // Read correct answer
-        const correctText = answers.length > 1
-          ? `The answer is: ${answers.slice(0, 3).join(". Or, ")}`
-          : `The answer is: ${answers[0]}`;
-        speak(correctText, () => {
+        // Read first correct answer in English with phonetic word-by-word highlight
+        const enAns = isNonEnglish ? englishAnswers : answers;
+        speakEnglishAnswer(enAns[0], () => {
           if (autoListen) {
             advanceTimerRef.current = setTimeout(() => {
               onNext();
@@ -153,7 +229,7 @@ export default function VoiceMode({
         });
       }
     }
-  }, [isListening, transcript, hasSpoken, answers, onCorrect, onIncorrect, onNext, speak, autoListen]);
+  }, [isListening, transcript, transcriptAlternatives, hasSpoken, answers, englishAnswers, isNonEnglish, onCorrect, onIncorrect, onNext, speak, speakEnglishAnswer, autoListen]);
 
   // Cleanup
   useEffect(() => {
@@ -181,23 +257,27 @@ export default function VoiceMode({
     stopSpeaking();
     setResult("skipped");
     if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
-    // Show answer briefly, then advance
-    speak(answers.slice(0, 3).join(". Or, "), () => {
+    // Read answer in English with phonetic highlight
+    const enAns = isNonEnglish ? englishAnswers : answers;
+    speakEnglishAnswer(enAns[0], () => {
       if (autoListen) {
         advanceTimerRef.current = setTimeout(onNext, 1500);
       }
     });
-  }, [stopListening, stopSpeaking, speak, answers, onNext, autoListen]);
+  }, [stopListening, stopSpeaking, speakEnglishAnswer, answers, englishAnswers, isNonEnglish, onNext, autoListen]);
 
   const handleRepeatQuestion = useCallback(() => {
     stopListening();
     if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
-    speak(question, () => {
-      if (isSupported && !result) {
-        setTimeout(() => startListening(), 400);
-      }
+    speak(question, {
+      lang: isNonEnglish ? locale.bcp47 : "en-US",
+      onEnd: () => {
+        if (isSupported && !result) {
+          setTimeout(() => startListening(), 400);
+        }
+      },
     });
-  }, [stopListening, speak, question, isSupported, result, startListening]);
+  }, [stopListening, speak, question, isNonEnglish, locale.bcp47, isSupported, result, startListening]);
 
   if (!isSupported) {
     return (
@@ -244,6 +324,16 @@ export default function VoiceMode({
           <h2 className="text-xl sm:text-2xl font-medium leading-relaxed text-white/90">
             {question}
           </h2>
+          {phonetic && (
+            <div lang={locale.code} className="mt-2">
+              <span aria-hidden="true" className="text-sm italic text-blue-300/50">
+                {phonetic}
+              </span>
+              <span className="sr-only">
+                Pronunciation guide for: {question}
+              </span>
+            </div>
+          )}
           <button
             onClick={handleRepeatQuestion}
             className={`mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs transition-all ${
@@ -356,9 +446,30 @@ export default function VoiceMode({
                     Correct answer{answers.length > 1 ? "s" : ""}:
                   </p>
                   {answers.slice(0, 5).map((a, i) => (
-                    <p key={i} className="text-emerald-300/80 text-sm">
-                      {a}
-                    </p>
+                    <div key={i}>
+                      <p className="text-emerald-300/80 text-sm">
+                        {a}
+                      </p>
+                      {answerPhonetics?.[i] && (
+                        <p aria-hidden="true" className="text-xs italic text-emerald-400/40">
+                          {i === 0 && isSpeaking && highlightWordIndex >= 0
+                            ? answerPhonetics[i].split(/\s+/).map((word, wi) => (
+                                <span
+                                  key={wi}
+                                  className={`transition-colors duration-150 ${
+                                    wi === highlightWordIndex
+                                      ? "text-emerald-300 font-medium"
+                                      : ""
+                                  }`}
+                                >
+                                  {wi > 0 ? " " : ""}{word}
+                                </span>
+                              ))
+                            : answerPhonetics[i]
+                          }
+                        </p>
+                      )}
+                    </div>
                   ))}
                   {answers.length > 5 && (
                     <p className="text-slate-500 text-xs">
@@ -416,10 +527,14 @@ export default function VoiceMode({
               setResult(null);
               setMatchedAnswer(null);
               setHasSpoken(false);
+              setHighlightWordIndex(-1);
               resetTranscript();
               if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
-              speak(question, () => {
-                setTimeout(() => startListening(), 400);
+              speak(question, {
+                lang: isNonEnglish ? locale.bcp47 : "en-US",
+                onEnd: () => {
+                  setTimeout(() => startListening(), 400);
+                },
               });
             }}
             className="px-6 py-2.5 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-300 font-medium hover:bg-blue-600/30 transition-all"

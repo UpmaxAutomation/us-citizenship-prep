@@ -1,0 +1,1026 @@
+{
+  "1": {
+    "en_question": "What is the form of government of the United States?",
+    "is6520": false,
+    "okunus": "vat iz di form ov gavirnment ov di yunaytid steyts",
+    "en_answer": "Republic",
+    "tr_q": "Amerika Birlesik Devletleri'nin yonetim sekli nedir?",
+    "tr_a": "Cumhuriyet."
+  },
+  "2": {
+    "en_question": "What is the supreme law of the land?",
+    "is6520": true,
+    "okunus": "vat iz di suprim lo ov di lend",
+    "en_answer": "(U.S.) Constitution",
+    "tr_q": "Ulkenin en yuksek yasasi nedir?",
+    "tr_a": "ABD Anayasasi."
+  },
+  "3": {
+    "en_question": "Name one thing the U.S. Constitution does.",
+    "is6520": false,
+    "okunus": "neym van ting di yu es konstitushin does.",
+    "en_answer": "Forms the government",
+    "tr_q": "ABD Anayasasi'nin yaptigi bir sey soyleyin.",
+    "tr_a": "Hukumeti kurar."
+  },
+  "4": {
+    "en_question": "The U.S. Constitution starts with the words “We the People.” What does “We the People” mean?",
+    "is6520": false,
+    "okunus": "di yu es konstitushin starts vith di vordz wi di people. vat daz wi di piipl miin",
+    "en_answer": "Self-government",
+    "tr_q": "ABD Anayasasi 'We the People' sozleriyle baslar. 'We the People' ne demektir?",
+    "tr_a": "Halkin kendi kendini yonetmesi."
+  },
+  "5": {
+    "en_question": "How are changes made to the U.S. Constitution?",
+    "is6520": false,
+    "okunus": "hav ar cheynciz meyd tu di yu es konstitushin",
+    "en_answer": "Amendments",
+    "tr_q": "ABD Anayasasi'nda degisiklikler nasil yapilir?",
+    "tr_a": "Degisikliklerle."
+  },
+  "6": {
+    "en_question": "What does the Bill of Rights protect?",
+    "is6520": false,
+    "okunus": "vat daz di bil ov rayts protekt",
+    "en_answer": "(The basic) rights of Americans",
+    "tr_q": "Haklar Bildirgesi neyi korur?",
+    "tr_a": "Amerikalilarin temel haklarini."
+  },
+  "7": {
+    "en_question": "How many amendments does the U.S. Constitution have?",
+    "is6520": true,
+    "okunus": "hav meni amendmints daz di yu es konstitushin hev",
+    "en_answer": "Twenty-seven (27)",
+    "tr_q": "ABD Anayasasi'nda kac degisiklik vardir?",
+    "tr_a": "Yirmi yedi (27)."
+  },
+  "8": {
+    "en_question": "Why is the Declaration of Independence important?",
+    "is6520": false,
+    "okunus": "vay iz di deklarayshin ov indipendins imporint",
+    "en_answer": "It says America is free from British control.",
+    "tr_q": "Bagimsizlik Bildirgesi neden onemlidir?",
+    "tr_a": "Amerika'nin Ingiliz kontrolunden ozgur oldugunu soyler."
+  },
+  "9": {
+    "en_question": "What founding document said the American colonies were free from Britain?",
+    "is6520": false,
+    "okunus": "vat faunding dokyument sed di amerikin koloniz were fri from britin",
+    "en_answer": "Declaration of Independence",
+    "tr_q": "Amerikan kolonilerinin Britanya'dan ozgur oldugunu hangi kurucu belge soyledi?",
+    "tr_a": "Bagimsizlik Bildirgesi."
+  },
+  "10": {
+    "en_question": "Name two important ideas from the Declaration of Independence and the U.S. Constitution.",
+    "is6520": false,
+    "okunus": "Okunus: neym tu imporint aydiyaz from di deklarayshin ov indipendins end di yu es constitushin.",
+    "en_answer": "Equality",
+    "tr_q": "Bagimsizlik Bildirgesi ve ABD Anayasasi'ndan iki onemli fikir soyleyin.",
+    "tr_a": "Esitlik."
+  },
+  "11": {
+    "en_question": "The words “Life, Liberty, and the pursuit of Happiness” are in what founding document?",
+    "is6520": false,
+    "okunus": "di vordz layf libirti end di pirsuit ov hepinis ar in vat faunding dokyument",
+    "en_answer": "Declaration of Independence",
+    "tr_q": "'Life, Liberty, and the pursuit of Happiness' sozleri hangi kurucu belgede yer alir?",
+    "tr_a": "Bagimsizlik Bildirgesi."
+  },
+  "12": {
+    "en_question": "What is the economic system of the United States?",
+    "is6520": true,
+    "okunus": "vat iz di ekonomik sistim ov di yunaytid steyts",
+    "en_answer": "Capitalism",
+    "tr_q": "Amerika Birlesik Devletleri'nin ekonomik sistemi nedir?",
+    "tr_a": "Kapitalizm."
+  },
+  "13": {
+    "en_question": "What is the rule of law?",
+    "is6520": false,
+    "okunus": "vat iz di ruul ov lo",
+    "en_answer": "Everyone must follow the law.",
+    "tr_q": "Hukukun ustunlugu nedir?",
+    "tr_a": "Herkes yasaya uymak zorundadir."
+  },
+  "14": {
+    "en_question": "Many documents influenced the U.S. Constitution. Name one.",
+    "is6520": false,
+    "okunus": "meni dokyuments influinst di yu es constitushin. neym one.",
+    "en_answer": "Declaration of Independence",
+    "tr_q": "Bir cok belge ABD Anayasasi'ni etkilemistir. Birini soyleyin.",
+    "tr_a": "Bagimsizlik Bildirgesi."
+  },
+  "15": {
+    "en_question": "There are three branches of government. Why?",
+    "is6520": false,
+    "okunus": "dere ar thri brenchiz ov government. vay",
+    "en_answer": "So one part does not become too powerful",
+    "tr_q": "Neden uc hukumet dali vardir?",
+    "tr_a": "Bir bolum cok guclu olmasin diye."
+  },
+  "16": {
+    "en_question": "Name the three branches of government.",
+    "is6520": false,
+    "okunus": "neym di thri brenchiz ov government.",
+    "en_answer": "Legislative, executive, and judicial",
+    "tr_q": "Uc hukumet dalini soyleyin.",
+    "tr_a": "Yasama, yurutme ve yargi."
+  },
+  "17": {
+    "en_question": "The President of the United States is in charge of which branch of government?",
+    "is6520": false,
+    "okunus": "di prezidint ov di yunaytid steyts iz in charge ov vich brench ov gavirnment",
+    "en_answer": "Executive branch",
+    "tr_q": "Amerika Birlesik Devletleri Baskani hangi hukumet dalindan sorumludur?",
+    "tr_a": "Yurutme dali."
+  },
+  "18": {
+    "en_question": "What part of the federal government writes laws?",
+    "is6520": false,
+    "okunus": "vat part ov di fediril gavirnment rayts loz",
+    "en_answer": "(U.S.) Congress",
+    "tr_q": "Federal hukumetin hangi bolumu yasalar yazar?",
+    "tr_a": "ABD Kongresi."
+  },
+  "19": {
+    "en_question": "What are the two parts of the U.S. Congress?",
+    "is6520": false,
+    "okunus": "vat ar di tu parts ov di yu es kangris",
+    "en_answer": "Senate and House (of Representatives)",
+    "tr_q": "ABD Kongresi'nin iki bolumu nedir?",
+    "tr_a": "Senato ve Temsilciler Meclisi."
+  },
+  "20": {
+    "en_question": "Name one power of the U.S. Congress.",
+    "is6520": true,
+    "okunus": "neym van pauir ov di yu es congress.",
+    "en_answer": "Writes laws",
+    "tr_q": "ABD Kongresi'nin bir yetkisini soyleyin.",
+    "tr_a": "Yasa yazar."
+  },
+  "21": {
+    "en_question": "How many U.S. senators are there?",
+    "is6520": false,
+    "okunus": "Okunus: hav meni yu es senitirs ar dere",
+    "en_answer": "One hundred (100)",
+    "tr_q": "Kac ABD senatoru vardir?",
+    "tr_a": "Yuz (100)."
+  },
+  "22": {
+    "en_question": "How long is a term for a U.S. senator?",
+    "is6520": false,
+    "okunus": "hav long iz a term for a yu es senitir",
+    "en_answer": "Six (6) years",
+    "tr_q": "Bir ABD senatorunun gorev suresi ne kadardir?",
+    "tr_a": "Alti (6) yil."
+  },
+  "23": {
+    "en_question": "Who is one of your state’s U.S. senators now?",
+    "is6520": false,
+    "okunus": "hu iz van ov yor steyts yu es senitirs nau",
+    "en_answer": "Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or",
+    "tr_q": "",
+    "tr_a": ""
+  },
+  "24": {
+    "en_question": "How many voting members are in the House of Representatives?",
+    "is6520": false,
+    "okunus": "hav meni vouting membirs ar in di haus ov reprizentitıvs",
+    "en_answer": "Four hundred thirty-five (435)",
+    "tr_q": "Temsilciler Meclisi'nde kac oy kullanan uye vardir?",
+    "tr_a": "Dort yuz otuz bes (435)."
+  },
+  "25": {
+    "en_question": "How long is a term for a member of the House of Representatives?",
+    "is6520": false,
+    "okunus": "hav long iz a term for a membir ov di haus ov reprizentitıvs",
+    "en_answer": "Two (2) years",
+    "tr_q": "Bir Temsilciler Meclisi uyesinin gorev suresi ne kadardir?",
+    "tr_a": "Iki (2) yil."
+  },
+  "26": {
+    "en_question": "Why do U.S. representatives serve shorter terms than U.S. senators?",
+    "is6520": false,
+    "okunus": "vay do yu es reprizentitıvs sirv shortir termz den yu es senitirs",
+    "en_answer": "To more closely follow public opinion",
+    "tr_q": "Neden ABD temsilcileri senatorlerden daha kisa sure gorev yapar?",
+    "tr_a": "Halkin gorusunu daha yakindan takip etmek icin."
+  },
+  "27": {
+    "en_question": "How many senators does each state have?",
+    "is6520": false,
+    "okunus": "hav meni senitirs daz iich state hev",
+    "en_answer": "Two (2)",
+    "tr_q": "Her eyaletin kac senatoru vardir?",
+    "tr_a": "Iki (2)."
+  },
+  "28": {
+    "en_question": "Why does each state have two senators?",
+    "is6520": false,
+    "okunus": "vay daz iich state hev tu senitirs",
+    "en_answer": "Equal representation (for small states)",
+    "tr_q": "Neden her eyaletin iki senatoru vardir?",
+    "tr_a": "Esit temsil icin."
+  },
+  "29": {
+    "en_question": "Name your U.S. representative.",
+    "is6520": false,
+    "okunus": "neym yor yu es representative.",
+    "en_answer": "Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide",
+    "tr_q": "",
+    "tr_a": ""
+  },
+  "30": {
+    "en_question": "What is the name of the Speaker of the House of Representatives now?",
+    "is6520": true,
+    "okunus": "vat iz di neym ov di spiikir ov di haus ov reprizentitıvs nau",
+    "en_answer": "Visit uscis.gov/citizenship/testupdates for the name of the Speaker of the House of Representatives.",
+    "tr_q": "Su anda Temsilciler Meclisi Baskani'nin adi nedir?",
+    "tr_a": "Guncel isme gore degisir."
+  },
+  "31": {
+    "en_question": "Who does a U.S. senator represent?",
+    "is6520": false,
+    "okunus": "hu daz a yu es senitir represent",
+    "en_answer": "Citizens of their state",
+    "tr_q": "Turkce soru: Bir ABD senatoru kimi temsil eder?",
+    "tr_a": "Eyaletindeki vatandaslari."
+  },
+  "32": {
+    "en_question": "Who elects U.S. senators?",
+    "is6520": false,
+    "okunus": "hu ilekts yu es senitirs",
+    "en_answer": "Citizens from their state",
+    "tr_q": "ABD senatorlerini kim secer?",
+    "tr_a": "Eyaletlerindeki vatandaslar."
+  },
+  "33": {
+    "en_question": "Who does a member of the House of Representatives represent?",
+    "is6520": false,
+    "okunus": "hu daz a membir ov di haus ov reprizentitıvs represent",
+    "en_answer": "Citizens in their (congressional) district",
+    "tr_q": "Bir Temsilciler Meclisi uyesi kimi temsil eder?",
+    "tr_a": "Bolgesindeki vatandaslari."
+  },
+  "34": {
+    "en_question": "Who elects members of the House of Representatives?",
+    "is6520": false,
+    "okunus": "hu ilekts membirs ov di haus ov reprizentitıvs",
+    "en_answer": "Citizens from their (congressional) district",
+    "tr_q": "Temsilciler Meclisi uyelerini kim secer?",
+    "tr_a": "Kongre bolgesindeki vatandaslar."
+  },
+  "35": {
+    "en_question": "Some states have more representatives than other states. Why?",
+    "is6520": false,
+    "okunus": "some steyts hev more reprizentitıvs den oder states. vay",
+    "en_answer": "(Because of) the state’s population",
+    "tr_q": "Neden bazi eyaletlerin digerlerinden daha fazla temsilcisi vardir?",
+    "tr_a": "Eyalet nufusu nedeniyle."
+  },
+  "36": {
+    "en_question": "The President of the United States is elected for how many years?",
+    "is6520": true,
+    "okunus": "di prezidint ov di yunaytid steyts iz ilektid for hav meni yiirs",
+    "en_answer": "Four (4) years",
+    "tr_q": "Amerika Birlesik Devletleri Baskani kac yil icin secilir?",
+    "tr_a": "Dort (4) yil."
+  },
+  "37": {
+    "en_question": "The President of the United States can serve only two terms. Why?",
+    "is6520": false,
+    "okunus": "di prezidint ov di yunaytid steyts ken sirv ounli tu terms. vay",
+    "en_answer": "(Because of) the 22nd Amendment",
+    "tr_q": "Baskan neden sadece iki donem gorev yapabilir?",
+    "tr_a": "22. Degisiklik nedeniyle."
+  },
+  "38": {
+    "en_question": "What is the name of the President of the United States now?",
+    "is6520": true,
+    "okunus": "vat iz di neym ov di prezidint ov di yunaytid steyts nau",
+    "en_answer": "Visit uscis.gov/citizenship/testupdates for the name of the President of the United States.",
+    "tr_q": "Su anda Amerika Birlesik Devletleri Baskani'nin adi nedir?",
+    "tr_a": "Guncel isme gore degisir."
+  },
+  "39": {
+    "en_question": "What is the name of the Vice President of the United States now?",
+    "is6520": true,
+    "okunus": "vat iz di neym ov di vays prezidint ov di yunaytid steyts nau",
+    "en_answer": "Visit uscis.gov/citizenship/testupdates for the name of the Vice President of the United States.",
+    "tr_q": "Su anda Amerika Birlesik Devletleri Baskan Yardimcisi'nin adi nedir?",
+    "tr_a": "Guncel isme gore degisir."
+  },
+  "40": {
+    "en_question": "If the president can no longer serve, who becomes president?",
+    "is6520": false,
+    "okunus": "if di prezidint ken nou longir sirv hu bikams prezidint",
+    "en_answer": "The Vice President (of the United States)",
+    "tr_q": "Baskan artik gorev yapamazsa kim baskan olur?",
+    "tr_a": "Baskan Yardimcisi."
+  },
+  "41": {
+    "en_question": "Name one power of the president.",
+    "is6520": false,
+    "okunus": "neym van pauir ov di president.",
+    "en_answer": "Signs bills into law",
+    "tr_q": "Baskanin bir yetkisini soyleyin.",
+    "tr_a": "Tasariyi yasaya donusturur."
+  },
+  "42": {
+    "en_question": "Who is Commander in Chief of the U.S. military?",
+    "is6520": false,
+    "okunus": "hu iz komandir in chiif ov di yu es militeri",
+    "en_answer": "The President (of the United States)",
+    "tr_q": "Turkce soru: ABD ordusunun baskomutani kimdir?",
+    "tr_a": "Baskan."
+  },
+  "43": {
+    "en_question": "Who signs bills to become laws?",
+    "is6520": false,
+    "okunus": "hu saynz bilz tu become loz",
+    "en_answer": "The President (of the United States)",
+    "tr_q": "Tasariyi yasaya kim donusturur?",
+    "tr_a": "Baskan."
+  },
+  "44": {
+    "en_question": "Who vetoes bills?",
+    "is6520": true,
+    "okunus": "hu vitouz bilz",
+    "en_answer": "The President (of the United States)",
+    "tr_q": "Yasayi kim veto eder?",
+    "tr_a": "Baskan."
+  },
+  "45": {
+    "en_question": "Who appoints federal judges?",
+    "is6520": false,
+    "okunus": "hu apoints fediril caciz",
+    "en_answer": "The President (of the United States)",
+    "tr_q": "Federal hakimleri kim atar?",
+    "tr_a": "Baskan."
+  },
+  "46": {
+    "en_question": "The executive branch has many parts. Name one.",
+    "is6520": false,
+    "okunus": "di executive brench has meni parts. neym one.",
+    "en_answer": "President (of the United States)",
+    "tr_q": "Yurutme dalinin bir bolumunu soyleyin.",
+    "tr_a": "Baskan."
+  },
+  "47": {
+    "en_question": "What does the President’s Cabinet do?",
+    "is6520": false,
+    "okunus": "vat daz di president's kebinit do",
+    "en_answer": "Advises the President (of the United States)",
+    "tr_q": "Baskanin Kabinesi ne yapar?",
+    "tr_a": "Baskana danismanlik yapar."
+  },
+  "48": {
+    "en_question": "What are two Cabinet-level positions?",
+    "is6520": false,
+    "okunus": "vat ar tu cabinet-level pozishinz",
+    "en_answer": "Attorney General",
+    "tr_q": "Iki kabine duzeyi gorev soyleyin.",
+    "tr_a": "Adalet Bakani ve Disisleri Bakani."
+  },
+  "49": {
+    "en_question": "Why is the Electoral College important?",
+    "is6520": false,
+    "okunus": "vay iz di ilektoral kolic imporint",
+    "en_answer": "It decides who is elected president.",
+    "tr_q": "Seciciler Kurulu neden onemlidir?",
+    "tr_a": "Baskanin kim secilecegine karar verir."
+  },
+  "50": {
+    "en_question": "What is one part of the judicial branch?",
+    "is6520": false,
+    "okunus": "vat iz van part ov di judicial brench",
+    "en_answer": "Supreme Court",
+    "tr_q": "Yargi dalinin bir bolumunu soyleyin.",
+    "tr_a": "Yuksek Mahkeme."
+  },
+  "51": {
+    "en_question": "What does the judicial branch do?",
+    "is6520": false,
+    "okunus": "vat daz di judicial brench do",
+    "en_answer": "Reviews laws",
+    "tr_q": "Yargi dali ne yapar?",
+    "tr_a": "Yasalari gozden gecirir."
+  },
+  "52": {
+    "en_question": "What is the highest court in the United States?",
+    "is6520": true,
+    "okunus": "vat iz di hayist kort in di yunaytid steyts",
+    "en_answer": "Supreme Court",
+    "tr_q": "Amerika Birlesik Devletleri'ndeki en yuksek mahkeme nedir?",
+    "tr_a": "Yuksek Mahkeme."
+  },
+  "53": {
+    "en_question": "How many seats are on the Supreme Court?",
+    "is6520": false,
+    "okunus": "hav meni siits ar on di suprim kort",
+    "en_answer": "Nine (9)",
+    "tr_q": "Turkce soru: Yuksek Mahkeme'de kac koltuk vardir?",
+    "tr_a": "Dokuz (9)."
+  },
+  "54": {
+    "en_question": "How many Supreme Court justices are usually needed to decide a case?",
+    "is6520": false,
+    "okunus": "hav meni suprim kort castisiz ar yujili niidid tu disayd a keys",
+    "en_answer": "Five (5)",
+    "tr_q": "Bir davayi karara baglamak icin genelde kac yargic gerekir?",
+    "tr_a": "Bes (5)."
+  },
+  "55": {
+    "en_question": "How long do Supreme Court justices serve?",
+    "is6520": false,
+    "okunus": "hav long do suprim kort castisiz sirv",
+    "en_answer": "(For) life",
+    "tr_q": "Yuksek Mahkeme yargiclari ne kadar sure gorev yapar?",
+    "tr_a": "Omur boyu."
+  },
+  "56": {
+    "en_question": "Supreme Court justices serve for life. Why?",
+    "is6520": false,
+    "okunus": "suprim kort castisiz sirv for life. vay",
+    "en_answer": "To be independent (of politics)",
+    "tr_q": "Yuksek Mahkeme yargiclari neden omur boyu gorev yapar?",
+    "tr_a": "Siyasetten bagimsiz olmalar icin."
+  },
+  "57": {
+    "en_question": "Who is the Chief Justice of the United States now?",
+    "is6520": false,
+    "okunus": "hu iz di chiif castis ov di yunaytid steyts nau",
+    "en_answer": "Visit uscis.gov/citizenship/testupdates for the name of the Chief Justice of the United States.",
+    "tr_q": "Su anda Amerika Birlesik Devletleri Basyargici kimdir?",
+    "tr_a": "Guncel isme gore degisir."
+  },
+  "58": {
+    "en_question": "Name one power that is only for the federal government.",
+    "is6520": false,
+    "okunus": "neym van pauir dat iz ounli for di fediril government.",
+    "en_answer": "Print paper money",
+    "tr_q": "Sadece federal hukumete ait olan bir yetki soyleyin.",
+    "tr_a": "Kagit para basmak."
+  },
+  "59": {
+    "en_question": "Name one power that is only for the states.",
+    "is6520": false,
+    "okunus": "neym van pauir dat iz ounli for di states.",
+    "en_answer": "Provide schooling and education",
+    "tr_q": "Sadece eyaletlere ait olan bir yetki soyleyin.",
+    "tr_a": "Egitim saglamak."
+  },
+  "60": {
+    "en_question": "What is the purpose of the 10th Amendment?",
+    "is6520": false,
+    "okunus": "vat iz di pirpis ov di tent amendmint",
+    "en_answer": "(It states that the) powers not given to the federal government belong to the states or to the people.",
+    "tr_q": "10. Degisiklik'in amaci nedir?",
+    "tr_a": "Federal hukumete verilmeyen yetkilerin eyaletlere veya halka ait oldugunu belirtir."
+  },
+  "61": {
+    "en_question": "Who is the governor of your state now?",
+    "is6520": true,
+    "okunus": "hu iz di gavırnir ov yor state nau",
+    "en_answer": "Answers will vary. [District of Columbia residents should answer that D.C. does not have a governor.]",
+    "tr_q": "Su anda eyaletinizin valisi kimdir?",
+    "tr_a": "Cevap degisir."
+  },
+  "62": {
+    "en_question": "What is the capital of your state?",
+    "is6520": false,
+    "okunus": "vat iz di kepitil ov yor state",
+    "en_answer": "Answers will vary. [District of Columbia residents should answer that D.C. is not a state and does not have a",
+    "tr_q": "",
+    "tr_a": ""
+  },
+  "63": {
+    "en_question": "There are four amendments to the U.S. Constitution about who can vote. Describe one of them.",
+    "is6520": false,
+    "okunus": "dere ar four amendmints tu di yu es konstitushin about hu ken vote. describe van ov dem.",
+    "en_answer": "Citizens eighteen (18) and older (can vote).",
+    "tr_q": "ABD Anayasasi'nda kimin oy verebilecegiyle ilgili dort degisiklik vardir. Bunlardan birini aciklayin.",
+    "tr_a": "18 yas ve ustu vatandaslar oy verebilir."
+  },
+  "64": {
+    "en_question": "Who can vote in federal elections, run for federal office, and serve on a jury in the United States?",
+    "is6520": false,
+    "okunus": "hu ken vote in fediril elecshins run for fediril office end sirv on a jury in di yunaytid steyts",
+    "en_answer": "Citizens",
+    "tr_q": "Amerika Birlesik Devletleri'nde federal secimlerde kim oy verebilir, federal goreve aday olabilir ve juri",
+    "tr_a": ""
+  },
+  "65": {
+    "en_question": "What are three rights of everyone living in the United States?",
+    "is6520": false,
+    "okunus": "vat ar thri rayts ov evrivon living in di yunaytid steyts",
+    "en_answer": "Freedom of expression",
+    "tr_q": "Amerika Birlesik Devletleri'nde yasayan herkesin uc hakkini soyleyin.",
+    "tr_a": "Ifade ozgurlugu."
+  },
+  "66": {
+    "en_question": "What do we show loyalty to when we say the Pledge of Allegiance?",
+    "is6520": true,
+    "okunus": "vat do wi shou loyalty tu when wi sey di pledge ov allegiance",
+    "en_answer": "The United States",
+    "tr_q": "Baglilik Andi'ni soylerken neye baglilik gosteririz?",
+    "tr_a": "Amerika Birlesik Devletleri'ne."
+  },
+  "67": {
+    "en_question": "Name two promises that new citizens make in the Oath of Allegiance.",
+    "is6520": false,
+    "okunus": "neym tu promises dat new sitizins make in di oad ov allegiance.",
+    "en_answer": "Give up loyalty to other countries",
+    "tr_q": "Yeni vatandaslarin Baglilik Yemini'nde verdigi iki sozu soyleyin.",
+    "tr_a": "Diger ulkelere olan bagliliklarindan vazgecerler."
+  },
+  "68": {
+    "en_question": "How can people become United States citizens?",
+    "is6520": false,
+    "okunus": "hav ken piipl become yunaytid steyts sitizins",
+    "en_answer": "Be born in the United States, under the conditions set by the 14th Amendment",
+    "tr_q": "Insanlar nasil ABD vatandasi olabilir?",
+    "tr_a": "Amerika'da dogarak."
+  },
+  "69": {
+    "en_question": "What are two examples of civic participation in the United States?",
+    "is6520": false,
+    "okunus": "vat ar tu examples ov civic participashin in di yunaytid steyts",
+    "en_answer": "Vote",
+    "tr_q": "Amerika Birlesik Devletleri'nde yurttas katilimina iki ornek soyleyin.",
+    "tr_a": "Oy vermek."
+  },
+  "70": {
+    "en_question": "What is one way Americans can serve their country?",
+    "is6520": false,
+    "okunus": "vat iz van wey americans ken sirv deir country",
+    "en_answer": "Vote",
+    "tr_q": "Amerikalilar ulkelerine bir sekilde nasil hizmet edebilir?",
+    "tr_a": "Oy vererek."
+  },
+  "71": {
+    "en_question": "Why is it important to pay federal taxes?",
+    "is6520": false,
+    "okunus": "vay iz it imporint tu pey fediril taxes",
+    "en_answer": "Required by law",
+    "tr_q": "Federal vergi odemek neden onemlidir?",
+    "tr_a": "Yasa geregi zorunludur."
+  },
+  "72": {
+    "en_question": "It is important for all men age 18 through 25 to register for the Selective Service. Name one reason why.",
+    "is6520": false,
+    "okunus": "it iz imporint for all men age 18 dro 25 tu register for di selective service. neym van riison why.",
+    "en_answer": "Required by law",
+    "tr_q": "18-25 yas arasi tum erkeklerin Selective Service'e kaydolmasi onemlidir. Nedenlerinden birini soyleyin.",
+    "tr_a": "Yasa geregi zorunludur."
+  },
+  "73": {
+    "en_question": "The colonists came to America for many reasons. Name one.",
+    "is6520": false,
+    "okunus": "di colonists came tu america for meni riisons. neym one.",
+    "en_answer": "Freedom",
+    "tr_q": "Koloniciler Amerika'ya bircok nedenle geldi. Bunlardan birini soyleyin.",
+    "tr_a": "Ozgunluk."
+  },
+  "74": {
+    "en_question": "Who lived in America before the Europeans arrived?",
+    "is6520": true,
+    "okunus": "hu lived in america before di europiins arrived",
+    "en_answer": "American Indians",
+    "tr_q": "Avrupalilar gelmeden once Amerika'da kimler yasiyordu?",
+    "tr_a": "Amerikan yerlileri."
+  },
+  "75": {
+    "en_question": "What group of people was taken and sold as slaves?",
+    "is6520": false,
+    "okunus": "vat group ov piipl was taken end sold as slaves",
+    "en_answer": "Africans",
+    "tr_q": "Hangi insan grubu kole olarak alinip satildi?",
+    "tr_a": "Afrikalilar."
+  },
+  "76": {
+    "en_question": "What war did the Americans fight to win independence from Britain?",
+    "is6520": false,
+    "okunus": "vat vor did di americans fight tu win indipendins from britin",
+    "en_answer": "American Revolution",
+    "tr_q": "Amerikalilar Britanya'dan bagimsizlik kazanmak icin hangi savasi savasti?",
+    "tr_a": "Amerikan Devrimi."
+  },
+  "77": {
+    "en_question": "Name one reason why the Americans declared independence from Britain.",
+    "is6520": false,
+    "okunus": "neym van riison vay di americans declared indipendins from britain.",
+    "en_answer": "High taxes",
+    "tr_q": "Amerikalilar neden Britanya'dan bagimsizlik ilan etti? Bir neden soyleyin.",
+    "tr_a": "Yuksek vergiler."
+  },
+  "78": {
+    "en_question": "Who wrote the Declaration of Independence?",
+    "is6520": true,
+    "okunus": "hu wrote di deklarayshin ov indipendins",
+    "en_answer": "(Thomas) Jefferson",
+    "tr_q": "Bagimsizlik Bildirgesi'ni kim yazdi?",
+    "tr_a": "Thomas Jefferson."
+  },
+  "79": {
+    "en_question": "When was the Declaration of Independence adopted?",
+    "is6520": false,
+    "okunus": "when was di deklarayshin ov indipendins adopted",
+    "en_answer": "July 4, 1776",
+    "tr_q": "Bagimsizlik Bildirgesi ne zaman kabul edildi?",
+    "tr_a": "4 Temmuz 1776."
+  },
+  "80": {
+    "en_question": "The American Revolution had many important events. Name one.",
+    "is6520": false,
+    "okunus": "di amerikin revolushin had meni imporint events. neym one.",
+    "en_answer": "(Battle of) Bunker Hill",
+    "tr_q": "Amerikan Devrimi'nin onemli olaylarindan birini soyleyin.",
+    "tr_a": "Bunker Hill Savasi."
+  },
+  "81": {
+    "en_question": "There were 13 original states. Name five.",
+    "is6520": false,
+    "okunus": "dere were 13 original states. neym five.",
+    "en_answer": "New Hampshire",
+    "tr_q": "13 ilk eyaletten besini soyleyin.",
+    "tr_a": "New Hampshire, Massachusetts, Rhode Island, Connecticut, New York."
+  },
+  "82": {
+    "en_question": "What founding document was written in 1787?",
+    "is6520": false,
+    "okunus": "vat faunding dokyument was written in 1787",
+    "en_answer": "(U.S.) Constitution",
+    "tr_q": "1787'de hangi kurucu belge yazildi?",
+    "tr_a": "ABD Anayasasi."
+  },
+  "83": {
+    "en_question": "The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.",
+    "is6520": false,
+    "okunus": "di federalist papers supported di passage ov di yu es constitushin. neym van ov di writers.",
+    "en_answer": "Answer: (James) Madison",
+    "tr_q": "Federalist Papers'in yazarlarindan birini soyleyin.",
+    "tr_a": "James Madison."
+  },
+  "84": {
+    "en_question": "Why were the Federalist Papers important?",
+    "is6520": false,
+    "okunus": "vay were di federalist papers imporint",
+    "en_answer": "They helped people understand the (U.S.) Constitution.",
+    "tr_q": "Federalist Papers neden onemliydi?",
+    "tr_a": "Insanlarin Anayasa'yi anlamasina yardim etti."
+  },
+  "85": {
+    "en_question": "Benjamin Franklin is famous for many things. Name one.",
+    "is6520": false,
+    "okunus": "benjamin franklin iz famous for meni dings. neym one.",
+    "en_answer": "Founded the first free public libraries",
+    "tr_q": "Benjamin Franklin bircok sey ile meshurdur. Birini soyleyin.",
+    "tr_a": "Ilk ucretsiz halk kutuphanelerini kurdu."
+  },
+  "86": {
+    "en_question": "George Washington is famous for many things. Name one.",
+    "is6520": true,
+    "okunus": "george washington iz famous for meni dings. neym one.",
+    "en_answer": "“Father of Our Country”",
+    "tr_q": "George Washington bircok sey ile meshurdur. Birini soyleyin.",
+    "tr_a": "Ulkemizin Babasi olarak bilinir."
+  },
+  "87": {
+    "en_question": "Thomas Jefferson is famous for many things. Name one.",
+    "is6520": false,
+    "okunus": "domas jefferson iz famous for meni dings. neym one.",
+    "en_answer": "Writer of the Declaration of Independence",
+    "tr_q": "Thomas Jefferson bircok sey ile meshurdur. Birini soyleyin.",
+    "tr_a": "Bagimsizlik Bildirgesi'nin yazariydi."
+  },
+  "88": {
+    "en_question": "James Madison is famous for many things. Name one.",
+    "is6520": false,
+    "okunus": "james madison iz famous for meni dings. neym one.",
+    "en_answer": "“Father of the Constitution”",
+    "tr_q": "James Madison bircok sey ile meshurdur. Birini soyleyin.",
+    "tr_a": "Anayasa'nin Babasi olarak bilinir."
+  },
+  "89": {
+    "en_question": "Alexander Hamilton is famous for many things. Name one.",
+    "is6520": false,
+    "okunus": "alexander hamilton iz famous for meni dings. neym one.",
+    "en_answer": "First Secretary of the Treasury",
+    "tr_q": "Alexander Hamilton bircok sey ile meshurdur. Birini soyleyin.",
+    "tr_a": "Ilk Hazine Bakaniydi."
+  },
+  "90": {
+    "en_question": "What territory did the United States buy from France in 1803?",
+    "is6520": false,
+    "okunus": "vat territory did di yunaytid steyts buy from france in 1803",
+    "en_answer": "Louisiana Territory",
+    "tr_q": "Amerika Birlesik Devletleri 1803'te Fransa'dan hangi topragi satin aldi?",
+    "tr_a": "Louisiana Topragi."
+  },
+  "91": {
+    "en_question": "Name one war fought by the United States in the 1800s.",
+    "is6520": false,
+    "okunus": "neym van vor fot by di yunaytid steyts in di 1800s.",
+    "en_answer": "War of 1812",
+    "tr_q": "1800'lerde ABD'nin savastigi bir savasi soyleyin.",
+    "tr_a": "1812 Savasi."
+  },
+  "92": {
+    "en_question": "Name the U.S. war between the North and the South.",
+    "is6520": false,
+    "okunus": "neym di yu es vor betwiin di nord end di soud.",
+    "en_answer": "The Civil War",
+    "tr_q": "Kuzey ile Guney arasindaki ABD savasinin adi nedir?",
+    "tr_a": "Ic Savas."
+  },
+  "93": {
+    "en_question": "The Civil War had many important events. Name one.",
+    "is6520": false,
+    "okunus": "di civil vor had meni imporint events. neym one.",
+    "en_answer": "(Battle of) Fort Sumter",
+    "tr_q": "Ic Savas'in onemli olaylarindan birini soyleyin.",
+    "tr_a": "Fort Sumter Savasi."
+  },
+  "94": {
+    "en_question": "Abraham Lincoln is famous for many things. Name one.",
+    "is6520": true,
+    "okunus": "abraham lincoln iz famous for meni dings. neym one.",
+    "en_answer": "Answer: Freed the slaves (Emancipation Proclamation)",
+    "tr_q": "Abraham Lincoln bircok sey ile meshurdur. Birini soyleyin.",
+    "tr_a": "Koleleri ozgurlestirdi."
+  },
+  "95": {
+    "en_question": "What did the Emancipation Proclamation do?",
+    "is6520": false,
+    "okunus": "vat did di emancipashin proclamashin do",
+    "en_answer": "Freed the slaves",
+    "tr_q": "Emancipation Proclamation ne yapti?",
+    "tr_a": "Koleleri ozgurlestirdi."
+  },
+  "96": {
+    "en_question": "What U.S. war ended slavery?",
+    "is6520": false,
+    "okunus": "vat yu es vor ended slavery",
+    "en_answer": "The Civil War",
+    "tr_q": "Hangi ABD savasi koleligi bitirdi?",
+    "tr_a": "Ic Savas."
+  },
+  "97": {
+    "en_question": "What amendment says all persons born or naturalized in the United States,",
+    "is6520": false,
+    "okunus": "vat amendmint seys all persons born or naturalized in di yunaytid steyts",
+    "en_answer": "14th Amendment",
+    "tr_q": "Amerika Birlesik Devletleri'nde dogan veya vatandasliga kabul edilen herkesin ABD vatandasi oldugunu",
+    "tr_a": ""
+  },
+  "98": {
+    "en_question": "When did all men get the right to vote?",
+    "is6520": false,
+    "okunus": "when did all men get di right tu vote",
+    "en_answer": "After the Civil War",
+    "tr_q": "Tum erkekler oy kullanma hakkini ne zaman kazandi?",
+    "tr_a": "Ic Savas'tan sonra."
+  },
+  "99": {
+    "en_question": "Name one leader of the women’s rights movement in the 1800s.",
+    "is6520": false,
+    "okunus": "neym van liider ov di women's rayts movement in di 1800s.",
+    "en_answer": "Susan B. Anthony",
+    "tr_q": "1800'lerde kadin haklari hareketinin bir liderini soyleyin.",
+    "tr_a": "Susan B. Anthony."
+  },
+  "100": {
+    "en_question": "Name one war fought by the United States in the 1900s.",
+    "is6520": false,
+    "okunus": "neym van vor fot by di yunaytid steyts in di 1900s.",
+    "en_answer": "World War I",
+    "tr_q": "1900'lerde ABD'nin savastigi bir savasi soyleyin.",
+    "tr_a": "I. Dunya Savasi."
+  },
+  "101": {
+    "en_question": "Why did the United States enter World War I?",
+    "is6520": false,
+    "okunus": "vay did di yunaytid steyts enter world vor i",
+    "en_answer": "Because Germany attacked U.S. (civilian) ships",
+    "tr_q": "ABD neden I. Dunya Savasi'na girdi?",
+    "tr_a": "Cunku Almanya ABD sivil gemilerine saldirdi."
+  },
+  "102": {
+    "en_question": "When did all women get the right to vote?",
+    "is6520": false,
+    "okunus": "when did all women get di right tu vote",
+    "en_answer": "1920",
+    "tr_q": "Tum kadinlar oy kullanma hakkini ne zaman kazandi?",
+    "tr_a": "1920'de."
+  },
+  "103": {
+    "en_question": "What was the Great Depression?",
+    "is6520": false,
+    "okunus": "vat was di griit depresjın",
+    "en_answer": "Longest economic recession in modern history",
+    "tr_q": "Buyuk Bunalim neydi?",
+    "tr_a": "Modern tarihin en uzun ekonomik durgunluguydu."
+  },
+  "104": {
+    "en_question": "When did the Great Depression start?",
+    "is6520": false,
+    "okunus": "when did di griit depresjın start",
+    "en_answer": "The Great Crash (1929)",
+    "tr_q": "Buyuk Bunalim ne zaman basladi?",
+    "tr_a": "1929 Buyuk Cokus'unda."
+  },
+  "105": {
+    "en_question": "Who was president during the Great Depression and World War II?",
+    "is6520": false,
+    "okunus": "Okunus: hu was prezidint during di griit depresjın end world vor ii",
+    "en_answer": "(Franklin) Roosevelt",
+    "tr_q": "Buyuk Bunalim ve II. Dunya Savasi sirasinda baskan kimdi?",
+    "tr_a": "Franklin Roosevelt."
+  },
+  "106": {
+    "en_question": "Why did the United States enter World War II?",
+    "is6520": false,
+    "okunus": "vay did di yunaytid steyts enter world vor ii",
+    "en_answer": "(Bombing of) Pearl Harbor",
+    "tr_q": "ABD neden II. Dunya Savasi'na girdi?",
+    "tr_a": "Pearl Harbor saldirisi nedeniyle."
+  },
+  "107": {
+    "en_question": "Dwight Eisenhower is famous for many things. Name one.",
+    "is6520": false,
+    "okunus": "dwight eisenhouer iz famous for meni dings. neym one.",
+    "en_answer": "General during World War II",
+    "tr_q": "Dwight Eisenhower bircok sey ile meshurdur. Birini soyleyin.",
+    "tr_a": "II. Dunya Savasi'nda generaldi."
+  },
+  "108": {
+    "en_question": "Who was the United States’ main rival during the Cold War?",
+    "is6520": false,
+    "okunus": "hu was di yunaytid states' main rival during di cold vor",
+    "en_answer": "Soviet Union",
+    "tr_q": "Soguk Savas sirasinda ABD'nin baslica rakibi kimdi?",
+    "tr_a": "Sovyetler Birligi."
+  },
+  "109": {
+    "en_question": "During the Cold War, what was one main concern of the United States?",
+    "is6520": false,
+    "okunus": "during di cold vor vat was van main concern ov di yunaytid steyts",
+    "en_answer": "Communism",
+    "tr_q": "Soguk Savas sirasinda ABD'nin temel kaygilarindan biri neydi?",
+    "tr_a": "Komunizm."
+  },
+  "110": {
+    "en_question": "Why did the United States enter the Korean War?",
+    "is6520": false,
+    "okunus": "vay did di yunaytid steyts enter di koriin vor",
+    "en_answer": "To stop the spread of communism",
+    "tr_q": "ABD neden Kore Savasi'na girdi?",
+    "tr_a": "Komunizmin yayilmasini durdurmak icin."
+  },
+  "111": {
+    "en_question": "Why did the United States enter the Vietnam War?",
+    "is6520": false,
+    "okunus": "vay did di yunaytid steyts enter di vietnam vor",
+    "en_answer": "To stop the spread of communism",
+    "tr_q": "ABD neden Vietnam Savasi'na girdi?",
+    "tr_a": "Komunizmin yayilmasini durdurmak icin."
+  },
+  "112": {
+    "en_question": "What did the civil rights movement do?",
+    "is6520": false,
+    "okunus": "vat did di civil rayts movement do",
+    "en_answer": "Fought to end racial discrimination",
+    "tr_q": "Sivil haklar hareketi ne yapti?",
+    "tr_a": "Irksal ayrimciligi sona erdirmek icin mucadele etti."
+  },
+  "113": {
+    "en_question": "Martin Luther King, Jr. is famous for many things. Name one.",
+    "is6520": true,
+    "okunus": "martin luder king jr. iz famous for meni dings. neym one.",
+    "en_answer": "Fought for civil rights",
+    "tr_q": "Martin Luther King, Jr. bircok sey ile meshurdur. Birini soyleyin.",
+    "tr_a": "Sivil haklar icin mucadele etti."
+  },
+  "114": {
+    "en_question": "Why did the United States enter the Persian Gulf War?",
+    "is6520": false,
+    "okunus": "vay did di yunaytid steyts enter di persian gulf vor",
+    "en_answer": "To force the Iraqi military from Kuwait",
+    "tr_q": "ABD neden Korfez Savasi'na girdi?",
+    "tr_a": "Irak ordusunu Kuveyt'ten cikarmak icin."
+  },
+  "115": {
+    "en_question": "What major event happened on September 11, 2001 in the United States?",
+    "is6520": true,
+    "okunus": "vat major event happened on september 11 2001 in di yunaytid steyts",
+    "en_answer": "Terrorists attacked the United States",
+    "tr_q": "11 Eylul 2001'de ABD'de hangi buyuk olay oldu?",
+    "tr_a": "Teroristler ABD'ye saldirdi."
+  },
+  "116": {
+    "en_question": "Name one U.S. military conflict after the September 11, 2001 attacks.",
+    "is6520": false,
+    "okunus": "Okunus: neym van yu es militeri conflict after di september 11 2001 attacks.",
+    "en_answer": "(Global) War on Terror",
+    "tr_q": "11 Eylul 2001 saldirilarindan sonra bir ABD askeri catismasi soyleyin.",
+    "tr_a": "Terore Karsi Savas."
+  },
+  "117": {
+    "en_question": "Name one American Indian tribe in the United States.",
+    "is6520": false,
+    "okunus": "neym van amerikin indian tribe in di yunaytid states.",
+    "en_answer": "Apache",
+    "tr_q": "Amerika Birlesik Devletleri'ndeki bir Amerikan yerli kabilesini soyleyin.",
+    "tr_a": "Apache."
+  },
+  "118": {
+    "en_question": "Name one example of an American innovation.",
+    "is6520": false,
+    "okunus": "neym van example ov an amerikin innovashin.",
+    "en_answer": "Light bulb",
+    "tr_q": "Bir Amerikan yeniligine ornek soyleyin.",
+    "tr_a": "Ampul."
+  },
+  "119": {
+    "en_question": "What is the capital of the United States?",
+    "is6520": false,
+    "okunus": "vat iz di kepitil ov di yunaytid steyts",
+    "en_answer": "Washington, D.C.",
+    "tr_q": "Amerika Birlesik Devletleri'nin baskenti neresidir?",
+    "tr_a": "Washington, D.C."
+  },
+  "120": {
+    "en_question": "Where is the Statue of Liberty?",
+    "is6520": false,
+    "okunus": "where iz di statue ov libirti",
+    "en_answer": "New York (Harbor)",
+    "tr_q": "Ozgurluk Heykeli nerededir?",
+    "tr_a": "New York Limani'nda."
+  },
+  "121": {
+    "en_question": "Why does the flag have 13 stripes?",
+    "is6520": true,
+    "okunus": "vay daz di flag hev 13 stripes",
+    "en_answer": "(Because there were) 13 original colonies",
+    "tr_q": "Bayrakta neden 13 cizgi vardir?",
+    "tr_a": "13 ilk koloniyi temsil eder."
+  },
+  "122": {
+    "en_question": "Why does the flag have 50 stars?",
+    "is6520": false,
+    "okunus": "vay daz di flag hev 50 stars",
+    "en_answer": "(Because there is) one star for each state",
+    "tr_q": "Bayrakta neden 50 yildiz vardir?",
+    "tr_a": "Her eyalet icin bir yildiz vardir."
+  },
+  "123": {
+    "en_question": "What is the name of the national anthem?",
+    "is6520": false,
+    "okunus": "vat iz di neym ov di nashinal andem",
+    "en_answer": "The Star-Spangled Banner",
+    "tr_q": "Ulusal marsin adi nedir?",
+    "tr_a": "The Star-Spangled Banner."
+  },
+  "124": {
+    "en_question": "The Nation’s first motto was “E Pluribus Unum.” What does that mean?",
+    "is6520": false,
+    "okunus": "di nashin's first motto was e pluribus unum. vat daz dat miin",
+    "en_answer": "Out of many, one",
+    "tr_q": "Ulkenin ilk slogani 'E Pluribus Unum' idi. Bu ne demektir?",
+    "tr_a": "Cokluktan birlik."
+  },
+  "125": {
+    "en_question": "What is Independence Day?",
+    "is6520": false,
+    "okunus": "vat iz indipendins dey",
+    "en_answer": "A holiday to celebrate U.S. independence (from Britain)",
+    "tr_q": "Independence Day nedir?",
+    "tr_a": "ABD bagimsizligini kutlayan bir bayramdir."
+  },
+  "126": {
+    "en_question": "Name three national U.S. holidays.",
+    "is6520": true,
+    "okunus": "neym thri nashinal yu es holideys.",
+    "en_answer": "New Year’s Day",
+    "tr_q": "ABD'nin uc ulusal tatilini soyleyin.",
+    "tr_a": "New Year's Day, Martin Luther King Jr. Day, Presidents Day."
+  },
+  "127": {
+    "en_question": "What is Memorial Day?",
+    "is6520": false,
+    "okunus": "vat iz memorial dey",
+    "en_answer": "A holiday to honor soldiers who died in military service",
+    "tr_q": "Memorial Day nedir?",
+    "tr_a": "Askerlik hizmetinde olen askerleri onurlandiran bir tatildir."
+  },
+  "128": {
+    "en_question": "What is Veterans Day?",
+    "is6520": false,
+    "okunus": "vat iz veterans dey",
+    "en_answer": "A holiday to honor people in the (U.S.) military",
+    "tr_q": "Veterans Day nedir?",
+    "tr_a": "ABD ordusunda gorev yapmis kisileri onurlandiran bir tatildir."
+  }
+}

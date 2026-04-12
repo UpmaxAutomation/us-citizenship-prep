@@ -6,6 +6,17 @@ export interface Question {
   subcategory: string;
   is6520: boolean;
   slug: string;
+  /**
+   * Phonetic transcription of the English question written in the learner's
+   * native orthography (e.g. Turkish "Okunus"). Optional — populated only in
+   * non-English data files so English callsites remain untouched.
+   */
+  phonetic?: string;
+  /**
+   * Phonetic transcription of each English answer, one entry per `answers[]`
+   * in the same order. Optional — see `phonetic`.
+   */
+  answerPhonetics?: string[];
 }
 
 export const categories = [

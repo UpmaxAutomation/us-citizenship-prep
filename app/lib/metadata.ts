@@ -1,4 +1,12 @@
 import type { Metadata } from "next";
+import {
+  ENABLED_LANGUAGES,
+  LANGUAGES,
+  getLanguageByCode,
+  toCanonicalPath,
+  toLocalizedPath,
+  type LanguageConfig,
+} from "./languages";
 
 export const siteConfig = {
   name: "US Citizenship Test Prep",
@@ -7,18 +15,39 @@ export const siteConfig = {
     "Master all 128 USCIS civics questions for your naturalization interview. Free flashcards, quizzes, and spaced repetition. Updated for the 2025 test.",
 };
 
+/**
+ * Build `alternates.languages` from the registry rather than pairwise `.replace()`.
+ * Given any `path` (which may already be localized) and the current `locale`, we
+ * reverse-map to the canonical English path and forward-map to every enabled language.
+ * Untranslated routes fall back to the target language's basePath (see
+ * `toLocalizedPath`) — this prevents broken hreflang links into 404s.
+ */
+function buildHreflangLanguages(
+  path: string,
+  currentLocaleCode: LanguageConfig["code"]
+): Record<string, string> {
+  const currentLang =
+    getLanguageByCode(currentLocaleCode) ?? LANGUAGES[0];
+  const canonical = toCanonicalPath(path, currentLang);
+  const map: Record<string, string> = {};
+  for (const lang of ENABLED_LANGUAGES) {
+    map[lang.bcp47] = `${siteConfig.url}${toLocalizedPath(canonical, lang)}`;
+  }
+  return map;
+}
+
 export function buildMetadata({
   title,
   description,
   path = "/",
   ogType,
-  locale,
+  locale = "en",
 }: {
   title?: string;
   description?: string;
   path?: string;
   ogType?: string;
-  locale?: "en" | "es";
+  locale?: LanguageConfig["code"];
 }): Metadata {
   // For <title> tag: just pass the raw title — layout.tsx template adds "| US Citizenship Test Prep"
   // For OG/Twitter: use full title with site name (social cards don't use the template)
@@ -39,7 +68,7 @@ export function buildMetadata({
       description: pageDescription,
       url,
       siteName: siteConfig.name,
-      locale: "en_US",
+      locale: (getLanguageByCode(locale) ?? LANGUAGES[0]).bcp47.replace("-", "_"),
       type: "website",
       images: [
         {
@@ -58,10 +87,7 @@ export function buildMetadata({
     },
     alternates: {
       canonical: url,
-      languages: {
-        "en": locale === "es" ? `${siteConfig.url}${path.replace(/^\/es/, "").replace(/\/estudio/, "/study").replace(/\/preguntas/, "/questions").replace(/\/examen-de-practica/, "/practice-test") || "/"}` : `${siteConfig.url}${path}`,
-        "es": locale === "es" ? url : `${siteConfig.url}/es${path === "/" ? "" : path.replace(/^\/study/, "/estudio").replace(/^\/questions$/, "/preguntas").replace(/^\/practice-test/, "/examen-de-practica")}`,
-      },
+      languages: buildHreflangLanguages(path, locale),
     },
   };
 

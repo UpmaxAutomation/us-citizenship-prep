@@ -22,32 +22,32 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.uscitizenshiptestprep.com"),
   title: {
     default:
-      "Preparacion para el Examen de Ciudadania de EE.UU. | 128 Preguntas Civicas USCIS (2025)",
-    template: "%s | Preparacion Ciudadania EE.UU.",
+      "ABD Vatandaslik Sinavi Hazirlik | 128 USCIS Sivil Bilgiler Sorusu (2025)",
+    template: "%s | ABD Vatandaslik Hazirlik",
   },
   description:
-    "Domina las 128 preguntas civicas del USCIS para tu entrevista de naturalizacion. Tarjetas de estudio, examenes de practica y repeticion espaciada gratis. Actualizado para el examen 2025.",
+    "Vatandaslik mulakati icin 128 USCIS sivil bilgiler sorusunu ogrenin. Ucretsiz calisma kartlari, deneme sinavlari ve aralikli tekrar. 2025 sinavi icin guncellendi.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Ciudadania Prep",
+    title: "Vatandaslik Hazirlik",
   },
   icons: {
     icon: "/icons/icon.svg",
     apple: "/icons/icon-192.png",
   },
   keywords: [
-    "examen de ciudadania americana",
-    "preguntas civicas USCIS",
-    "examen de ciudadania 2025",
-    "128 preguntas civicas",
-    "examen de naturalizacion",
-    "preparacion examen ciudadania",
-    "preguntas examen ciudadania",
-    "USCIS en espanol",
-    "examen civico practica",
-    "entrevista naturalizacion",
+    "ABD vatandaslik sinavi",
+    "USCIS sivil bilgiler sorulari",
+    "vatandaslik sinavi 2025",
+    "128 sivil bilgiler sorusu",
+    "naturalizasyon sinavi",
+    "vatandaslik sinavi hazirligi",
+    "USCIS Turkce",
+    "sivil bilgiler pratik",
+    "naturalizasyon mulakati",
+    "Amerikan vatandasligi",
   ],
   robots: {
     index: true,
@@ -58,13 +58,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SpanishLayout({
+export default function TurkishLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="tr">
       <body
         className={`${inter.className} bg-slate-950 text-white min-h-screen`}
       >
@@ -72,21 +72,21 @@ export default function SpanishLayout({
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[200] focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg"
         >
-          Saltar al contenido principal
+          Ana iceriye atla
         </a>
         <JsonLd
           data={{
             "@context": "https://schema.org",
             "@type": "WebSite",
-            name: "Preparacion Examen Ciudadania EE.UU.",
-            url: "https://www.uscitizenshiptestprep.com/es",
-            inLanguage: "es",
+            name: "ABD Vatandaslik Sinavi Hazirlik",
+            url: "https://www.uscitizenshiptestprep.com/tr",
+            inLanguage: "tr",
           }}
         />
         <GoogleTagManager />
         <ServiceWorkerRegistrar />
         <SiteNav />
-        <LocaleProvider code="es">
+        <LocaleProvider code="tr">
           <main id="main-content">{children}</main>
         </LocaleProvider>
         <Footer />

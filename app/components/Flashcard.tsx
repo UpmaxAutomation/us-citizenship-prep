@@ -15,6 +15,10 @@ interface FlashcardProps {
   onPrev: () => void;
   currentIndex: number;
   totalCards: number;
+  /** English question written in the learner's native orthography (e.g. Turkish "okunus"). */
+  phonetic?: string;
+  /** One phonetic entry per answer, same order as answers[]. */
+  answerPhonetics?: string[];
 }
 
 const statusColors = {
@@ -71,8 +75,11 @@ export default function Flashcard({
   onPrev,
   currentIndex,
   totalCards,
+  phonetic,
+  answerPhonetics,
 }: FlashcardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [showPhonetic, setShowPhonetic] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -489,15 +496,44 @@ export default function Flashcard({
             </button>
 
             <div className="flex-1 flex items-center justify-center">
-              <h2 className="text-xl sm:text-2xl font-medium text-center leading-relaxed text-white/90">
-                {question}
-              </h2>
+              <div className="text-center">
+                <h2 className="text-xl sm:text-2xl font-medium leading-relaxed text-white/90">
+                  {question}
+                </h2>
+                {phonetic && showPhonetic && (
+                  <div lang="tr" className="mt-3">
+                    <span aria-hidden="true" className="text-sm italic text-blue-300/70">
+                      {phonetic}
+                    </span>
+                    <span className="sr-only">
+                      Pronunciation guide for: {question}
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
 
-            <div className="text-center mt-6">
+            <div className="text-center mt-6 flex items-center justify-center gap-3">
               <span className="text-sm text-slate-500">
                 {isAutoPlaying ? "Auto-playing..." : "Tap to reveal answer"}
               </span>
+              {phonetic && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowPhonetic((prev) => !prev);
+                  }}
+                  className={`text-xs px-2.5 py-1 rounded-full border transition-colors ${
+                    showPhonetic
+                      ? "bg-blue-500/20 text-blue-300 border-blue-500/30"
+                      : "bg-slate-800/50 text-slate-500 border-slate-700/50 hover:text-slate-300"
+                  }`}
+                  title={showPhonetic ? "Hide pronunciation" : "Show pronunciation"}
+                  aria-label={showPhonetic ? "Hide pronunciation guide" : "Show pronunciation guide"}
+                >
+                  {showPhonetic ? "Hide" : "Show"} pronunciation
+                </button>
+              )}
             </div>
           </div>
 
@@ -568,9 +604,9 @@ export default function Flashcard({
             <div className="flex-1 min-h-0 flex items-center justify-center overflow-y-auto">
               <div className={`text-center w-full ${answers.length > 6 ? "columns-2 gap-x-4 text-left" : "space-y-2"}`}>
                 {answers.map((answer, i) => (
-                  <p
+                  <div
                     key={i}
-                    className={`leading-relaxed text-emerald-300/90 ${
+                    className={`leading-relaxed ${
                       answers.length > 6
                         ? "text-sm py-0.5 break-inside-avoid"
                         : answers.length > 3
@@ -578,11 +614,18 @@ export default function Flashcard({
                         : "text-lg sm:text-xl"
                     }`}
                   >
-                    {answers.length > 3 && (
-                      <span className="text-emerald-500/50 mr-1.5">&#8226;</span>
+                    <p className="text-emerald-300/90">
+                      {answers.length > 3 && (
+                        <span className="text-emerald-500/50 mr-1.5">&#8226;</span>
+                      )}
+                      {answer}
+                    </p>
+                    {answerPhonetics?.[i] && showPhonetic && (
+                      <p aria-hidden="true" className="text-xs italic text-emerald-400/50 mt-0.5 ml-3">
+                        {answerPhonetics[i]}
+                      </p>
                     )}
-                    {answer}
-                  </p>
+                  </div>
                 ))}
               </div>
             </div>

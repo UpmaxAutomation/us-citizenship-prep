@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { states, stateNameToSlug } from "./data/states";
 import { blogPosts } from "./data/blog-posts";
 import { categories, subcategories, questions } from "./data/questions";
+import { ENABLED_LANGUAGES, toLocalizedPath } from "./lib/languages";
 
 function slugify(text: string): string {
   return text
@@ -14,6 +15,44 @@ const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.uscitizenshiptestprep.com";
 
 const LAST_MODIFIED = new Date("2026-03-14");
+
+/**
+ * For a canonical English path, return the localized URL (absolute) for each
+ * enabled language. Languages that don't have a `routeMap` entry for this path
+ * fall back to their landing page via `toLocalizedPath`.
+ *
+ * Consumed as the `alternates.languages` field on a sitemap entry — Next.js
+ * emits one `<xhtml:link rel="alternate" hreflang="...">` per entry.
+ */
+function hreflangFor(canonicalPath: string): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const lang of ENABLED_LANGUAGES) {
+    map[lang.bcp47] = `${BASE_URL}${toLocalizedPath(canonicalPath, lang)}`;
+  }
+  return map;
+}
+
+/**
+ * Path is considered translated into `lang` when `routeMap[canonicalPath]`
+ * exists — otherwise `toLocalizedPath` falls back to `basePath` and we'd emit
+ * a redundant landing-page URL from every untranslated route.
+ */
+function emitLocalizedClones(
+  canonicalPath: string,
+  lastModified: Date,
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"],
+  priority: number
+): MetadataRoute.Sitemap {
+  return ENABLED_LANGUAGES.filter(
+    (lang) => lang.code !== "en" && lang.routeMap[canonicalPath]
+  ).map((lang) => ({
+    url: `${BASE_URL}${lang.routeMap[canonicalPath]}`,
+    lastModified,
+    changeFrequency,
+    priority,
+    alternates: { languages: hreflangFor(canonicalPath) },
+  }));
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -191,32 +230,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   ];
 
-  const spanishPages: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE_URL}/es`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/es/estudio`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/es/preguntas`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/es/examen-de-practica`,
-      lastModified: LAST_MODIFIED,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+  // Localized landing/study/questions/practice-test for every enabled language
+  // (excluding English; that's already in `staticPages`). Driven by `routeMap`
+  // so adding Turkish/Chinese/etc is zero-code — just flip `enabled: true` in
+  // `app/lib/languages.ts` and list the localized paths.
+  const localizedPages: MetadataRoute.Sitemap = [
+    ...emitLocalizedClones("/", LAST_MODIFIED, "weekly", 0.8),
+    ...emitLocalizedClones("/study", LAST_MODIFIED, "monthly", 0.7),
+    ...emitLocalizedClones("/questions", LAST_MODIFIED, "monthly", 0.7),
+    ...emitLocalizedClones(
+      "/practice-test",
+      LAST_MODIFIED,
+      "monthly",
+      0.7
+    ),
   ];
 
-  return [...staticPages, ...spanishPages, ...statePages, ...questionPages, ...studyGuidePages, ...blogPages];
+  // Decorate the English canonical entries with hreflang siblings for the
+  // routes that exist in other languages. Static non-translated pages
+  // (about, blog, state pages) stay single-language and get no alternates.
+  const TRANSLATED_CANONICAL_PATHS = new Set([
+    "/",
+    "/study",
+    "/questions",
+    "/practice-test",
+  ]);
+
+  const decoratedStatic = staticPages.map((entry) => {
+    const canonicalPath =
+      entry.url === BASE_URL ? "/" : entry.url.replace(BASE_URL, "");
+    if (!TRANSLATED_CANONICAL_PATHS.has(canonicalPath)) return entry;
+    return {
+      ...entry,
+      alternates: { languages: hreflangFor(canonicalPath) },
+    };
+  });
+
+  return [
+    ...decoratedStatic,
+    ...localizedPages,
+    ...statePages,
+    ...questionPages,
+    ...studyGuidePages,
+    ...blogPages,
+  ];
 }
