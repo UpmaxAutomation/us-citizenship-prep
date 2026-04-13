@@ -7,6 +7,14 @@ export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const title = searchParams.get("title") || "US Citizenship Test Prep";
   const type = searchParams.get("type") || "page";
+  const lang = searchParams.get("lang") || "en";
+
+  const subtitles: Record<string, [string, string, string]> = {
+    en: ["All 128 USCIS Civics Questions", "Free Study Tools", "Updated 2025"],
+    es: ["Las 128 Preguntas Civicas USCIS", "Herramientas Gratuitas", "Actualizado 2025"],
+    tr: ["128 USCIS Sivil Bilgiler Sorusu", "Ucretsiz Calisma Araclari", "2025 Guncellendi"],
+  };
+  const [sub1, sub2, sub3] = subtitles[lang] || subtitles.en;
 
   // Color based on type
   const accentColor =
@@ -82,11 +90,11 @@ export async function GET(request: NextRequest) {
             fontSize: "18px",
           }}
         >
-          <span>All 128 USCIS Civics Questions</span>
+          <span>{sub1}</span>
           <span>|</span>
-          <span>Free Study Tools</span>
+          <span>{sub2}</span>
           <span>|</span>
-          <span>Updated 2025</span>
+          <span>{sub3}</span>
         </div>
         <div
           style={{

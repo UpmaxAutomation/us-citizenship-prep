@@ -58,7 +58,7 @@ export function buildMetadata({
   const url = `${siteConfig.url}${path}`;
 
   const ogImageUrl = title
-    ? `${siteConfig.url}/api/og?title=${encodeURIComponent(title)}${ogType ? `&type=${encodeURIComponent(ogType)}` : ""}`
+    ? `${siteConfig.url}/api/og?title=${encodeURIComponent(title)}${ogType ? `&type=${encodeURIComponent(ogType)}` : ""}${locale !== "en" ? `&lang=${locale}` : ""}`
     : `${siteConfig.url}/og-image.png`;
 
   const meta: Metadata = {

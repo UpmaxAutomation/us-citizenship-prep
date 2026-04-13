@@ -8,6 +8,7 @@ export const metadata = buildMetadata({
   description:
     "Domina las 128 preguntas civicas del USCIS para tu entrevista de naturalizacion 2025. Tarjetas de estudio, examenes de practica y repeticion espaciada gratis. Sin cuenta requerida.",
   path: "/es",
+  locale: "es",
 });
 
 export default function SpanishHomePage() {

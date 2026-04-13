@@ -16,6 +16,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Lista completa de las 128 preguntas civicas oficiales del USCIS y sus respuestas para la entrevista de naturalizacion 2025. Organizadas por categoria con preguntas de exencion 65/20 marcadas.",
   path: "/es/preguntas",
+  locale: "es",
 });
 
 const categoryColors: Record<

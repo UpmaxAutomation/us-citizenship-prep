@@ -35,6 +35,12 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic: "Guat is de form of govérnment of de Iunáited Steits?",
+    answerPhonetics: [
+      "Ripáblic",
+      "Constitúshon-beist féderal ripáblic",
+      "Repriséntativ dimócrasi",
+    ],
     slug: "form-of-government-of-the-united-states",
   },
   {
@@ -44,6 +50,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: true,
+    phonetic: "Guat is de suprim lo of de land?",
+    answerPhonetics: ["Iu Es Constitúshon"],
     slug: "supreme-law-of-the-land",
   },
   {
@@ -58,6 +66,13 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic: "Neim guan ting de Iu Es Constitúshon das",
+    answerPhonetics: [
+      "Forms de govérnment",
+      "Difains páuers of govérnment",
+      "Difains de parts of govérnment",
+      "Pritécts de raits of de pípol",
+    ],
     slug: "what-the-constitution-does",
   },
   {
@@ -74,6 +89,15 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic:
+      "De Iu Es Constitúshon starts guit de guords Gui de Pípol. Guat das Gui de Pípol min?",
+    answerPhonetics: [
+      "Self govérnment",
+      "Pópyular sóvrinty",
+      "Consént of de govérnd",
+      "Pípol shud gávern demsélvs",
+      "Egzámpol of sóshol cóntract",
+    ],
     slug: "we-the-people-meaning",
   },
   {
@@ -83,6 +107,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic: "Jau ar chéinyes meid tu de Iu Es Constitúshon?",
+    answerPhonetics: ["Améndments", "De améndment próses"],
     slug: "how-to-change-the-constitution",
   },
   {
@@ -95,6 +121,11 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic: "Guat das de Bil of Raits priténct?",
+    answerPhonetics: [
+      "De béisic raits of Américans",
+      "De béisic raits of pípol líving in de Iunáited Steits",
+    ],
     slug: "what-the-bill-of-rights-protects",
   },
   {
@@ -104,6 +135,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: true,
+    phonetic: "Jau méni améndments das de Iu Es Constitúshon hav?",
+    answerPhonetics: ["Tuénti séven"],
     slug: "how-many-amendments",
   },
   {
@@ -118,6 +151,13 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic: "Guai is de Déclareishon of Indipéndens impórtant?",
+    answerPhonetics: [
+      "It ses América is fri from Brítiash contról",
+      "It ses ol pípol ar criéited íkuol",
+      "It aidentífais injérent raits",
+      "It aidentífais indivíjual frídems",
+    ],
     slug: "why-declaration-of-independence-is-important",
   },
   {
@@ -128,6 +168,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic:
+      "Guat fáunding dócyument sed de Américan cólonis guer fri from Bríten?",
+    answerPhonetics: ["Déclaréishon of Indipéndens"],
     slug: "founding-document-colonies-free-from-britain",
   },
   {
@@ -145,6 +188,16 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic:
+      "Neim tu impórtant aídias from de Déclaréishon of Indipéndens and de Iu Es Constitúshon",
+    answerPhonetics: [
+      "Ikuáliti",
+      "Líberti",
+      "Sóshol cóntract",
+      "Náchural raits",
+      "Límited govérnment",
+      "Self govérnment",
+    ],
     slug: "important-ideas-declaration-and-constitution",
   },
   {
@@ -155,6 +208,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic:
+      "De guords Laif Líberti and de Persiút of Jápines ar in guat fáunding dócyument?",
+    answerPhonetics: ["Déclaréishon of Indipéndens"],
     slug: "life-liberty-pursuit-of-happiness-document",
   },
   {
@@ -164,6 +220,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: true,
+    phonetic: "Guat is de écanomic sístem of de Iunáited Steits?",
+    answerPhonetics: ["Cápitalism", "Fri márket écenemi"],
     slug: "economic-system-of-the-united-states",
   },
   {
@@ -178,6 +236,13 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic: "Guat is de rul of lo?",
+    answerPhonetics: [
+      "Évriuan mast fólo de lo",
+      "Líders mast obéi de lo",
+      "Govérnment mast obéi de lo",
+      "No guan is abáv de lo",
+    ],
     slug: "what-is-the-rule-of-law",
   },
   {
@@ -197,6 +262,18 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic:
+      "Méni dócyuments ínfluenst de Iu Es Constitúshon. Neim guan.",
+    answerPhonetics: [
+      "Déclaréishon of Indipéndens",
+      "Articles of Confidereishon",
+      "Féderalist Péipers",
+      "Anti Féderalist Péipers",
+      "Veryínya Déclaréishon of Raits",
+      "Fandaméntal Orders of Conécticat",
+      "Méiflaur Cómpact",
+      "Iróquois Greit Lo of Pis",
+    ],
     slug: "documents-that-influenced-the-constitution",
   },
   {
@@ -210,6 +287,12 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Principios del Gobierno Americano",
     is6520: false,
+    phonetic: "Der ar zri brénches of govérnment. Guai?",
+    answerPhonetics: [
+      "So guan part das not bicám tu páuerful",
+      "Cheks and bálances",
+      "Sépareishan of páuers",
+    ],
     slug: "why-three-branches-of-government",
   },
 
@@ -226,6 +309,11 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Neim de zri brénches of govérnment",
+    answerPhonetics: [
+      "Leyislétiv, Egzécyutiv and Yudíshol",
+      "Cóngres, Président and de Corts",
+    ],
     slug: "name-the-three-branches-of-government",
   },
   {
@@ -236,6 +324,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic:
+      "De Président of de Iunáited Steits is in chary of guch branch of govérnment?",
+    answerPhonetics: ["Egzécyutiv branch"],
     slug: "president-in-charge-of-which-branch",
   },
   {
@@ -249,6 +340,12 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guat part of de féderal govérnment raits los?",
+    answerPhonetics: [
+      "Iu Es Cóngres",
+      "Iu Es or néshonal leyisléicher",
+      "Leyislétiv branch",
+    ],
     slug: "what-part-of-government-writes-laws",
   },
   {
@@ -258,6 +355,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guat ar de tu parts of de Iu Es Cóngres?",
+    answerPhonetics: ["Sénat and Jaus of Repriséntetivs"],
     slug: "two-parts-of-congress",
   },
   {
@@ -271,6 +370,12 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: true,
+    phonetic: "Neim guan páuer of de Iu Es Cóngres",
+    answerPhonetics: [
+      "Raits los",
+      "Diclércs guor",
+      "Meiks de féderal báchet",
+    ],
     slug: "power-of-congress",
   },
   {
@@ -280,6 +385,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Jau méni Iu Es sénators ar der?",
+    answerPhonetics: ["Guan jándred"],
     slug: "how-many-us-senators",
   },
   {
@@ -289,6 +396,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Jau long is a term for a Iu Es sénator?",
+    answerPhonetics: ["Sics yirs"],
     slug: "how-long-is-a-senator-term",
   },
   {
@@ -302,6 +411,12 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Ju is guan of yor steits Iu Es sénators nau?",
+    answerPhonetics: [
+      "Ánsers guil veri",
+      "For Califórnia: Alecs Padíla",
+      "For Califórnia: Éidam Shif",
+    ],
     slug: "your-states-us-senators",
   },
   {
@@ -312,6 +427,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Jau méni vóuting mémbors ar in de Jaus of Repriséntetivs?",
+    answerPhonetics: ["For jándred zérti faiv"],
     slug: "how-many-voting-members-house-of-representatives",
   },
   {
@@ -322,6 +439,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Jau long is a term for a mémbor of de Jaus of Repriséntetivs?",
+    answerPhonetics: ["Tu yirs"],
     slug: "how-long-is-a-house-representative-term",
   },
   {
@@ -332,6 +451,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic:
+      "Guai du Iu Es repriséntetivs serv shortor terms dan Iu Es sénators?",
+    answerPhonetics: ["Tu mor clóusli fólo páblic opínyon"],
     slug: "why-representatives-serve-shorter-terms",
   },
   {
@@ -341,6 +463,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Jau méni sénators das ich steit jav?",
+    answerPhonetics: ["Tu"],
     slug: "how-many-senators-per-state",
   },
   {
@@ -353,6 +477,11 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guai das ich steit jav tu sénators?",
+    answerPhonetics: [
+      "Ikuol reprisentéishon for smol steits",
+      "De Greit Cómpromais, Conécticat Cómpromais",
+    ],
     slug: "why-each-state-has-two-senators",
   },
   {
@@ -362,6 +491,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Neim yor Iu Es repriséntetiv",
+    answerPhonetics: ["Ánsers guil veri bai congréshonel district"],
     slug: "name-your-us-representative",
   },
   {
@@ -372,6 +503,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: true,
+    phonetic:
+      "Guat is de neim of de Spíker of de Jaus of Repriséntetivs nau?",
+    answerPhonetics: ["Maik Yónson"],
     slug: "speaker-of-the-house-now",
   },
   {
@@ -384,6 +518,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Ju das a Iu Es sénator réprisent?",
+    answerPhonetics: ["Sítisens of der steit", "Pípol of der steit"],
     slug: "who-does-a-senator-represent",
   },
   {
@@ -393,6 +529,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Ju ilécts Iu Es sénators?",
+    answerPhonetics: ["Sítisens from der steit"],
     slug: "who-elects-us-senators",
   },
   {
@@ -407,6 +545,14 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic:
+      "Ju das a mémbor of de Jaus of Repriséntetivs réprisent?",
+    answerPhonetics: [
+      "Sítisens in der congréshonel district",
+      "Sítisens in der district",
+      "Pípol from der congréshonel district",
+      "Pípol in der district",
+    ],
     slug: "who-does-a-house-representative-represent",
   },
   {
@@ -416,6 +562,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Ju ilécts mémbors of de Jaus of Repriséntetivs?",
+    answerPhonetics: ["Sítisens from der congréshonel district"],
     slug: "who-elects-house-representatives",
   },
   {
@@ -430,6 +578,13 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic:
+      "Som steits jav mor repriséntetivs dan áder steits. Guai?",
+    answerPhonetics: [
+      "Bicós of de steits pópyuleishon",
+      "Bicós dei jav mor pípol",
+      "Bicós som steits jav mor pípol",
+    ],
     slug: "why-some-states-have-more-representatives",
   },
   {
@@ -440,6 +595,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: true,
+    phonetic:
+      "De Président of de Iunáited Steits is iléctid for jau méni yirs?",
+    answerPhonetics: ["For yirs"],
     slug: "president-elected-for-how-many-years",
   },
   {
@@ -453,6 +611,12 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic:
+      "De Président of de Iunáited Steits can serv ónli tu terms. Guai?",
+    answerPhonetics: [
+      "Bicós of de tuénti-sécond améndment",
+      "Tu kip de président from bicáming tu páuerful",
+    ],
     slug: "why-president-can-serve-only-two-terms",
   },
   {
@@ -463,6 +627,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: true,
+    phonetic:
+      "Guat is de neim of de Président of de Iunáited Steits nau?",
+    answerPhonetics: ["Dónald Tromp", "Dónald Yei Tromp"],
     slug: "name-of-the-president-now",
   },
   {
@@ -473,6 +640,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: true,
+    phonetic:
+      "Guat is de neim of de Vais Président of de Iunáited Steits nau?",
+    answerPhonetics: ["Yei Di Vans", "Yei Di Vans"],
     slug: "name-of-the-vice-president-now",
   },
   {
@@ -483,6 +653,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic:
+      "If de président can no lónger serv, ju bicóms président?",
+    answerPhonetics: ["De Vais Président of de Iunáited Steits"],
     slug: "who-becomes-president-if-president-cannot-serve",
   },
   {
@@ -499,6 +672,15 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Neim guan páuer of de président",
+    answerPhonetics: [
+      "Sains bils intu lo",
+      "Vítouz bils",
+      "Infórses los",
+      "Cománder in Chif of de mílitary",
+      "Chif díplomat",
+      "Apóints féderal yáyes",
+    ],
     slug: "power-of-the-president",
   },
   {
@@ -509,6 +691,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Ju is Cománder in Chif of de Iu Es mílitary?",
+    answerPhonetics: ["De Président of de Iunáited Steits"],
     slug: "commander-in-chief-of-the-military",
   },
   {
@@ -518,6 +702,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Ju sains bils tu bicám los?",
+    answerPhonetics: ["De Président of de Iunáited Steits"],
     slug: "who-signs-bills-to-become-laws",
   },
   {
@@ -527,6 +713,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: true,
+    phonetic: "Ju vítouz bils?",
+    answerPhonetics: ["De Président of de Iunáited Steits"],
     slug: "who-vetoes-bills",
   },
   {
@@ -536,6 +724,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Ju apóints féderal yáyes?",
+    answerPhonetics: ["De Président of de Iunáited Steits"],
     slug: "who-appoints-federal-judges",
   },
   {
@@ -549,6 +739,12 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "De egzécyutiv branch jas méni parts. Neim guan.",
+    answerPhonetics: [
+      "Président of de Iunáited Steits",
+      "Cábinet",
+      "Féderal dipártments and éyensis",
+    ],
     slug: "parts-of-the-executive-branch",
   },
   {
@@ -558,6 +754,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guat das de présidents Cábinet du?",
+    answerPhonetics: ["Ádvaisis de Président of de Iunáited Steits"],
     slug: "what-does-the-presidents-cabinet-do",
   },
   {
@@ -590,6 +788,31 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guat ar tu Cábinet-level posíshons?",
+    answerPhonetics: [
+      "Átorni Yéneral",
+      "Sécreteri of Ágricolcher",
+      "Sécreteri of Cómers",
+      "Sécreteri of Ediucéishon",
+      "Sécreteri of Éneryi",
+      "Sécreteri of Jelz and Jiúman Sérvises",
+      "Sécreteri of Jómland Siquiúriti",
+      "Sécreteri of Jáusing and Érban Divélopment",
+      "Sécreteri of de Intírior",
+      "Sécreteri of Léibor",
+      "Sécreteri of Steit",
+      "Sécreteri of Tránsportéishon",
+      "Sécreteri of de Tréshuri",
+      "Sécreteri of Véterans Afáirs",
+      "Sécreteri of Guor, Difens",
+      "Vais Président",
+      "Ádministreitor of de Inváironmental Protékshon Éyensi",
+      "Ádministreitor of de Smol Bísnes Ádministréishon",
+      "Diréctor of de Séntral Intéliyens Éyensi",
+      "Diréctor of de Ófis of Mánaeyement and Báchet",
+      "Diréctor of Néshonal Intéliyens",
+      "Iunáited Steits Treid Repriséntetiv",
+    ],
     slug: "two-cabinet-level-positions",
   },
   {
@@ -602,6 +825,11 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guai is de Iléctoral Cóley impórtant?",
+    answerPhonetics: [
+      "It disáids ju is iléctid président",
+      "It prováids a cómpromais bituin de pópyular iléckshon of de président and congréshonel seléckshon",
+    ],
     slug: "why-electoral-college-is-important",
   },
   {
@@ -611,6 +839,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guat is guan part of de Yudíshol branch?",
+    answerPhonetics: ["Suprim Cort", "Féderal Corts"],
     slug: "part-of-the-judicial-branch",
   },
   {
@@ -625,6 +855,13 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guat das de Yudíshol branch du?",
+    answerPhonetics: [
+      "Rivíus los",
+      "Ikspleins los",
+      "Risólvs dispyúts, diságriments abáut de lo",
+      "Disáids if a lo gous aguénst de Iu Es Constitúshon",
+    ],
     slug: "what-does-the-judicial-branch-do",
   },
   {
@@ -634,6 +871,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: true,
+    phonetic: "Guat is de jaiest cort in de Iunáited Steits?",
+    answerPhonetics: ["Suprim Cort"],
     slug: "highest-court-in-the-united-states",
   },
   {
@@ -643,6 +882,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Jau méni sits ar on de Suprim Cort?",
+    answerPhonetics: ["Nain"],
     slug: "how-many-seats-on-supreme-court",
   },
   {
@@ -653,6 +894,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic:
+      "Jau méni Suprim Cort yástises ar yúshually níded tu disáid a keis?",
+    answerPhonetics: ["Faiv"],
     slug: "how-many-justices-needed-to-decide-a-case",
   },
   {
@@ -666,6 +910,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Jau long du Suprim Cort yástises serv?",
+    answerPhonetics: ["For laif", "Láiftaim apóintment", "Until ritáiermant"],
     slug: "how-long-do-supreme-court-justices-serve",
   },
   {
@@ -679,6 +925,11 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Suprim Cort yástises serv for laif. Guai?",
+    answerPhonetics: [
+      "Tu bi indipéndent of polítics",
+      "Tu límit áutsaid polítical ínfluens",
+    ],
     slug: "why-supreme-court-justices-serve-for-life",
   },
   {
@@ -688,6 +939,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Ju is de Chif Yástis of de Iunáited Steits nau?",
+    answerPhonetics: ["Yon Róberts", "Yon Yi Róberts Yúnior"],
     slug: "chief-justice-of-the-united-states-now",
   },
   {
@@ -705,6 +958,15 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Neim guan páuer dat is ónli for de féderal govérnment",
+    answerPhonetics: [
+      "Print péiper mani",
+      "Mint coins",
+      "Diclér guor",
+      "Crieít an ármi",
+      "Meik trítis",
+      "Set fóren pólisi",
+    ],
     slug: "power-only-for-the-federal-government",
   },
   {
@@ -720,6 +982,14 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Neim guan páuer dat is ónli for de steits",
+    answerPhonetics: [
+      "Prováid scúling and ediucéishon",
+      "Prováid protékshon, polis",
+      "Prováid séifti, fáier dipártments",
+      "Guiv a dráivers láisens",
+      "Apruúv sóuning and land yus",
+    ],
     slug: "power-only-for-the-states",
   },
   {
@@ -731,6 +1001,10 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guat is de pérpos of de Tenz Améndment?",
+    answerPhonetics: [
+      "It steits dat de páuers not given tu de féderal govérnment bilóng tu de steits or tu de pípol",
+    ],
     slug: "purpose-of-the-10th-amendment",
   },
   {
@@ -743,6 +1017,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: true,
+    phonetic: "Ju is de góvernor of yor steit nau?",
+    answerPhonetics: ["Ánsers guil veri", "For Califórnia: Gáevin Niúsom"],
     slug: "governor-of-your-state-now",
   },
   {
@@ -755,6 +1031,8 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Sistema de Gobierno",
     is6520: false,
+    phonetic: "Guat is de cápital of yor steit?",
+    answerPhonetics: ["Ánsers guil veri", "For Califórnia: Sácramiento"],
     slug: "capital-of-your-state",
   },
 
@@ -774,6 +1052,14 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: false,
+    phonetic:
+      "Der ar for améndments tu de Iu Es Constitúshon abáut ju can vout. Discráib guan of dem.",
+    answerPhonetics: [
+      "Sítisens éityn and óldar can vout",
+      "Iu dont jav tu pei a pol teks tu vout",
+      "Éni sítisen can vout. Gúimen and men can vout.",
+      "A meil sítisen of éni reis can vout",
+    ],
     slug: "four-voting-amendments-describe-one",
   },
   {
@@ -788,6 +1074,13 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: false,
+    phonetic:
+      "Ju can vout in féderal iléckshons, ran for féderal ófis, and serv on a Yúri in de Iunáited Steits?",
+    answerPhonetics: [
+      "Sítisens",
+      "Sítisens of de Iunáited Steits",
+      "Iu Es sítisens",
+    ],
     slug: "who-can-vote-run-for-office-serve-on-jury",
   },
   {
@@ -805,6 +1098,16 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: false,
+    phonetic:
+      "Guat ar zri raits of évriuan living in de Iunáited Steits?",
+    answerPhonetics: [
+      "Fridóm of iksprésion",
+      "Fridóm of spich",
+      "Fridóm of asémbling",
+      "Fridóm tu petísion de govérnment",
+      "Fridóm of rilíyon",
+      "De rait tu ber arms",
+    ],
     slug: "three-rights-of-everyone-in-the-united-states",
   },
   {
@@ -815,6 +1118,9 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: true,
+    phonetic:
+      "Guat du gui shou lóyalti tu guen gui sei de Plyey of Aléyens?",
+    answerPhonetics: ["De Iunáited Steits", "De flag"],
     slug: "pledge-of-allegiance-loyalty",
   },
   {
@@ -832,6 +1138,16 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: false,
+    phonetic:
+      "Neim tu prómises dat niú sítisens meik in de Outh of Aléyens",
+    answerPhonetics: [
+      "Guiv op lóyalti tu áder cántris",
+      "Difend de Iu Es Constitúshon",
+      "Obéi de los of de Iunáited Steits",
+      "Serv in de mílitary if níded",
+      "Serv, jelp, du impórtant guork for de néishon if níded",
+      "Bi lóyal tu de Iunáited Steits",
+    ],
     slug: "oath-of-allegiance-promises",
   },
   {
@@ -845,6 +1161,12 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: false,
+    phonetic: "Jau can pípol bicám Iunáited Steits sítisens?",
+    answerPhonetics: [
+      "Bi born in de Iunáited Steits ánder de condíshons set bai de Fortínz Améndment",
+      "Néchuralaiz",
+      "Diráiv sítisenshipsh ánder condíshons set bai Cóngres",
+    ],
     slug: "how-to-become-a-united-states-citizen",
   },
   {
@@ -866,6 +1188,20 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: false,
+    phonetic:
+      "Guat ar tu egzámpols of sívic partisipéishon in de Iunáited Steits?",
+    answerPhonetics: [
+      "Vout",
+      "Ran for ófis",
+      "Yoin a polítical párti",
+      "Jelp guit a campéin",
+      "Yoin a sívic grup",
+      "Yoin a comyúniti grup",
+      "Guiv an iléctid ofíshal yor opínyon on an íshiu",
+      "Contáct iléctid ofíshals",
+      "Sopórt or opóus an íshiu or pólisi",
+      "Rait tu a niúspéipar",
+    ],
     slug: "examples-of-civic-participation",
   },
   {
@@ -882,6 +1218,15 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: false,
+    phonetic: "Guat is guan guei Américans can serv der cántri?",
+    answerPhonetics: [
+      "Vout",
+      "Pei tékses",
+      "Obéi de lo",
+      "Serv in de mílitary",
+      "Ran for ófis",
+      "Guork for lóucal, steit, or féderal govérnment",
+    ],
     slug: "ways-americans-can-serve-their-country",
   },
   {
@@ -896,6 +1241,13 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: false,
+    phonetic: "Guai is it impórtant tu pei féderal tékses?",
+    answerPhonetics: [
+      "Rikuáierd bai lo",
+      "Ol pípol pei tu fand de féderal govérnment",
+      "Rikuáierd bai de Iu Es Constitúshon, Sickstínz Améndment",
+      "Sívic diúti",
+    ],
     slug: "why-important-to-pay-federal-taxes",
   },
   {
@@ -910,6 +1262,13 @@ export const questionsEs: Question[] = [
     category: "Gobierno Americano",
     subcategory: "Derechos y Responsabilidades",
     is6520: false,
+    phonetic:
+      "It is impórtant for ol men ey éityn zru tuénti-faiv tu réyister for de Siléctiv Sérvos. Neim guan rison guai.",
+    answerPhonetics: [
+      "Rikuáierd bai lo",
+      "Sívic diúti",
+      "Meiks de draft fer if níded",
+    ],
     slug: "why-register-for-selective-service",
   },
 
@@ -930,6 +1289,14 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "De cólonists keim tu América for méni risens. Neim guan.",
+    answerPhonetics: [
+      "Fridóm",
+      "Polítical líberti",
+      "Rilíyos fridóm",
+      "Ecónomic opórtiuniti",
+      "Escéip persiquiúshon",
+    ],
     slug: "why-colonists-came-to-america",
   },
   {
@@ -939,6 +1306,8 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: true,
+    phonetic: "Ju livd in América bifór de Eiuropians aráivd?",
+    answerPhonetics: ["Américan Indyans", "Néitiv Américans"],
     slug: "who-lived-in-america-before-europeans",
   },
   {
@@ -948,6 +1317,8 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "Guat grup of pípol guas téiken and sould as sleivs?",
+    answerPhonetics: ["Áfricans", "Pípol from África"],
     slug: "what-group-was-taken-and-sold-as-slaves",
   },
   {
@@ -962,6 +1333,13 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic:
+      "Guat guor did de Américans fait tu guin indipéndens from Bríten?",
+    answerPhonetics: [
+      "Américan Revolúshon",
+      "De Américan Revolúshoneri Guor",
+      "Guor for Américan Indipéndens",
+    ],
     slug: "war-to-win-independence-from-britain",
   },
   {
@@ -983,6 +1361,20 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic:
+      "Neim guan rison guai de Américans diclérd indipéndens from Bríten",
+    answerPhonetics: [
+      "Jai tékses",
+      "Tékseishon guit-áut reprisentéishon",
+      "Brítiash sólyors steid in Américans háuses, bórding, cuórtering",
+      "Dei did not jav self govérnment",
+      "Bóston Másaker",
+      "Bóston Ti Párti, Ti Act",
+      "Stemp Act",
+      "Shúgar Act",
+      "Táunsend Acts",
+      "Intólerabel, Koersív Acts",
+    ],
     slug: "reason-americans-declared-independence",
   },
   {
@@ -992,6 +1384,8 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: true,
+    phonetic: "Ju rout de Déclaréishon of Indipéndens?",
+    answerPhonetics: ["Yéferson"],
     slug: "who-wrote-the-declaration-of-independence",
   },
   {
@@ -1001,6 +1395,8 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "Guen guas de Déclaréishon of Indipéndens adóptid?",
+    answerPhonetics: ["Yulái Forz, Sevéntyn Séventi Sics"],
     slug: "when-was-declaration-of-independence-adopted",
   },
   {
@@ -1018,6 +1414,16 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic:
+      "De Américan Revolúshon jad méni impórtant ivents. Neim guan.",
+    answerPhonetics: [
+      "Bánker Jil",
+      "Déclaréishon of Indipéndens",
+      "Guáshington cróssing de Délawar, Bátol of Tréntom",
+      "Sáratoga",
+      "Váley Fory Incámpment",
+      "Yórktaun, Brítiash Seréndor at Yórktaun",
+    ],
     slug: "important-events-of-the-american-revolution",
   },
   {
@@ -1041,6 +1447,22 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "Der guer zértyn órijinal steits. Neim faiv.",
+    answerPhonetics: [
+      "Niú Jámpshir",
+      "Másachústes",
+      "Roud Áiland",
+      "Conécticat",
+      "Niú York",
+      "Niú Yersi",
+      "Pensilvéinia",
+      "Délawar",
+      "Mérilend",
+      "Veryínya",
+      "Norz Caroláina",
+      "Sauz Caroláina",
+      "Yoryia",
+    ],
     slug: "13-original-states-name-five",
   },
   {
@@ -1050,6 +1472,8 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "Guat fáunding dócyument guas ríten in Sevéntyn Eiti Séven?",
+    answerPhonetics: ["Iu Es Constitúshon"],
     slug: "founding-document-written-in-1787",
   },
   {
@@ -1065,6 +1489,14 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic:
+      "De Féderalist Péipers sopórtid de pásay of de Iu Es Constitúshon. Neim guan of de ráiters.",
+    answerPhonetics: [
+      "Yeims Médison",
+      "Algzánder Háamilton",
+      "Yon Yei",
+      "Piúblius",
+    ],
     slug: "federalist-papers-writers",
   },
   {
@@ -1077,6 +1509,11 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "Guai guer de Féderalist Péipers impórtant?",
+    answerPhonetics: [
+      "Dei jelpt pípol ánderstend de Iu Es Constitúshon",
+      "Dei sopórtid pásing de Iu Es Constitúshon",
+    ],
     slug: "why-federalist-papers-were-important",
   },
   {
@@ -1093,6 +1530,14 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "Bénjamin Frénklin is féimos for méni zings. Neim guan.",
+    answerPhonetics: [
+      "Fáundid de forst fri páblick láibreris",
+      "Forst Póstmaster Yéneral of de Iunáited Steits",
+      "Jelpt rait de Déclaréishon of Indipéndens",
+      "Invéntor",
+      "Iu Es Díplomat",
+    ],
     slug: "benjamin-franklin-famous-for",
   },
   {
@@ -1108,6 +1553,13 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: true,
+    phonetic: "Yory Guáshington is féimos for méni zings. Neim guan.",
+    answerPhonetics: [
+      "Fáder of Aur Cántri",
+      "Forst Président of de Iunáited Steits",
+      "Yéneral of de Cóntinental Ármi",
+      "Président of de Constitúshonal Convénshon",
+    ],
     slug: "george-washington-famous-for",
   },
   {
@@ -1125,6 +1577,15 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "Tómas Yéferson is féimos for méni zings. Neim guan.",
+    answerPhonetics: [
+      "Ráiter of de Déclaréishon of Indipéndens",
+      "Zord Président of de Iunáited Steits",
+      "Dábled de saiz of de Iunáited Steits, Luisiána Pérches",
+      "Forst Sécreteri of Steit",
+      "Fáundid de Univérsiti of Veryínya",
+      "Ráiter of de Veryínya Státut on Rilíyos Fridóm",
+    ],
     slug: "thomas-jefferson-famous-for",
   },
   {
@@ -1140,6 +1601,13 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "Yeims Médison is féimos for méni zings. Neim guan.",
+    answerPhonetics: [
+      "Fáder of de Constitúshon",
+      "Forz Président of de Iunáited Steits",
+      "Président diúring de Guor of Éityn Tuélv",
+      "Guan of de ráiters of de Féderalist Péipers",
+    ],
     slug: "james-madison-famous-for",
   },
   {
@@ -1156,6 +1624,14 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Periodo Colonial e Independencia",
     is6520: false,
+    phonetic: "Algzánder Háamilton is féimos for méni zings. Neim guan.",
+    answerPhonetics: [
+      "Forst Sécreteri of de Tréshuri",
+      "Guan of de ráiters of de Féderalist Péipers",
+      "Jelpt establish de Forst Bénk of de Iunáited Steits",
+      "Éid tu Yéneral Yory Guáshington",
+      "Mémbor of de Cóntinental Cóngres",
+    ],
     slug: "alexander-hamilton-famous-for",
   },
 
@@ -1170,6 +1646,9 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: false,
+    phonetic:
+      "Guat térritori did de Iunáited Steits bai from Frans in Éityn O Zri?",
+    answerPhonetics: ["Luisiána Térritori", "Luisiána"],
     slug: "territory-bought-from-france-in-1803",
   },
   {
@@ -1184,6 +1663,14 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: false,
+    phonetic:
+      "Neim guan guor fout bai de Iunáited Steits in de Éityn Jándreds",
+    answerPhonetics: [
+      "Guor of Éityn Tuélv",
+      "Mécsican Américan Guor",
+      "Sívil Guor",
+      "Spánish Américan Guor",
+    ],
     slug: "war-fought-in-the-1800s",
   },
   {
@@ -1193,6 +1680,8 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: false,
+    phonetic: "Neim de Iu Es guor bituin de Norz and de Sauz",
+    answerPhonetics: ["De Sívil Guor"],
     slug: "war-between-the-north-and-south",
   },
   {
@@ -1212,6 +1701,17 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: false,
+    phonetic: "De Sívil Guor jad méni impórtant ivents. Neim guan.",
+    answerPhonetics: [
+      "Fort Sámter",
+      "Imánsipéishon Próclameishon",
+      "Vícksberg",
+      "Gétisborg",
+      "Shérmans March",
+      "Seréndor at Apomátocs",
+      "Ántiitam, Shárpsberg",
+      "Líncoln guas asásinéited",
+    ],
     slug: "important-events-of-the-civil-war",
   },
   {
@@ -1228,6 +1728,14 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: true,
+    phonetic: "Éibrajam Líncoln is féimos for méni zings. Neim guan.",
+    answerPhonetics: [
+      "Frid de sleivs, Imánsipéishon Próclameishon",
+      "Séivd or Prisórvd de Yúnion",
+      "Led de Iunáited Steits diúring de Sívil Guor",
+      "Sixtínz Président of de Iunáited Steits",
+      "Delivered de Gétisborg Ádres",
+    ],
     slug: "abraham-lincoln-famous-for",
   },
   {
@@ -1242,6 +1750,13 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: false,
+    phonetic: "Guat did de Imánsipéishon Próclameishon du?",
+    answerPhonetics: [
+      "Frid de sleivs",
+      "Frid sleivs in de Confédorasi",
+      "Frid sleivs in de Confédoret steits",
+      "Frid sleivs in most sáudern steits",
+    ],
     slug: "what-did-emancipation-proclamation-do",
   },
   {
@@ -1251,6 +1766,8 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: false,
+    phonetic: "Guat Iu Es guor endid sleíveri?",
+    answerPhonetics: ["De Sívil Guor"],
     slug: "what-war-ended-slavery",
   },
   {
@@ -1261,6 +1778,9 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: false,
+    phonetic:
+      "Guat améndment ses ol pérsons born or néchuralaizd in de Iunáited Steits and subgéct tu de yurisdicshon derof ar Iu Es sítisens?",
+    answerPhonetics: ["Fortínz Améndment"],
     slug: "14th-amendment-citizenship",
   },
   {
@@ -1275,6 +1795,13 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: false,
+    phonetic: "Guen did ol men get de rait tu vout?",
+    answerPhonetics: [
+      "After de Sívil Guor",
+      "Diúring Riconstráckshon",
+      "Guit de Fiftínz Améndment",
+      "Éityn Séventi",
+    ],
     slug: "when-did-all-men-get-the-right-to-vote",
   },
   {
@@ -1292,6 +1819,16 @@ export const questionsEs: Question[] = [
     category: "Historia Americana",
     subcategory: "Los 1800s",
     is6520: false,
+    phonetic:
+      "Neim guan líder of de Wímens Raits Múvment in de Éityn Jándreds",
+    answerPhonetics: [
+      "Súsan Bi Ánzoni",
+      "Ilísabez Kéidi Stánton",
+      "Sóyorner Truz",
+      "Jériet Tábman",
+      "Lucrísja Mot",
+      "Lúsi Stoun",
+    ],
     slug: "leader-of-womens-rights-movement-1800s",
   },
 
@@ -1313,6 +1850,15 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic:
+      "Neim guan guor fout bai de Iunáited Steits in de Náintyn Jándreds",
+    answerPhonetics: [
+      "Guorld Guor Guan",
+      "Guorld Guor Tu",
+      "Corían Guor",
+      "Viétnam Guor",
+      "Pérshon Golf Guor",
+    ],
     slug: "war-fought-in-the-1900s",
   },
   {
@@ -1327,6 +1873,13 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic:
+      "Guai did de Iunáited Steits enter Guorld Guor Guan?",
+    answerPhonetics: [
+      "Bicós Yérmani atáct Iu Es sivílian ships",
+      "Tu sopórt de Álaid Páuers: Ingland, Frans, Itali and Rasha",
+      "Tu opóus de Séntral Páuers: Yérmani, Óstria-Háugari, de Ótoman Émpair and Bolgéria",
+    ],
     slug: "why-united-states-entered-world-war-i",
   },
   {
@@ -1341,6 +1894,12 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic: "Guen did ol wimen get de rait tu vout?",
+    answerPhonetics: [
+      "Náintyn Tuénti",
+      "After Guorld Guor Guan",
+      "Guit de Náintynz Améndment",
+    ],
     slug: "when-did-all-women-get-the-right-to-vote",
   },
   {
@@ -1351,6 +1910,8 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic: "Guat guas de Greit Diprésion?",
+    answerPhonetics: ["Lóngest ecónomic resésion in módorn jístori"],
     slug: "what-was-the-great-depression",
   },
   {
@@ -1364,6 +1925,11 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic: "Guen did de Greit Diprésion start?",
+    answerPhonetics: [
+      "De Greit Crash, Náintyn Tuénti-Náin",
+      "Stoc Márket Crash of Náintyn Tuénti-Náin",
+    ],
     slug: "when-did-the-great-depression-start",
   },
   {
@@ -1375,6 +1941,9 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic:
+      "Ju guas Président diúring de Greit Diprésion and Guorld Guor Tu?",
+    answerPhonetics: ["Rósevelt"],
     slug: "president-during-great-depression-and-world-war-ii",
   },
   {
@@ -1390,6 +1959,14 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic:
+      "Guai did de Iunáited Steits enter Guorld Guor Tu?",
+    answerPhonetics: [
+      "Bómbing of Perl Járbor",
+      "Yapanís atáct Perl Járbor",
+      "Tu sopórt de Álaid Páuers: Ingland, Frans and Rasha",
+      "Tu opóus de Áksis Páuers: Yérmani, Itali and Yapán",
+    ],
     slug: "why-united-states-entered-world-war-ii",
   },
   {
@@ -1406,6 +1983,13 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic: "Duáit Áisenjauer is féimos for méni zings. Neim guan.",
+    answerPhonetics: [
+      "Yéneral diúring Guorld Guor Tu",
+      "Président at de end of, diúring de Corían Guor",
+      "Zérti-Forz Président of de Iunáited Steits",
+      "Sáind de Féderal Éid Jáiuei Act of Náintyn Fifti Sics, Criéited de Intersteit Sístem",
+    ],
     slug: "dwight-eisenhower-famous-for",
   },
   {
@@ -1417,6 +2001,9 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic:
+      "Ju guas de Iunáited Steits mein ráivel diúring de Cóld Guor?",
+    answerPhonetics: ["Sóviet Yúnion", "Iu Es Es Ar", "Rasha"],
     slug: "main-rival-during-the-cold-war",
   },
   {
@@ -1428,6 +2015,9 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic:
+      "Diúring de Cóld Guor, guat guas guan mein consérn of de Iunáited Steits?",
+    answerPhonetics: ["Comiúnism", "Niúcliar Guor"],
     slug: "main-concern-during-the-cold-war",
   },
   {
@@ -1438,6 +2028,8 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic: "Guai did de Iunáited Steits enter de Corían Guor?",
+    answerPhonetics: ["Tu stop de spred of Comiúnism"],
     slug: "why-united-states-entered-korean-war",
   },
   {
@@ -1448,6 +2040,8 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic: "Guai did de Iunáited Steits enter de Viétnam Guor?",
+    answerPhonetics: ["Tu stop de spred of Comiúnism"],
     slug: "why-united-states-entered-vietnam-war",
   },
   {
@@ -1458,6 +2052,8 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic: "Guat did de Sívil Raits Múvment du?",
+    answerPhonetics: ["Fout tu end réishol discrimanéishon"],
     slug: "what-did-the-civil-rights-movement-do",
   },
   {
@@ -1473,6 +2069,13 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: true,
+    phonetic:
+      "Mártin Lúzer King Yúnior is féimos for méni zings. Neim guan.",
+    answerPhonetics: [
+      "Fout for Sívil Raits",
+      "Guorct for ikuáliti for ol Américans",
+      "Guorct tu inshúr dat pípol guud not bi yáyd bai de cólor of der skin bat bai de cóntent of der cáracter",
+    ],
     slug: "martin-luther-king-jr-famous-for",
   },
   {
@@ -1484,6 +2087,9 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic:
+      "Guai did de Iunáited Steits enter de Pérshon Golf Guor?",
+    answerPhonetics: ["Tu fors de Iráki mílitary from Cuuéit"],
     slug: "why-united-states-entered-persian-gulf-war",
   },
   {
@@ -1500,6 +2106,14 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: true,
+    phonetic:
+      "Guat méiyor ivent jápend on Séptember Iléven, Tu Záusand Guan in de Iunáited Steits?",
+    answerPhonetics: [
+      "Térrorists atáct de Iunáited Steits",
+      "Térrorists tuc óver tu pleins and créshd dem intu de Guorld Treid Sénter in Niú York Siti",
+      "Térrorists tuc óver a plein and créshd intu de Péntagon in Árlington, Veryínya",
+      "Térrorists tuc óver a plein óriyinali eimd at Guáshington Di Si and créshd in a fild in Pensilvéinia",
+    ],
     slug: "what-happened-on-september-11-2001",
   },
   {
@@ -1515,6 +2129,13 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic:
+      "Neim guan Iu Es mílitary cónflict after de Séptember Iléven, Tu Záusand Guan atacs",
+    answerPhonetics: [
+      "Glóbal Guor on Térror",
+      "Guor in Afgánistan",
+      "Guor in Irac",
+    ],
     slug: "military-conflict-after-september-11",
   },
   {
@@ -1551,6 +2172,35 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic:
+      "Neim guan Américan Indyan traib in de Iunáited Steits",
+    answerPhonetics: [
+      "Apáchi",
+      "Blécfit",
+      "Kéiuga",
+      "Chéruky",
+      "Sheién",
+      "Chípua",
+      "Chóctou",
+      "Cric",
+      "Crou",
+      "Jópi",
+      "Jiúron",
+      "Inupiát",
+      "Lacóta",
+      "Mojóc",
+      "Mojígan",
+      "Návajo",
+      "Ouéida",
+      "Onondága",
+      "Puéblo",
+      "Séminoul",
+      "Séneca",
+      "Shóni",
+      "Su",
+      "Títon",
+      "Tuscorára",
+    ],
     slug: "american-indian-tribe-in-united-states",
   },
   {
@@ -1569,6 +2219,16 @@ export const questionsEs: Question[] = [
     subcategory:
       "Historia Americana Reciente y Otra Informacion Historica Importante",
     is6520: false,
+    phonetic: "Neim guan egzámpol of an Américan inovéishon",
+    answerPhonetics: [
+      "Láit Bolb",
+      "Ótomobail, cars, intérnal combástion ényin",
+      "Scáiscréipers",
+      "Érplein",
+      "Asémbling Lain",
+      "Lánding on de Mun",
+      "Intégréited Sércot, Ái Si",
+    ],
     slug: "example-of-american-innovation",
   },
 
@@ -1582,6 +2242,8 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Simbolos",
     is6520: false,
+    phonetic: "Guat is de cápital of de Iunáited Steits?",
+    answerPhonetics: ["Guáshington Di Si"],
     slug: "capital-of-the-united-states",
   },
   {
@@ -1597,6 +2259,14 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Simbolos",
     is6520: false,
+    phonetic: "Guer is de Státu of Líberti?",
+    answerPhonetics: [
+      "Niú York Járbor",
+      "Líberti Áiland",
+      "Niú Yersi",
+      "Nir Niú York Siti",
+      "On de Jádson Ríver",
+    ],
     slug: "where-is-the-statue-of-liberty",
   },
   {
@@ -1609,6 +2279,11 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Simbolos",
     is6520: true,
+    phonetic: "Guai das de flag jav zértyn straips?",
+    answerPhonetics: [
+      "Bicós der guer zértyn órijinal cólonis",
+      "Bicós de straips réprisent de órijinal cólonis",
+    ],
     slug: "why-does-the-flag-have-13-stripes",
   },
   {
@@ -1622,6 +2297,12 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Simbolos",
     is6520: false,
+    phonetic: "Guai das de flag jav fifti stars?",
+    answerPhonetics: [
+      "Bicós der is guan star for ich steit",
+      "Bicós ich star réprisents a steit",
+      "Bicós der ar fifti steits",
+    ],
     slug: "why-does-the-flag-have-50-stars",
   },
   {
@@ -1631,6 +2312,8 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Simbolos",
     is6520: false,
+    phonetic: "Guat is de neim of de Néshonal Ánzem?",
+    answerPhonetics: ["De Star Spángold Béner"],
     slug: "name-of-the-national-anthem",
   },
   {
@@ -1641,6 +2324,9 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Simbolos",
     is6520: false,
+    phonetic:
+      "De néishons forst móto guas E Pluribus Unum. Guat das dat min?",
+    answerPhonetics: ["Áut of Méni, Guan", "Gui ol Bicám Guan"],
     slug: "e-pluribus-unum-meaning",
   },
 
@@ -1657,6 +2343,11 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Dias Festivos",
     is6520: false,
+    phonetic: "Guat is Indipéndens Dei?",
+    answerPhonetics: [
+      "A jólodei tu sélibreit Iu Es indipéndens from Bríten",
+      "De cántris bérzday",
+    ],
     slug: "what-is-independence-day",
   },
   {
@@ -1678,6 +2369,20 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Dias Festivos",
     is6520: true,
+    phonetic: "Neim zri néshonal Iu Es jólodeis",
+    answerPhonetics: [
+      "Niú Yirs Dei",
+      "Mártin Lúzer King Yúnior Dei",
+      "Présidents Dei, Guáshingtons Bérzday",
+      "Memórial Dei",
+      "Yúntynz",
+      "Indipéndens Dei",
+      "Léibor Dei",
+      "Colómbus Dei",
+      "Véterans Dei",
+      "Zánksgíving Dei",
+      "Crísmas Dei",
+    ],
     slug: "three-national-us-holidays",
   },
   {
@@ -1689,6 +2394,10 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Dias Festivos",
     is6520: false,
+    phonetic: "Guat is Memórial Dei?",
+    answerPhonetics: [
+      "A jólodei tu ónor sólyors ju daid in mílitary sérvos",
+    ],
     slug: "what-is-memorial-day",
   },
   {
@@ -1701,6 +2410,11 @@ export const questionsEs: Question[] = [
     category: "Simbolos y Dias Festivos",
     subcategory: "Dias Festivos",
     is6520: false,
+    phonetic: "Guat is Véterans Dei?",
+    answerPhonetics: [
+      "A jólodei tu ónor pípol in de Iu Es mílitary",
+      "A jólodei tu ónor pípol ju jav servd in de Iu Es mílitary",
+    ],
     slug: "what-is-veterans-day",
   },
 ];

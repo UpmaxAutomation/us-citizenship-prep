@@ -186,3 +186,27 @@ export function toLocalizedPath(
   // Untranslated page — fall back to the landing page of the target language.
   return lang.basePath || "/";
 }
+
+/**
+ * Localize a nav/footer href for the given language.
+ * Unlike `toLocalizedPath`, this does NOT fall back to basePath for untranslated
+ * routes — it keeps the original English path so nav links don't redirect to the
+ * landing page for pages that haven't been translated yet.
+ */
+export function localizeNavHref(href: string, lang: LanguageConfig): string {
+  if (lang.code === "en") return href;
+
+  // Exact match in routeMap.
+  if (lang.routeMap[href]) return lang.routeMap[href];
+
+  // Child path of a mapped route (e.g. /questions/some-slug).
+  for (const [enPath, locPath] of Object.entries(lang.routeMap)) {
+    if (enPath === "/") continue;
+    if (href.startsWith(`${enPath}/`)) {
+      return `${locPath}${href.slice(enPath.length)}`;
+    }
+  }
+
+  // Not translated — keep original English path unchanged.
+  return href;
+}

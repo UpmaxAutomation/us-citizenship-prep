@@ -2,18 +2,26 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { getLanguageFromPath, localizeNavHref } from "@/app/lib/languages";
+import { getNavStrings } from "@/app/lib/i18n-strings";
 
 export default function SiteNav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [processOpen, setProcessOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
 
+  const pathname = usePathname();
+  const lang = getLanguageFromPath(pathname);
+  const t = getNavStrings(lang.code);
+  const h = (href: string) => localizeNavHref(href, lang);
+
   return (
     <nav className="border-b border-slate-800/50 bg-slate-950" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
         <Link
-          href="/"
+          href={lang.basePath || "/"}
           className="text-sm font-semibold text-slate-300 hover:text-white transition-colors"
         >
           <span className="text-blue-400">US</span> Citizenship Prep
@@ -22,28 +30,28 @@ export default function SiteNav() {
         {/* Desktop links */}
         <div className="hidden sm:flex items-center gap-4">
           <Link
-            href="/study"
+            href={h("/study")}
             className="text-xs text-slate-400 hover:text-white transition-colors"
           >
-            Study
+            {t.study}
           </Link>
           <Link
-            href="/practice-test"
+            href={h("/practice-test")}
             className="text-xs text-slate-400 hover:text-white transition-colors"
           >
-            Practice Test
+            {t.practiceTest}
           </Link>
           <Link
-            href="/questions"
+            href={h("/questions")}
             className="text-xs text-slate-400 hover:text-white transition-colors"
           >
-            All 128 Questions
+            {t.all128Questions}
           </Link>
           <Link
-            href="/daily-challenge"
+            href={h("/daily-challenge")}
             className="text-xs text-slate-400 hover:text-white transition-colors"
           >
-            Daily Challenge
+            {t.dailyChallenge}
           </Link>
           {/* Process dropdown */}
           <div className="relative">
@@ -55,7 +63,7 @@ export default function SiteNav() {
               aria-expanded={processOpen}
               aria-haspopup="true"
             >
-              Process
+              {t.process}
               <svg
                 width="12"
                 height="12"
@@ -73,28 +81,28 @@ export default function SiteNav() {
             </button>
             <div className={`absolute right-0 top-full mt-2 w-48 rounded-xl bg-slate-900 border border-slate-800 shadow-xl shadow-black/20 py-1 z-50 ${processOpen ? "block" : "hidden"}`}>
                 <Link
-                  href="/eligibility-checker"
+                  href={h("/eligibility-checker")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  Eligibility Checker
+                  {t.eligibilityChecker}
                 </Link>
                 <Link
-                  href="/n400-guide"
+                  href={h("/n400-guide")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  N-400 Guide
+                  {t.n400Guide}
                 </Link>
                 <Link
-                  href="/citizenship-timeline"
+                  href={h("/citizenship-timeline")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  Timeline
+                  {t.timeline}
                 </Link>
                 <Link
-                  href="/citizenship-costs"
+                  href={h("/citizenship-costs")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  Costs
+                  {t.costs}
                 </Link>
               </div>
           </div>
@@ -108,7 +116,7 @@ export default function SiteNav() {
               aria-expanded={moreOpen}
               aria-haspopup="true"
             >
-              More
+              {t.more}
               <svg
                 width="12"
                 height="12"
@@ -126,40 +134,40 @@ export default function SiteNav() {
             </button>
             <div className={`absolute right-0 top-full mt-2 w-48 rounded-xl bg-slate-900 border border-slate-800 shadow-xl shadow-black/20 py-1 z-50 ${moreOpen ? "block" : "hidden"}`}>
                 <Link
-                  href="/reading-writing"
+                  href={h("/reading-writing")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  Reading & Writing
+                  {t.readingWriting}
                 </Link>
                 <Link
-                  href="/interview-guide"
+                  href={h("/interview-guide")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  Interview Guide
+                  {t.interviewGuide}
                 </Link>
                 <Link
-                  href="/2025-test-changes"
+                  href={h("/2025-test-changes")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  2025 Test Changes
+                  {t.testChanges2025}
                 </Link>
                 <Link
-                  href="/senior-exemption"
+                  href={h("/senior-exemption")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  Senior 65/20
+                  {t.senior6520}
                 </Link>
                 <Link
-                  href="/blog"
+                  href={h("/blog")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  Blog
+                  {t.blog}
                 </Link>
                 <Link
-                  href="/about"
+                  href={h("/about")}
                   className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
                 >
-                  About
+                  {t.about}
                 </Link>
               </div>
           </div>
@@ -213,102 +221,102 @@ export default function SiteNav() {
       <div className={`sm:hidden border-t border-slate-800/50 bg-slate-950 ${menuOpen ? "block" : "hidden"}`}>
           <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
             <Link
-              href="/study"
+              href={h("/study")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Study
+              {t.study}
             </Link>
             <Link
-              href="/practice-test"
+              href={h("/practice-test")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Practice Test
+              {t.practiceTest}
             </Link>
             <Link
-              href="/questions"
+              href={h("/questions")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              All 128 Questions
+              {t.all128Questions}
             </Link>
             <Link
-              href="/daily-challenge"
+              href={h("/daily-challenge")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Daily Challenge
+              {t.dailyChallenge}
             </Link>
             <Link
-              href="/eligibility-checker"
+              href={h("/eligibility-checker")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Eligibility Checker
+              {t.eligibilityChecker}
             </Link>
             <Link
-              href="/n400-guide"
+              href={h("/n400-guide")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              N-400 Guide
+              {t.n400Guide}
             </Link>
             <Link
-              href="/citizenship-timeline"
+              href={h("/citizenship-timeline")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Timeline
+              {t.timeline}
             </Link>
             <Link
-              href="/citizenship-costs"
+              href={h("/citizenship-costs")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Costs
+              {t.costs}
             </Link>
             <Link
-              href="/reading-writing"
+              href={h("/reading-writing")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Reading & Writing
+              {t.readingWriting}
             </Link>
             <Link
-              href="/interview-guide"
+              href={h("/interview-guide")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Interview Guide
+              {t.interviewGuide}
             </Link>
             <Link
-              href="/2025-test-changes"
+              href={h("/2025-test-changes")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              2025 Test Changes
+              {t.testChanges2025}
             </Link>
             <Link
-              href="/senior-exemption"
+              href={h("/senior-exemption")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Senior 65/20
+              {t.senior6520}
             </Link>
             <Link
-              href="/blog"
+              href={h("/blog")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              Blog
+              {t.blog}
             </Link>
             <Link
-              href="/about"
+              href={h("/about")}
               className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors"
               onClick={() => setMenuOpen(false)}
             >
-              About
+              {t.about}
             </Link>
             <div className="border-t border-slate-800/50 mt-2 pt-2">
               <LanguageSwitcher />

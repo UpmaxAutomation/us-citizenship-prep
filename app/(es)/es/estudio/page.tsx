@@ -9,6 +9,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Estudia las 128 preguntas civicas del USCIS con tarjetas interactivas y repeticion espaciada. Sigue tu progreso, toma examenes de practica y obtiene respuestas personalizadas por estado. Actualizado para 2025.",
   path: "/es/estudio",
+  locale: "es",
 });
 
 export default function EstudioPage() {

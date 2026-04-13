@@ -9,6 +9,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Toma un examen de practica gratis con 20 preguntas civicas al azar del USCIS. Simula la entrevista real de naturalizacion con puntuacion de 12/20 para pasar. Actualizado para 2025.",
   path: "/es/examen-de-practica",
+  locale: "es",
 });
 
 export default function ExamenDePracticaPage() {

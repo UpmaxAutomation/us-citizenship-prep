@@ -1,4 +1,4 @@
-const CACHE_NAME = 'citizenship-prep-v4';
+const CACHE_NAME = 'citizenship-prep-v5';
 const urlsToCache = [
   '/',
   '/study',
@@ -12,6 +12,14 @@ const urlsToCache = [
   '/terms',
   '/about',
   '/manifest.json',
+  '/es',
+  '/es/estudio',
+  '/es/preguntas',
+  '/es/examen-de-practica',
+  '/tr',
+  '/tr/calisma',
+  '/tr/sorular',
+  '/tr/deneme-sinavi',
 ];
 
 self.addEventListener('install', (event) => {
